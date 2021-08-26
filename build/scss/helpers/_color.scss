@@ -1,0 +1,88 @@
+// Primary Color
+$primary: #313994;
+.primary{
+    color: $primary;
+}
+.bg_primary{
+    background-color: $primary;
+}
+// Secondary Color
+// $secondary: #708ba5;
+$secondary:  RGB(53 ,157 ,209);
+.secondary{
+    color: $secondary;
+}
+.bg_secondary{
+    background-color: $secondary;
+}
+
+//Third Color
+$third: #708ba5;
+.third{
+    color: $third;
+}
+
+// important Color
+// $important: #708ba5;
+$important: #5bbbeb;
+.important{
+    color: $important;
+}
+.bg_important{
+    background-color: $important;
+}
+// Text Color
+$text: #5a5a5a;
+.text{
+    color: $text;
+}
+
+// Body Background
+$bg-body: #ecf5ff;
+.bg{
+    background-color: $bg-body;
+}
+.bg-blue30{
+    background-color: #ebf8ff;
+}
+// White Color
+$white: #ffffff;
+.white{
+    color: $white;
+}
+
+$light-gray:#E9EEF2;
+.bg-lightGray{
+    background-color: $light-gray;
+}
+
+// Dark Color
+$dark: #303030;
+.dark{
+    color: $dark;
+}
+
+// Hover Color
+$hover: #313994;
+.hover{
+    color: $hover;
+}
+.bg_hover{
+    background-color: $hover;
+}
+
+$yellow: RGB(245,199,29);
+
+$purple:#88157b;
+.purple{
+    color: $purple;
+}
+
+$pink:#d31577;
+.pink{
+    color: $pink;
+}
+
+.bg_gradient{
+    background:linear-gradient(to left, #113E9A, #52B0DD);
+}

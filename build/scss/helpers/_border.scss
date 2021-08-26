@@ -1,0 +1,20 @@
+.border-b{
+    border-bottom: 1px solid #000;
+}
+
+.border-blue{
+    border-color: $hover;
+}
+.border-purple{
+    border-color: $purple;
+}
+.border-pink{
+    border-color: $pink;
+}
+
+.border-right{
+    border-right: 1px white solid;
+    @media #{$breakpoint-md},#{$breakpoint-sm},#{$breakpoint-xs}{
+        border-right: 0px;
+    }
+}

@@ -1,0 +1,143 @@
+
+
+
+// #InputArea
+.InputArea{
+    .card{
+        padding: 0px;
+        .card-header{
+            background-color: brown;
+            color: $white;
+        }
+        .card-body{
+            min-height: 300px !important;
+        }
+    }
+}
+.in-redline{
+    border:1px solid red !important;
+}
+
+// #SelectArea
+.SelectArea{
+    .card{
+        padding: 0px;
+    }
+    .card-header{
+        background-color: $secondary;
+        color: $white;
+    }
+     .card-body{
+        min-height: 300px !important;
+    }
+    .search{
+        background-color: $white !important;
+    }
+    .dropdown-menu{
+        left:0;
+    }
+}
+
+//checkBoxArea
+.checkBoxArea{
+
+    .checkbox_ex1[type=checkbox] {
+        -webkit-appearance:none;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        padding: 3px;
+        margin-right: 2px;
+        border: 1px solid rgb(226, 67, 67);
+        color: #444;
+        user-select: none; /* 防止文字被滑鼠選取反白 */
+        position: relative;
+    }
+
+    .checkbox_ex1[type=checkbox]:checked {
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        // font-size: 13px;
+        background-color: rgb(226, 67, 67);
+        
+    }
+
+    .radio_ex1[type=radio] {
+        -webkit-appearance:none;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        padding: 3px;
+        margin-right: 2px;
+        border: 1px solid rgb(226, 67, 67);
+        color: #444;
+        user-select: none; /* 防止文字被滑鼠選取反白 */
+        position: relative;
+    }
+
+    .radio_ex1[type=radio]:checked {
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        background-color: rgb(226, 67, 67);
+        
+    }
+}
+
+// #TableArea
+.TableArea{
+    .card-header{
+        background-color: rgb(79, 18, 150);
+        color: $white;
+    }
+    .card-body{
+        min-height: 300px !important;
+    }
+    
+    .table-Hover{
+        td,th{
+            border-top: 1px solid rgb(155, 177, 219);
+        }
+        tbody tr{
+            
+            &:hover{
+                background-color: rgb(253, 216, 48) !important; 
+            }
+            &:nth-child(odd){
+                background-color: rgb(234, 245, 252);
+            }
+        }
+    }
+    .datatable-RWD{
+        text-align: left;
+        tbody{
+            .dtr-title{
+                text-align: left;
+            }
+        }
+    }
+}
+
+// #ChartArea
+.ChartArea{
+    .card{
+        padding: 0px;
+    }
+    .card-header{
+        background-color: rgb(0, 166, 196);
+        color: $white;
+    }
+    .card-body{
+        .Chart{
+            margin: 0 auto;
+            text-align: center;
+            thead{
+                background-color: #ccc;
+                line-height: 15px;
+            }
+        }
+    }
+}
+
+

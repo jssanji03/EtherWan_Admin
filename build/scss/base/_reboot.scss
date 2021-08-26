@@ -1,0 +1,60 @@
+body {
+    font-family: $fontsNoto;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+label{
+    margin-bottom: 2px;
+    line-height: 25px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontsNoto;
+    font-weight: 400;
+    margin: 0px;
+}
+h3{
+    font-size: 25px;
+}
+h4{
+    font-size: 22px;
+}
+p {
+    font-family: $font-family-sans-serif;
+    color: $text;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0px;
+}
+
+a,
+a:focus {
+    text-decoration: none;
+    outline: 0 solid transparent;
+    font-family: $fonts;
+    color: $secondary;
+    &:hover{
+        color: $primary;
+    }
+}
+
+ul {
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+

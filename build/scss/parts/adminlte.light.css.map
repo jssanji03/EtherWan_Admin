@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;;;GAMG;ACNH;;;;;GAKG",
+    "sources": [
+        "adminlte.light.scss",
+        "../adminlte.scss"
+    ],
+    "names": [],
+    "file": "adminlte.light.css"
+}
