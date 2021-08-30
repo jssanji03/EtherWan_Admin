@@ -3,6 +3,14 @@
     border-radius: 5px;
     padding: 20px;
 }
+
+.vtitle{
+    padding:0px  5px ;
+    color: $purple;
+    // background-color: $third;
+    font-size: 20px;
+    border-left: 5px solid $purple;
+}
 .card-noShadow{
     border-radius: 10px;
     padding: 20px;

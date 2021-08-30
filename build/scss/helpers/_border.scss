@@ -1,6 +1,12 @@
 .border-b{
     border-bottom: 1px solid #000;
 }
+.border-t{
+    border-top: 5px solid #000;
+}
+.border-l{
+    border-left: 5px solid ;
+}
 
 .border-blue{
     border-color: $hover;
@@ -18,3 +24,8 @@
         border-right: 0px;
     }
 }
+
+.demo { 
+    overflow:auto; 
+    // border:1px solid silver; 
+    min-height:100px; }

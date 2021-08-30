@@ -1,5 +1,13 @@
 .main-sidebar{
   background-color: #546D92;
+  height: 100vw;
+  overflow: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar{
+    width: 0 !important;
+    display: none;
+  }
   .nav-sidebar{
     .nav-item{
       &.menu-open{

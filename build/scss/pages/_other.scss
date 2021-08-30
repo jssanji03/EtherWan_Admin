@@ -1,23 +1,4 @@
 //--- Title and BreadCrumb---//
-.page_title{
-    align-items: center;
-    padding:  20px 30px;
-    h2{
-        line-height: 30px;
-    }
-    .breadcrumb{
-        line-height: 30px;
-        height: 30px;
-        margin: 0px;
-        a{
-            color: $dark;
-        }
-    }
-    .active{
-        color: $secondary;
-    }
-}
-//--- Title and BreadCrumb End ---//
 
 
 //HomePage
@@ -67,13 +48,15 @@
 .process{
     .list-group{
         .active{
-            // background-color: #ccc;
             background-color: $secondary;
             border: none;
             p{
                 color: white;
                 // color: #000;
             }
+        }
+        p{
+            color: $text;
         }
     }
     .tab-content{

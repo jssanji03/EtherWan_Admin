@@ -1,7 +1,18 @@
+// html{
+//     overflow: -moz-hidden-unscrollable; /*注意！若只打 hidden，chrome 的其它 hidden 會出問題*/
+//     height: 100%;
+// }
 body {
     font-family: $fontsNoto;
     font-size: 15px;
     background-color: rgb(255, 255, 255);
+    // -ms-overflow-style: none;
+    // height: 100%;
+	// width: calc(100vw + 18px); /*瀏覽器滾動條的長度大約是 18px*/
+	// overflow: auto;
+    //  &::-webkit-scrollbar{
+    //      display: none;
+    //  }
 }
 
 label{

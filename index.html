@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | EtherWan</title>
+  <title>EtherWan | 後台管理介面</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./dist/css/adminlte.min.css">
   <link rel="stylesheet" href="./build/scss/style.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -29,45 +29,15 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">Home</a>
       </li>
     </ul>
-
+    
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
         </a>
       </li>
     </ul>
@@ -77,7 +47,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="dist/img/Logo_w.png" alt="AdminLTE Logo" class="">
     </a>
 
@@ -88,73 +58,293 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+                                                         with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                管理
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="index.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>排程設定</p>
+                  <p>發布作業</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>發布 / 維護管理</p>
                 </a>
               </li>
             </ul>
           </li>
+          <!-- 排程 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                排程管理
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./pages/process.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>排程設定</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 公告 -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
-                Tables
+                公告管理
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="./pages/announcement.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
+                  <p>公告發布管理</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="./pages/announcementADD.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
+                  <p>公告發布作業</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-header important">EXAMPLES</li>
+          <!-- 行事曆 -->
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
+                行事曆管理
+                <i class="fas fa-angle-left right"></i>
               </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>行事曆發布管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>行事曆發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 輪播 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                輪播管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>輪播管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>輪播發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 首頁內頁 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                首頁內頁管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href=#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>輪播設定</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>行事曆</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 連結 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-link"></i>
+              <p>
+                連結管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>連結管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>連結發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 角色與權限 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-shield"></i>
+              <p>
+                角色與權限管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>角色與權限管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>角色與權限發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 郵件通知 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                郵件通知管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>郵件通知管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>郵件通知發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 後台Menu -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-server"></i>
+              <p>
+                後台Menu管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>後台Menu通知管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>後台Menu發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 應用程式 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-box"></i>
+              <p>
+                應用程式管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>應用程式通知管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>應用程式發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- 參數 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-chart-bar"></i>
+              <p>
+                參數管理
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>參數通知管理</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>參數發布作業</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header important">頁面設計</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-columns nav-icon"></i>
+              <p>版面維護</p>
             </a>
           </li>
         </ul>
@@ -171,183 +361,89 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">排程設定</h1>
+            <h1 class="m-0">首頁</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">排程設定</li>
+              <!-- <li class="breadcrumb-item active">排程設定</li> -->
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <!-- Main row -->
-        <div class="row">
-          <!-- Left col -->
-          <section class="process col-12 connectedSortable">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xl-3 col-12">
-                  <ul class="nav justify-content-start d-xl-none" id="myTab" role="tablist">
-                    <li class="nav-item me-4" role="presentation">
-                      <a class="a-link active" data-bs-toggle="tab" data-bs-target="#process1" role="tab">排程1</a>
-                    </li>
-                    <li class="nav-item me-4" role="presentation">
-                      <a class="a-link " data-bs-toggle="tab" data-bs-target="#process2" role="tab">排程2</a>
-                    </li>
-                    <li class="nav-item me-4" role="presentation">
-                      <a class="a-link " data-bs-toggle="tab" data-bs-target="#process3" role="tab">排程3</a>
-                    </li>
-                    <li class="nav-item me-4" role="presentation">
-                      <a class="a-link " data-bs-toggle="tab" data-bs-target="#process4" role="tab">排程4</a>
-                    </li>
-                    <li class="nav-item me-4" role="presentation">
-                      <a class="a-link " data-bs-toggle="tab" data-bs-target="#process5" role="tab">排程5</a>
-                    </li>
-                  </ul>
-                  <div class="list-group d-none d-xl-block">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true" data-bs-toggle="tab"
-                      data-bs-target="#process1" role="tab">
-                      <p class="d-flex justify-content-between align-items-center secondary">排程1
-                        <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                      </p>
-                    </a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process2" role="tab">
-                      <p class="d-flex justify-content-between align-items-center secondary">排程2
-                        <!-- <span class="badge bg-success rounded-pill">5</span> -->
-                      </p>
-                    </a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process3" role="tab">
-                      <p class="d-flex justify-content-between align-items-center secondary">排程3
-                        <!-- <span class="badge bg-warning rounded-pill">3</span> -->
-                      </p>
-                    </a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process4" role="tab">
-                      <p class="d-flex justify-content-between align-items-center secondary">排程4
-                        <!-- <span class="badge bg-primary rounded-pill">2</span> -->
-                      </p>
-                    </a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process5" role="tab">
-                      <p class="d-flex justify-content-between align-items-center secondary">排程5
-                        <!-- <span class="badge bg-danger rounded-pill">2</span> -->
-                      </p>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-xl-9  col-12 mt-lg-0 mt-4">
-                  <div class="tab-content">
-                    <section class="tab-pane fade show active" role="tabpanel" id="process1">
-                      <div class="d-flex justify-content-between">
-                        <h4 class="primary">Process1</h4>
-                        <a class="cronLink badge bg-primary f-400 fz-15 p-2"
-                          href="https://www.bejson.com/othertools/cron/">排程設定</a>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-12">
-                          <table class="table table-striped table-bordered border mt-2 vCorn">
-                            <thead class="table-dark">
-                              <tr class="text-center">
-                                <th class="border" scope="col">內容</th>
-                                <th class="border" style="width: 20%;" scope="col">時間</th>
-                                <th class="border" scope="col">自動 / 手動</th>
-                              </tr>
-                            </thead>
-                            <tbody class="lh-30">
-                              <tr>
-                                <td scope="row" class="border">Lorem ipsum dolor sit, adipisicing elit. </td>
-                                <td class="border text-center p-2">
-                                  <input type="text" class="form-control form-control-sm">
-                                </td>
-                                <td class="border text-center p-0">
-                                  <button type="button" class="btn btn-edit btn-sm">Ａ</button>
-                                  <button type="button" class="btn btn-padding btn-sm">Ｍ</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td scope="row" class="border">Lorem ipsum dolor sit, adipisicing elit.</td>
-                                <td class="border text-center">
-                                  <input type="text" class="form-control form-control-sm">
-                                </td>
-                                <td class="border text-center">
-                                  <button type="button" class="btn btn-edit btn-sm">Ａ</button>
-                                  <button type="button" class="btn btn-padding btn-sm">Ｍ</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td scope="row" class="border">Lorem ipsum dolor sit, adipisicing elit.</td>
-                                <td class="border text-center">
-                                  <input type="text" class="form-control form-control-sm">
-                                </td>
-                                <td class="border text-center">
-                                  <button type="button" class="btn btn-edit btn-sm">Ａ</button>
-                                  <button type="button" class="btn btn-padding btn-sm">Ｍ</button>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="col-12 mt-3">
-                          <table class="responsive nowrap datatable-RWD" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>日期</th>
-                                <th>時間</th>
-                                <th>狀態</th>
-                                <th>訊息</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>2021/08/21</td>
-                                <td>10:30 am</td>
-                                <td><span class="">Success</span></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td>2021/08/22</td>
-                                <td>9:30 am</td>
-                                <td><span>Success</span></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td>2021/08/23</td>
-                                <td>14:30 pm</td>
-                                <td><span>Reject</span></td>
-                                <td>訊息錯誤</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-          
-                    </section>
-                    <section class="tab-pane fade" role="tabpanel" id="process2">
-                      <h4>Process2 Items</h4>
-                      <hr>
-                    </section>
-                    <section class="tab-pane fade" role="tabpanel" id="process3">
-                      <h4>Process3 Items</h4>
-                      <hr>
-                    </section>
-                    <section class="tab-pane fade" role="tabpanel" id="process4">
-                      <h4>Process4 Items</h4>
-                      <hr>
-                    </section>
-                    <section class="tab-pane fade" role="tabpanel" id="process5">
-                      <h4>Process5 Items</h4>
-                      <hr>
-                    </section>
-                  </div>
+        <div class="row px-3">
+            <div class="card card-secondary p-0">
+              <div class="card-header">
+                <h3 class="card-title">Search</h3>
+            
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
                 </div>
               </div>
+              <div class="card-body row">
+                <div class="form-group col-3">
+                  <label for="inputEstimatedBudget">Estimated budget</label>
+                  <input type="number" id="inputEstimatedBudget" class="form-control">
+                </div>
+                <div class="form-group col-3">
+                  <label for="inputSpentBudget">Total amount spent</label>
+                  <input type="number" id="inputSpentBudget" class="form-control">
+                </div>
+                <div class="form-group col-3">
+                  <label for="inputEstimatedDuration">Estimated project duration</label>
+                  <input type="number" id="inputEstimatedDuration" class="form-control">
+                </div>
+                <div class="form-group col-3">
+                  <label for="inputEstimatedDuration">Estimated project duration</label>
+                  <input type="number" id="inputEstimatedDuration" class="form-control">
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="button" class="btn btn-padding btn-sm"><i class="fas fa-search"></i> 查詢</button>
+              </div>
             </div>
+          <!-- col -->
+          <section class="process col-12 connectedSortable py-4 ">
+            <span class="vtitle">待審核申請</span>
+            <table class="display responsive nowrap datatable-RWD mt-5" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="width: 5%;">申請編號</th>
+                  <th>申請功能</th>
+                  <th style="width: 30%;">申請內容</th>
+                  <th style="width: 5%;">目前審核關卡</th>
+                  <th>申請日期</th>
+                  <th style="width: 10%;">申請人</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td>行事曆</td>
+                  <td><a href="#">申請內容</a></td>
+                  <td><span>直屬主管</span></td>
+                  <td>2021/08/25</td>
+                  <td>UserA</td>
+                </tr>
+                <tr>
+                  <td>0002</td>
+                  <td>公告</td>
+                  <td><a href="#">申請內容</a></td>
+                  <td><span>直屬主管</span></td>
+                  <td>2021/08/30</td>
+                  <td>UserB</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
         </div>
         <!-- /.row (main row) -->
@@ -357,18 +453,10 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer bg-black">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    &copy; 2021 EtherWAN Systems, Inc. All rights reserved.
     All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0
-    </div>
   </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
@@ -378,16 +466,42 @@
 <script src="plugins/jquery/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <!-- Bootstrap 5 -->
-<script src="./plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
 <!-- DataTable -->
-<script src="./plugins/DataTables-1.10.25/datatables.min.js"></script>
-<script src="./plugins/Magicsuggest/js/magicsuggest-min.js"></script>
-<script src="./plugins/select2-4.0.13/js/select2.full.min.js"></script>
+<script src="plugins/DataTables-1.10.25/datatables.min.js"></script>
+<script src="plugins/Magicsuggest/js/magicsuggest-min.js"></script>
+<script src="plugins/select2-4.0.13/js/select2.full.min.js"></script>
 <!-- daterangepicker -->
 <script src="plugins/moment/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 <script src="dist/js/component.js"></script>
+<script>
+  const dataTable = document.querySelector('.datatable-RWD')
+  const rows = dataTable.rows;//獲取所有行
+  // console.log(rows.length);
+  for (let i = 0; i < rows.length; i++) {
+    for (let j = 0; j < rows[i].cells.length; j++) {
+      // console.log(rows[i].cells[j].innerText);
+      let text = rows[i].cells[j]
+      switch (text.innerText) {
+        case '直屬主管':
+          text.firstChild.className = 'pill-success';
+          break;
+        case 'Reject':
+          text.firstChild.className = 'pill-danger'
+          break;
+        case 'Approval':
+          text.firstChild.className = 'pill-approval'
+          break;
+        case 'Draft':
+          text.firstChild.className = 'pill-draft'
+          break;
+      }
+    }
+  }
+
+</script>
 </body>
 </html>

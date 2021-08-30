@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | EtherWan</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../build/scss/style.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+            </ul>
+            
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../dist/img/Logo_w.png" alt="AdminLTE Logo" class="">
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                                                   with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布作業</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布 / 維護管理</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 排程 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    排程管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="process.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>排程設定</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 公告 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    公告管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="announcement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="announcementADD.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 行事曆 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    行事曆管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 輪播 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    輪播管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 首頁內頁 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    首頁內頁管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href=#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播設定</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 連結 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-link"></i>
+                                <p>
+                                    連結管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 角色與權限 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-shield"></i>
+                                <p>
+                                    角色與權限管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 郵件通知 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>
+                                    郵件通知管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 後台Menu -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    後台Menu管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 應用程式 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-box"></i>
+                                <p>
+                                    應用程式管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 參數 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-chart-bar"></i>
+                                <p>
+                                    參數管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-columns nav-icon"></i>
+                                <p>版面維護</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">排程設定</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">排程設定</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="process col-12 connectedSortable">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-3 col-12">
+                            <ul class="nav justify-content-start d-xl-none" id="myTab" role="tablist">
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link active" data-bs-toggle="tab" data-bs-target="#process1" role="tab">排程1</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process2" role="tab">排程2</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process3" role="tab">排程3</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process4" role="tab">排程4</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process5" role="tab">排程5</a>
+                                </li>
+                            </ul>
+                            <div class="list-group d-none d-xl-block">
+                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true"
+                                    data-bs-toggle="tab" data-bs-target="#process1" role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程1
+                                        <!-- <span class="badge bg-primary rounded-pill">14</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process2"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程2
+                                        <!-- <span class="badge bg-success rounded-pill">5</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process3"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程3
+                                        <!-- <span class="badge bg-warning rounded-pill">3</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process4"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程4
+                                        <!-- <span class="badge bg-primary rounded-pill">2</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process5"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程5
+                                        <!-- <span class="badge bg-danger rounded-pill">2</span> -->
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9  col-12 mt-lg-0 mt-4">
+                            <div class="tab-content">
+                                <section class="tab-pane fade show active" role="tabpanel" id="process1">
+                                    <!-- general form elements -->
+                                    <div class="card p-0">
+                                        <div class="card-header bg_purple white">
+                                            <h3 class="card-title lh-30 m-0">Process1</h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <!-- form start -->
+                                        <form>
+                                            <div class="card-body row">
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputEmail1">公司代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputEmail1"
+                                                        placeholder="CompanyCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputPassword1">排程代碼</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        id="exampleInputPassword1" placeholder="ScheduleJobCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程名稱</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        id="exampleInputPassword1" placeholder="ScheduleJobName">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程說明</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        id="exampleInputPassword1" placeholder="Description">
+                                                </div>
+                                                <label for="exampleInputFile">排程時間(CRON)</label>
+                                                <div class="form-group d-flex align-items-center col-6">
+                                                    <input type="password" class="form-control form-control-sm"
+                                                        id="exampleInputPassword1" placeholder="* * * * * ?">
+                                                    <span class="px-2"><a class="cronLink badge bg-primary f-400 fz-15 p-2"
+                                                            href="https://www.bejson.com/othertools/cron/">排程設定</a></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+                                            <div class="card-footer p-0xw">
+                                                <button type="submit" class="btn btn-add btn-sm"><i
+                                                        class="fas fa-plus-circle"></i> 新增</button>
+                                            </div>
+                                        </form>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+            
+                                    <div class="row pb-5">
+                                        <div class="col-12 mt-3">
+                                            <table class="responsive nowrap datatable-RWD" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>公司代碼</th>
+                                                        <th style="width: 5%;">排程代碼</th>
+                                                        <th>排程開始時間</th>
+                                                        <th>排程結束時間</th>
+                                                        <th>狀態</th>
+                                                        <th style="width: 30%;">說明</th>
+                                                        <th style="width: 5%;">輸入</th>
+                                                        <th style="width: 5%;">輸出</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Soetek</td>
+                                                        <td>A</td>
+                                                        <td>1/1/2021 10:00:00 AM</td>
+                                                        <td>1/1/2021 10:01:00 AM</td>
+                                                        <td><span>Success</span></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Soetek</td>
+                                                        <td>A</td>
+                                                        <td>1/1/2021 10:00:00 AM</td>
+                                                        <td>1/1/2021 10:01:00 AM</td>
+                                                        <td><span>Fail</span></td>
+                                                        <td>連線失敗</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Soetek</td>
+                                                        <td>A</td>
+                                                        <td>1/1/2021 10:00:00 AM</td>
+                                                        <td>1/1/2021 10:01:00 AM</td>
+                                                        <td><span>In progress</span></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="tab-pane fade" role="tabpanel" id="process2">
+                                    <h4>Process2 Items</h4>
+                                    <hr>
+                                </section>
+                                <section class="tab-pane fade" role="tabpanel" id="process3">
+                                    <h4>Process3 Items</h4>
+                                    <hr>
+                                </section>
+                                <section class="tab-pane fade" role="tabpanel" id="process4">
+                                    <h4>Process4 Items</h4>
+                                    <hr>
+                                </section>
+                                <section class="tab-pane fade" role="tabpanel" id="process5">
+                                    <h4>Process5 Items</h4>
+                                    <hr>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer bg-black">
+            &copy; 2021 EtherWAN Systems, Inc. All rights reserved.
+            All rights reserved.
+        </footer>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTable -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
+    <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <script src="../dist/js/component.js"></script>
+    <script>
+        const dataTable = document.querySelector('.datatable-RWD')
+        const rows = dataTable.rows;//獲取所有行
+        // console.log(rows.length);
+        for (let i = 0; i < rows.length; i++) {
+            for (let j = 0; j < rows[i].cells.length; j++) {
+                // console.log(rows[i].cells[j].innerText);
+                let text = rows[i].cells[j]
+                switch (text.innerText) {
+                    case 'Success':
+                        text.firstChild.className = 'pill-success';
+                        break;
+                    case 'Fail':
+                        text.firstChild.className = 'pill-danger'
+                        break;
+                    case 'Approval':
+                        text.firstChild.className = 'pill-approval'
+                        break;
+                    case 'In progress':
+                        text.firstChild.className = 'pill-draft'
+                        break;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

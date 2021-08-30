@@ -1,7 +1,105 @@
+
+
+/////### Datatable Control Start ###/////
+// https://datatables.net/
+
+//## 包含標題與搜尋功能 RWD card - Start ##//
+$(".listDataTable").DataTable({
+        searching: true,
+        "paging": true,
+  "orderCellsTop": true,
+        
+            
+        // "orderMulti": true,
+        "stateSave": true,
+        "fnInitComplete": function (settings, json) {  
+        $(".listDataTable").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>")},
+        "autoWidth": true,  
+        // "scrollX": true,
+        "language": {
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+        },
+        buttons: [
+            {
+              extend: 'excel',
+              text: '<i class="fa fa-copy"></i> Excel',
+              exportOptions: {
+              columns: ':visible'
+              }
+            },
+            {
+              extend: 'colvis',
+              text: '<i class="fas fa-filter"></i> Colvis',
+              columns: ':not(:eq(8),:eq(1))',
+        
+            },
+            
+        ],
+        dom: "<'row justify-content-between'<'listTitle col-md-8'B><'col-md-4'fr>>" +
+        "<'row'<'col-sm-12'tlp>>",
+  })
+
+
+  
+//## 包含標題與搜尋功能 RWD card - End ##//    
+
+//## Datatable Responsive 套件 - Start ##//
+ $('.datatable-RWD').DataTable({
+        searching: false,
+        "paging": false,
+        "ordering": false,
+        "info": false,
+        "autoWidth": false,
+        scroller: true,
+        responsive: true,
+        "language": {
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+        },
+        dom: "<'row'<'col-xl-12'fr>>" +
+            "<'row'<'col-sm-12'tlp>>",
+    }
+ );
+//## Datatable Responsive 套件 - End ##//   
+
+//## Datatable CSS客製 RWD card - Start ##//
+  $('.datatable-card,.table-gray').DataTable({
+        searching: true,
+        "paging": true,
+        "ordering": false,
+        "scrollX": true,
+        "language": {
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+        },
+        dom: "<'row'<'col-xl-12'fr>>" +
+            "<'row'<'col-sm-12'tlp>>",
+    }
+  );
+//## Datatable CSS客製 RWD card - End ##//
+/////### Datatable Control End ###/////
+
+
 /////### DateRangePicker 日期時間選擇 Start ###/////
 // https://www.daterangepicker.com/
 $(function () { 
-  $('input[name="dateTimesPick"]').daterangepicker({
+  $('input[name="reservationtime"]').daterangepicker({
     timePicker: true,
     singleDatePicker: true,
     locale: {
@@ -101,103 +199,6 @@ $(".fixedArea").on('keyup', function () {
 /////### Datatable Control Start ###/////
 // https://datatables.net/
 
-//## 包含標題與搜尋功能 RWD card - Start ##//
-$(".listDataTable").DataTable({
-        searching: true,
-        "paging": true,
-        "orderCellsTop": true,
-        "stateSave": true,
-        "fnInitComplete": function (settings, json) {  
-        $(".listDataTable").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>")},
-        "autoWidth": true,  
-        "language": {
-            "info": "顯示 _PAGE_ 至 _PAGES_",
-            "search": "搜尋 :",
-            "paginate": {
-                "previous": "上一頁",
-                "next":"下一頁"
-            },
-            "lengthMenu": "顯示 _MENU_ 筆資料"
-        },
-        buttons: [
-            {
-              extend: 'excel',
-              text: '<i class="fa fa-copy"></i> Excel',
-              exportOptions: {
-              columns: ':visible'
-              }
-            },
-            {
-              extend: 'colvis',
-              text: '<i class="fas fa-filter"></i> Colvis',
-              columns: ':not(:eq(8),:eq(1))',
-        
-            },
-            
-        ],
-        dom: "<'row justify-content-between'<'listTitle col-md-8'B><'col-md-4'fr>>" +
-        "<'row'<'col-sm-12'tlp>>",
-  })
-
-
-
-  // Datatable Hover Background //
-    let oldColor = "";
-    $(".listDataTable tbody tr").mouseover(function () {
-        oldColor = $(this).css("background-color");
-	  $(this).css("background-color","#ffdab5");
-    }).mouseout(function () {
-        $(this).css("background-color",oldColor);
-    });
-  
-//## 包含標題與搜尋功能 RWD card - End ##//    
-
-//## Datatable Responsive 套件 - Start ##//
- $('.datatable-RWD').DataTable({
-        searching: false,
-        "paging": false,
-        "ordering": false,
-        "info": true,
-        "autoWidth": false,
-        scroller: true,
-        responsive: true,
-        "language": {
-            "info": "顯示 _PAGE_ 至 _PAGES_",
-            "search": "搜尋 :",
-            "paginate": {
-                "previous": "上一頁",
-                "next":"下一頁"
-            },
-            "lengthMenu": "顯示 _MENU_ 筆資料"
-        },
-        dom: "<'row'<'col-xl-12'fr>>" +
-            "<'row'<'col-sm-12'tlp>>",
-    }
- );
-//## Datatable Responsive 套件 - End ##//   
-
-//## Datatable CSS客製 RWD card - Start ##//
-  $('.datatable-card,.table-gray').DataTable({
-        searching: true,
-        "paging": true,
-        "ordering": false,
-        "scrollX": true,
-        "language": {
-            "info": "顯示 _PAGE_ 至 _PAGES_",
-            "search": "搜尋 :",
-            "paginate": {
-                "previous": "上一頁",
-                "next":"下一頁"
-            },
-            "lengthMenu": "顯示 _MENU_ 筆資料"
-        },
-        dom: "<'row'<'col-xl-12'fr>>" +
-            "<'row'<'col-sm-12'tlp>>",
-    }
-  );
-//## Datatable CSS客製 RWD card - End ##//
-/////### Datatable Control End ###/////
-
 
 /////###  設定列印範圍 Start ###/////
 function printDiv(){
@@ -240,3 +241,16 @@ $(function () {
     }); 
 });
 /////###  顯示圖片 End  ###/////
+
+$(function () {
+    var pathname = window.location.pathname;
+   $(".nav-sidebar li a").each( function() {
+        var href= $(this).attr("href");
+        if (href != undefined && pathname.indexOf(href) >= 0){
+          $(this).addClass("active");
+          $(this).parents('.nav-treeview').children('.nav-link').addClass("active")
+          $(this).parents('.nav-treeview').parent().addClass("menu-open")
+          $(this).parents('.menu-open').children('.nav-link').addClass("active")
+        }
+    });
+});

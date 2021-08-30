@@ -21,7 +21,10 @@
     }
 }
 
-.btn-edit {
+.btn-add {
+    @include button($background-color:#7C8AA1,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btn-submit {
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
 }
 .btn-delete {
@@ -29,6 +32,12 @@
 }
 .btn-padding {
     @include button($background-color:rgb(22, 171, 182),$fontColor: $white,$hover-color:rgb(16, 118, 126),$hover-fontColor:$white);
+}
+.btn-cancel {
+    @include button($background-color:rgb(207, 207, 207),$fontColor: $text,$hover-color:rgb(71, 71, 71),$hover-fontColor:$white);
+}
+.btn-edit {
+    @include button($background-color:$yellow,$fontColor: $white,$hover-color:rgb(228, 186, 0),$hover-fontColor:$white);
 }
 
 .btn-cal{

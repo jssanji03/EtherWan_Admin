@@ -4,14 +4,19 @@
 @import url("../../plugins/jquery-ui/jquery-ui.min.css");
 @import url("../../plugins/summernote/summernote.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
+@import url("../../plugins/select2-4.0.13/css/select2.min.css");
+@import url("../../plugins/Magicsuggest/css/magicsuggest-min.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
-// @import url("../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
+@import url("../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css");
+@import url("../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css");
+@import url("../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css");
+@import url("../../plugins/jstree-3.3.11/dist/themes/default/style.min.css");
 
 
 /* :: 1.0 Import Fonts */
-// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
 
 @import "base/reset";
@@ -35,7 +40,6 @@
 @import "component/card";
 @import "component/datatable";
 @import "component/datepicker";
-// @import "component/header";
 
 // *******************
 //     base
@@ -46,6 +50,6 @@
 //     pages
 // // *******************
 @import "pages/organization";
-@import "pages/index";
+// @import "pages/index";
 @import "pages/other";
 
