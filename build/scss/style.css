@@ -6,16 +6,19 @@
 @import url("../../plugins/summernote/summernote.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
 @import url("../../plugins/select2-4.0.13/css/select2.min.css");
+@import url("../../plugins/dropzone/min/dropzone.min.css");
 @import url("../../plugins/Magicsuggest/css/magicsuggest-min.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
-@import url("../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css");
-@import url("../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css");
-@import url("../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css");
+@import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
+@import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap.min.css");
 @import url("../../plugins/jstree-3.3.11/dist/themes/default/style.min.css");
+@import url("../../plugins/summernote/summernote-lite.min.css");
+@import url("../../plugins/dropzone/min/dropzone.min.css");
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -213,6 +216,12 @@ table {
   background: linear-gradient(to left, #113E9A, #52B0DD);
 }
 
+.ui-state-highlight {
+  width: 100%;
+  height: 30px;
+  background-color: #d31577;
+}
+
 .mt-15 {
   margin-top: 15px !important;
 }
@@ -353,6 +362,29 @@ table {
   min-height: 100px;
 }
 
+.btn-success {
+  height: 35px;
+  min-width: auto;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 0px 5px;
+  background-color: #313994;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #313994;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-success:focus {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .btn-add {
   height: 35px;
   min-width: auto;
@@ -422,7 +454,7 @@ table {
   font-weight: 400;
 }
 
-.btn-padding {
+.btn-edit {
   height: 35px;
   min-width: auto;
   font-size: 16px;
@@ -433,14 +465,14 @@ table {
   color: #ffffff;
 }
 
-.btn-padding:hover {
+.btn-edit:hover {
   background-color: #10767e;
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
 }
 
-.btn-padding:focus {
+.btn-edit:focus {
   font-size: 16px;
   font-weight: 400;
 }
@@ -468,7 +500,7 @@ table {
   font-weight: 400;
 }
 
-.btn-edit {
+.btn-padding {
   height: 35px;
   min-width: auto;
   font-size: 16px;
@@ -479,14 +511,14 @@ table {
   color: #ffffff;
 }
 
-.btn-edit:hover {
+.btn-padding:hover {
   background-color: #e4ba00;
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
 }
 
-.btn-edit:focus {
+.btn-padding:focus {
   font-size: 16px;
   font-weight: 400;
 }
@@ -551,8 +583,8 @@ table {
 }
 
 .btn-menu:hover::before {
-  -webkit-box-shadow: inset 300px 0px 0px #5bbbeb;
-          box-shadow: inset 300px 0px 0px #5bbbeb;
+  -webkit-box-shadow: inset 1400px 0px 0px #5bbbeb;
+          box-shadow: inset 1400px 0px 0px #5bbbeb;
   color: #ffffff;
 }
 
@@ -636,6 +668,10 @@ button {
     width: 30%;
     height: 30%;
   }
+}
+
+.photoLink {
+  max-height: 450px;
 }
 
 .InputArea .card {
@@ -837,6 +873,7 @@ button {
           box-shadow: 1px 1px 3px 1px rgba(197, 197, 197, 0.37);
   border-radius: 5px;
   padding: 20px;
+  min-height: 300px;
 }
 
 .vtitle {
@@ -855,6 +892,7 @@ button {
   border-radius: 5px;
   padding: 5px;
   height: 100%;
+  min-height: 420px;
 }
 
 .card-border {
@@ -862,6 +900,7 @@ button {
   padding: 5px;
   height: 100%;
   border: 1px solid #cecece;
+  background-color: #ffffff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -897,6 +936,18 @@ button {
 .circle-sm {
   width: 40px;
   height: 40px;
+}
+
+.content-header {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  z-index: 999;
+  top: 5px;
+  right: 15px;
+  width: 97%;
 }
 
 table.dataTable tbody th,
@@ -1074,24 +1125,24 @@ table.dataTable .assignActive {
 }
 
 .ui-widget.ui-widget-content {
-  background-color: whitesmoke;
-  border-radius: 8px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
   width: 100%;
-  padding: 0px;
+  padding: 20px;
   -webkit-box-shadow: 1px 1px 5px 2px rgba(197, 197, 197, 0.486);
           box-shadow: 1px 1px 5px 2px rgba(197, 197, 197, 0.486);
   margin: 0 auto;
 }
 
 .ui-datepicker .ui-datepicker-header {
-  background: -webkit-gradient(linear, right top, left top, from(#113E9A), to(#52B0DD));
-  background: linear-gradient(to left, #113E9A, #52B0DD);
-  overflow: hidden;
-  color: #ffffff;
+  background: transparent;
+  color: #000;
+  font-size: 18px;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
   line-height: 40px;
+  font-family: 'Urbanist', sans-serif;
 }
 
 .ui-datepicker-prev {
@@ -1173,14 +1224,28 @@ table.dataTable .assignActive {
   margin-top: 0px;
 }
 
+.ui-datepicker-month {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px;
+  border-color: lightgray;
+}
+
 .ui-datepicker table {
   padding: 2px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 16px;
 }
 
 .ui-datepicker table thead {
-  color: #000;
-  font-weight: 400;
+  color: #3d88dd;
+  font-weight: 600;
   line-height: 20px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.ui-datepicker table tbody td {
+  padding: 8px 0px;
 }
 
 .ui-datepicker table tbody .ui-datepicker td span, .ui-datepicker table tbody .ui-datepicker td a {
@@ -1197,13 +1262,9 @@ table.dataTable .assignActive {
   text-align: center;
 }
 
-.ui-datepicker table tbody .ui-datepicker-week-end a {
-  color: #f81190;
-}
-
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+.ui-datepicker-today .ui-state-highlight {
   color: #ffffff !important;
-  background-color: #5bbbeb !important;
+  background-color: #3d88dd !important;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -1211,7 +1272,16 @@ table.dataTable .assignActive {
   margin: 0 auto;
 }
 
-.ui-datepicker-current-day .ui-state-default.ui-state-active {
+.ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  background-color: transparent;
+}
+
+.ui-widget-content .ui-state-default:hover, .ui-widget-header .ui-state-default:hover, .ui-button:hover, html .ui-button.ui-state-disabled:hover:hover, html .ui-button.ui-state-disabled:active:hover {
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
   background-color: #f1dcb4;
   border-radius: 50%;
   width: 30px;
@@ -1220,13 +1290,8 @@ table.dataTable .assignActive {
   text-align: center;
 }
 
-.ui-state-hover {
-  background-color: #f2ecf7 !important;
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  text-align: center;
-  color: #ffffff;
+.event li {
+  list-style: disc;
 }
 
 body {
@@ -1249,14 +1314,6 @@ h6 {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   margin: 0px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-h4 {
-  font-size: 22px;
 }
 
 p {
@@ -2143,6 +2200,119 @@ img {
   position: relative;
 }
 
+.portlet {
+  padding: 30px 0px;
+  border: 1px solid #969696;
+  position: relative;
+}
+
+.editPage {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 45%;
+}
+
+.photoLink {
+  height: inherit;
+}
+
+.carousel-caption {
+  margin-bottom: 30px;
+}
+
+.marqueeBox .marquee-wrapper ul {
+  height: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.marqueeBox .marquee-wrapper ul li {
+  position: absolute;
+  top: -10;
+  left: calc(40% - 100px);
+  opacity: 0;
+  -webkit-animation: display 12s ease-in-out  infinite;
+          animation: display 12s ease-in-out  infinite;
+}
+
+@media only screen and (max-width: 767px) {
+  .marqueeBox .marquee-wrapper ul li {
+    left: calc(30% - 100px);
+  }
+}
+
+.marqueeBox .marquee-wrapper ul li:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.marqueeBox .marquee-wrapper ul li:nth-child(3) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.marqueeBox .marquee-wrapper ul li:nth-child(4) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+@-webkit-keyframes display {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@keyframes display {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
 .info img {
   height: 300px;
   -o-object-fit: cover;
@@ -2213,5 +2383,42 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.linkList {
+  padding: 0px 20px;
+}
+
+.linkList li {
+  padding: 5px;
+}
+
+.linkList li .btn-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.linkList li .btn-menu .fas {
+  text-align: right;
+  line-height: 40px;
+  padding-right: 0px;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.linkList li .btn-menu:hover {
+  padding-left: 20px;
+}
+
+.linkList li .btn-menu:hover .fas {
+  padding-right: 20px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | EtherWan</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../build/scss/style.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../dist/img/Logo_w.png" alt="AdminLTE Logo" class="">
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                                                                       with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布作業</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布 / 維護管理</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 排程 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    排程管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="process.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>排程設定</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 公告 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    公告管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="announcement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="announcementADD.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 行事曆 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    行事曆管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 輪播 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    輪播管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 首頁內頁 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    首頁內頁管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href=#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播設定</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 連結 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-link"></i>
+                                <p>
+                                    連結管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 角色與權限 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-shield"></i>
+                                <p>
+                                    角色與權限管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 郵件通知 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>
+                                    郵件通知管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 後台Menu -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    後台Menu管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 應用程式 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-box"></i>
+                                <p>
+                                    應用程式管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 參數 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-chart-bar"></i>
+                                <p>
+                                    參數管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-item">
+                            <a href="board.html" class="nav-link">
+                                <i class="fas fa-columns nav-icon"></i>
+                                <p>版面管理</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">版面維護</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">版面維護</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                    <div class="alert alert-success alert-dismissible shadow fade " role="alert" >
+                        <i class="fas fa-exclamation-triangle fz-20 mx-2"></i>
+                        <strong>新增成功</strong> 
+                        <button type="button" class="btn-close" aria-label="Close" onclick="cancel()"></button>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="process col-12 connectedSortable">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-3 col-12">
+                            <div class="card d-none d-xl-block">
+                                <div id="data" class="demo"></div>
+                                <!-- <div id="html1" class="d-block">
+                                    <ul class="nav navbar-nav mt-4">
+                                        <li class="tab-title"'>首頁 
+                                            <ul class="">
+                                                <li class="nav-item"  data-jstree='{"opened":true,"selected":true}'><a class="nav-link active" href="#content1">菲尼克斯集團介紹</a></li>
+                                                </li>
+                                                <li class="nav-item"><a class="nav-link" href="#content2">企業承諾</a></li>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link"></i>企業政策</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">組織介紹</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">歷史沿革</a></li>
+                                                <li class="nav-item has-menu"><a href="#" class="nav-link">表單連結<i class="fas fa-angle-down"></i></a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li class="dropdown-item"><a href="companyForm.html">公司管理辦法 / 表單</a></li>
+                                                        <li class="dropdown-item"><a href="#">員工手冊 /總部行為準則手冊</a></li>
+                                                        <li class="dropdown-item"><a href="#">CIS公司範本下載</a></li>
+                                                        <li class="dropdown-item"><a href="useForm.html">常用資訊</a></li>
+                                                        <li class="dropdown-item"><a href="sysForm.html">系統連結</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-xl-9  col-12 mt-lg-0 mt-4">
+                            <section class="tab-pane" id="content1">
+                                <!-- 頁面設定 -->
+                                <div class="card p-0">
+                                    <div class="card-header bg_purple white">
+                                        <h3 class="card-title lh-30 m-0">頁面設定</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <!-- form start -->
+                                    <form>
+                                        <div class="card-body row">
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>頁面名稱</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        placeholder="PageName">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>父頁面識別碼</label>
+                                                    <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
+                                                        <option selected="selected">首頁</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>關鍵字</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        placeholder="Keyword">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>網頁描述</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        placeholder="Description">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>開始時間</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="far fa-calendar-alt"></i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" name="reservation">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>結束時間</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="far fa-calendar-alt"></i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" name="reservation">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox">
+                                                        <label class="form-check-label">另開視窗</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox">
+                                                        <label class="form-check-label">側邊選單</label>
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row align-items-end">
+                                                <div class="form-group col-6">
+                                                    <label>外網連結</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="OutSideURL">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox">
+                                                        <label class="form-check-label">是否發佈</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="card-footer p-0xw">
+                                        <button id="boardSubmit" type="submit" class="btn btn-submit btn-sm" onclick="show ()">儲存</button>
+                                    </div>
+                                    
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- 版型 -->
+                                <div class="card p-0">
+                                    <div class="card-header bg_purple white">
+                                        <h3 class="card-title lh-30 m-0">版型</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <!-- Full template -->
+                                            <!-- <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="Full_demo" style="height: 200px;">
+                                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
+                                                        <div class="carousel-inner">
+                                                            <div class="carousel-item active" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/1020/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="carousel-item" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/1035/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="carousel-item" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/1033/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                </section>
+                                                <section class="Full portlet" style="display: none;">
+                                                    <div class="editPage">
+                                                        <a href="./boardEdit.html"  class="btn btn-edit btn-sm">編輯</a>
+                                                    </div>
+                                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                                        <div class="carousel-indicators">
+                                                        </div>
+                                                        <div class="carousel-inner">
+                                                            <div class="carousel-item active photoLink">
+                                                                <img src="https://fakeimg.pl/1000x350/" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="carousel-item photoLink">
+                                                                <img src="https://fakeimg.pl/1000x350/" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="carousel-item photoLink">
+                                                                <img src="https://fakeimg.pl/1000x350/" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                                            data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                                            data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input"name="list" type="radio" value="full">
+                                                        <label class="form-check-label">滿版輪播</label>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <!-- OneGrid template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="OneGrid_demo border">
+                                                    <!-- <div class="container">
+                                                        <div class="row" style="min-height: 200px;">
+                                                            <h4 class="card-title primary mt-1">Title</h4>
+                                                            <div>
+                                                                <img src="https://picsum.photos/id/1033/500/150" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <h6 class="card-subtitle mb-2 third">Subtitle</h6>
+                                                                <p class="card-text" style="max-height: 20px;overflow: hidden;">Some quick example text to build on the card title and make up the bulk of the card's
+                                                                    content.</p>
+                                                                <a href="#" class="card-link lh-30">Card link</a>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col-12" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/109/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="OneGrid" style="display: none;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                            <div style="min-height:350px;max-height: 450px;">
+                                                                <a href="#"><img name="Image" src="https://fakeimg.pl/1920x350/" class="img-fluid" alt="..."></a>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                                                    content.</p>
+                                                                <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i class="fas fa-angle-right"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="one">
+                                                        <label class="form-check-label">單格</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- TwoGrid template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="TwoGrid_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col-6" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/19/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="col-6" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/675/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="TwoGrid" style="display: none;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div>
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                            class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div href="#">
+                                                                    <img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid" alt="...">
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                            class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="two">
+                                                        <label class="form-check-label">雙格</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- ThreeGrid template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="ThreeGrid_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col-4" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/10/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="col-4" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/12/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="col-4" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/14/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="ThreeGrid" style="display: none;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div style="max-height:300px;">
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                            class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div style="max-height:300px;">
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                            class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div style="max-height:300px;">
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                            class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="three">
+                                                        <label class="form-check-label">三格</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- FourGrid template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="FourGrid_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col-3" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/16/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="col-3" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/18/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="col-3" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/20/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                            <div class="col-3" style="height: 200px;">
+                                                                <img src="https://picsum.photos/id/22/200" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="FourGrid" style="display: none;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div>
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                    class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div>
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                    class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div>
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                    class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h3 name="Title" class="card-title"><a href="#" class="primary">Title</a></h3>
+                                                                <div>
+                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h6 name="SubTitle" class="card-subtitle mb-2 third">Card subtitle</h6>
+                                                                    <p name="Description" class="card-text">Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                    class="fas fa-angle-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="four">
+                                                        <label class="form-check-label">四格</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 公告 template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="announcement_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col" style="height: 200px;">
+                                                                <img src="https://fakeimg.pl/350x200/?text=Announcement"" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="announcement" style="display: none;">
+                                                    <div class="container" style="height: 100%;">
+                                                        <div class="p-3 card-border d-flex flex-wrap">
+                                                            <div class="col-12">
+                                                                <p class="fz-20 lh-40 border-bottom primary text-center">公告</p>
+                                                            </div>
+                                                            <div class="col-12 my-2">
+                                                                <ul class="lh-30 ">
+                                                                    <li class="d-flex justify-content-between">
+                                                                        <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                                            益公字第07003號_企業識別系統</a>
+                                                                        <span class="third">2021/08/19</span>
+                                                                    </li>
+                                                                    <li class="d-flex justify-content-between">
+                                                                        <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                                            益公字第07005號_企業識別系統</a>
+                                                                        <span class="third">2021/08/18</span>
+                                                                    </li>
+                                                                    <li class="d-flex justify-content-between">
+                                                                        <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                                            益公字第07005號_企業識別系統</a>
+                                                                        <span class="third">2021/08/18</span>
+                                                                    </li>
+                                                                    <li class="d-flex justify-content-between">
+                                                                        <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                                            益公字第07005號_企業識別系統</a>
+                                                                        <span class="third">2021/08/18</span>
+                                                                    </li>
+                                                                    <li class="d-flex justify-content-between">
+                                                                        <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                                            益公字第07005號_企業識別系統</a>
+                                                                        <span class="third">2021/08/18</span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 text-end align-items-end">
+                                                                <a class="" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">過往資訊 <i
+                                                                        class="mx-2 fas fa-angle-right"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="announcement">
+                                                        <label class="form-check-label">公告</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Calendar template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="calendar_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col" style="height: 200px;">
+                                                                <img src="https://fakeimg.pl/350x200/?text=Calendar"" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="calendar col-lg-6 col-12" style="display: none;">
+                                                    <div class="container" style="height: 100%;">
+                                                        <div class="row">
+                                                            <div class="p-3 card-radius bg-white shadow-sm d-flex flex-wrap justify-content-center">
+                                                                <div class="col-12">
+                                                                    <p class="fz-20 lh-40 border-bottom text-center primary">行事曆</p>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <p class="pink lh-40 text-center">＊點選可查看當日行程</p>
+                                                                    <div class="datepicker"></div>
+                                                                    <div id="event" class="m-3 d-flex flex-wrap">
+                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="calendar">
+                                                        <label class="form-check-label">行事曆</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- LeaveApplication template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="leaveApplication_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col" style="height: 200px;">
+                                                                <img src="https://fakeimg.pl/350x200/?text=LeaveApplication" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="leaveApplication col-lg-6 col-12" style="display: none;">
+                                                    <div class="container" style="height: 100%;">
+                                                        <div class="row p-3 card-border">
+                                                            <div class="col-12">
+                                                                <p class="fz-20 lh-40 border-bottom primary text-center">請假資訊</p>
+                                                            </div>
+                                                            <div class="col-12 my-2">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr class="fz-15">
+                                                                            <th scope="col">人員</th>
+                                                                            <th scope="col">部門</th>
+                                                                            <th scope="col">代理人</th>
+                                                                            <th scope="col">假別</th>
+                                                                            <th scope="col">開始時間</th>
+                                                                            <th scope="col">結束時間</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="fz-13">
+                                                                            <td>Mark</td>
+                                                                            <td>TD</td>
+                                                                            <td>John Lin</td>
+                                                                            <td>特休</td>
+                                                                            <td>2021/09/02</td>
+                                                                            <td>2021/09/03</td>
+                                                                        </tr>
+                                                                        <tr class="fz-13">
+                                                                            <td>Mark</td>
+                                                                            <td>TD</td>
+                                                                            <td>John Lin</td>
+                                                                            <td>特休</td>
+                                                                            <td>2021/09/02</td>
+                                                                            <td>2021/09/03</td>
+                                                                        </tr>
+                                                                        <tr class="fz-13">
+                                                                            <td>Mark</td>
+                                                                            <td>TD</td>
+                                                                            <td>John Lin</td>
+                                                                            <td>特休</td>
+                                                                            <td>2021/09/02</td>
+                                                                            <td>2021/09/03</td>
+                                                                        </tr>
+                                                                        <tr class="fz-13">
+                                                                            <td>Mark</td>
+                                                                            <td>TD</td>
+                                                                            <td>John Lin</td>
+                                                                            <td>特休</td>
+                                                                            <td>2021/09/02</td>
+                                                                            <td>2021/09/03</td>
+                                                                        </tr>
+                                                                        <tr class="fz-13">
+                                                                            <td>Mark</td>
+                                                                            <td>TD</td>
+                                                                            <td>John Lin</td>
+                                                                            <td>特休</td>
+                                                                            <td>2021/09/02</td>
+                                                                            <td>2021/09/03</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-12 text-end align-items-end">
+                                                                <a class="" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">查看更多 <i
+                                                                        class="mx-2 fas fa-angle-right"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="leaveApplication">
+                                                        <label class="form-check-label">請假資訊</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- LinkURL template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="LinkURL_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col" style="height: 200px;">
+                                                                <img src="https://fakeimg.pl/350x200/?text=LinkURL" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="LinkURL col-lg-6 col-12" style="display: none;">
+                                                    <div class="container" style="height: 100%;">
+                                                        <div class="row p-3 card-radius bg-white shadow-sm">
+                                                            <div class="col-12">
+                                                                <p class="fz-20 lh-40 border-bottom text-center primary">系統連結</p>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-6 col-12">
+                                                                        <ul class="linkList">
+                                                                            <li>
+                                                                                <button class="btn btn-menu">員工園地 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                            <li>
+                                                                                <button class="btn btn-menu">文件檔案區 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                            <li>
+                                                                                <button class="btn btn-menu">網頁信箱 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                            <li>
+                                                                                <button class="btn btn-menu">SalesForce <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-12">
+                                                                        <ul class="linkList">
+                                                                            <li>
+                                                                                <button class="btn btn-menu">線上學習平台 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                            <li>
+                                                                                <button class="btn btn-menu">Redmine追蹤管理系統 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                            <li>
+                                                                                <button class="btn btn-menu">匯率查詢系統 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                            <li>
+                                                                                <button class="btn btn-menu">退貨維護查詢 <i class="fas fa-angle-right"></i></button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 text-end align-items-end">
+                                                                <a class="" href="sysForm.html">快速連結 <i class="mx-2 fas fa-angle-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="LinkURL">
+                                                        <label class="form-check-label">常用連結</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Index HomeBanner template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="HomeBanner_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col" style="height: 200px;">
+                                                                <img src="https://fakeimg.pl/350x200/?text=HomeBanner" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="HomeBanner col-12" style="display: none;">
+                                                    <div class="container-fluid">
+                                                        <div class="row pt-70 align-items-center">
+                                                            <div class="col-lg-3 col-12 order-lg-first order-last mt-lg-0 mt-3">
+                                                                <div class="row flex-xl-column d-flex px-4">
+                                                                    <div class="information_card bg_gradient">
+                                                                        <a class="" href="homepage.html">
+                                                                            <h3 class="white">關於益網</h3>
+                                                                            <p class="important fontsEn fz-12 lh-30">About EtherWan</p>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="information_card mt-4 bg_gradient">
+                                                                        <a class="" href="companyForm.html">
+                                                                            <h3 class="white">公司管理辦法/表單</h3>
+                                                                            <p class="important fontsEn fz-12 lh-30 ">Policy / Form</p>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="information_card mt-4 bg_gradient">
+                                                                        <a class="" href="useForm.html">
+                                                                            <h3 class="white">常用資訊</h3>
+                                                                            <p class="important fontsEn fz-12 lh-30">Useful Information</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-9 col-12 p-0 order-lg-last order-first">
+                                                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                                                    <div class="carousel-indicators ">
+                                                                    </div>
+                                                                    <div class="carousel-inner" style="height: 350px;">
+                                                                        <div class="carousel-item active photoLink">
+                                                                            <img src="https://fakeimg.pl/1920x350/" class="img-fluid" alt="...">
+                                                                        </div>
+                                                                        <div class="carousel-item photoLink">
+                                                                            <img src="https://fakeimg.pl/1920x350/" class="img-fluid" alt="...">
+                                                                        </div>
+                                                                        <div class="carousel-item photoLink">
+                                                                            <img src="https://fakeimg.pl/1920x350/" class="img-fluid" alt="...">
+                                                                        </div>
+                                                                    </div>
+                                                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                                                        data-bs-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="visually-hidden">Previous</span>
+                                                                    </button>
+                                                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                                                        data-bs-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="visually-hidden">Next</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="HomeBanner">
+                                                        <label class="form-check-label">首頁輪播</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Propaganda template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="Propaganda_demo border">
+                                                    <div class="container">
+                                                        <div class="row p-1">
+                                                            <div class="col" style="height: 200px;">
+                                                                <img src="https://fakeimg.pl/350x200/?text=Propaganda" class="img-fluid" alt="...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="Propaganda col-12" style="display: none;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-12 bg_third marqueeBox overflow-hidden p-2">
+                                                                <p class="white text-center f-500 fz-25"><i class="fas fa-bell"></i> 即時宣導</p>
+                                                                <div class="col-12 mt-4 marquee-wrapper" id="marquee">
+                                                                    <ul class="white mx-auto">
+                                                                        <li>1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia.</li>
+                                                                        <li>2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia.</li>
+                                                                        <li>3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="Propaganda">
+                                                        <label class="form-check-label">即時宣導</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer p-0xw">
+                                        <input type="submit" id="clone" class="btn btn-add btn-sm" value="新增"></input>
+                                    </div>
+                                </div>
+                                <div class="card p-0">
+                                    <div class="card-header bg_purple white">
+                                        <h3 class="card-title lh-30 m-0">版面設計</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="row box1">
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- /.content-wrapper -->
+        <footer class="main-footer bg-black">
+            &copy; 2021 EtherWAN Systems, Inc. All rights reserved.
+            All rights reserved.
+        </footer>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTable -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
+    <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <!-- js tree -->
+    <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/board.js"></script>
+    <script src="../dist/js/index.js"></script>
+    <script>
+        // $(function () {
+      //         $.ajax({
+      //             async: true,
+      //             type: "GET",
+      //             url: "http://localhost:8082/restdataapi/gettreedata",
+      //             dataType: "json",
+      //             success: function (json) {
+      //                 createJSTree(json);
+      //             },
+
+      //             error: function (xhr, ajaxOptions, thrownError) {
+      //                 alert(xhr.status);
+      //                 alert(thrownError);
+      //             }
+      //         });
+      //     });
+        $(function () {
+        const jsonData = [
+                {
+                    "id":"json1",
+                    "text": "首頁",
+                    "parent": "#",
+                    "state": {
+                        "opened": true,  //展示第一個層級下面的node 
+                    },
+                },
+                {
+                    "id": "json2",
+                    "text": "企業承諾",
+                    "parent": "json1",
+                    "a_attr": {
+                        "class": "a-link",
+                        "href": "#",
+                    },
+                },
+                {
+                "id": "json3",
+                "text": "企業政策",
+                "parent": "json1",
+                "a_attr": {
+                    "class": "a-link",
+                    "href": "#content2",
+                },
+                }
+            ]
+            createJSTree(jsonData);
+        })
+      
+            function customMenu($node) {
+                    var tree = $("#data").jstree(true);
+                    var items = {
+                        "Create": {
+                            "separator_before": false,
+                            "separator_after": true,
+                            "label": "新增頁面",
+                            action: function (data) {
+                                $node = tree.create_node($node, { text: 'New Folder', type: 'default' });
+                                tree.deselect_all();
+                                tree.select_node($node);
+                            }
+
+                        },
+                        "Rename": {
+                            "separator_before": false,
+                            "separator_after": false,
+                            "label": "重新命名",
+                            "action": function (obj) {
+                                tree.edit($node);
+                            }
+                        },
+                        "Remove": {
+                            "separator_before": false,
+                            "separator_after": false,
+                            "label": "刪除",
+                            "action": function (obj) {
+                                tree.delete_node($node);
+                            }
+                        }
+                    };
+                    if ($node.parent == 'json1') {    //如果是根節點
+                        delete items.Create;
+                    } return items
+            }
+            function createJSTree(jsonData) {
+                    $('#data').jstree({
+                        "core": {
+                            "check_callback": true,
+                            'data': jsonData
+                        },
+                        "plugins": ["themes", "json_data", "html_data","contextmenu"],
+                        "contextmenu": {
+                            "items": customMenu
+                        }
+                    })
+                }
+            
+            
+    </script>
+</body>
+
+</html>

@@ -32,15 +32,46 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
                     </a>
                 </li>
             </ul>
@@ -62,7 +93,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                                   with font-awesome or any other icon font library -->
+                                                                       with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -346,9 +377,9 @@
                         </li>
                         <li class="nav-header important">頁面設計</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="board.html" class="nav-link">
                                 <i class="fas fa-columns nav-icon"></i>
-                                <p>版面維護</p>
+                                <p>版面管理</p>
                             </a>
                         </li>
                     </ul>
@@ -365,224 +396,216 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">公告發布管理</h1>
+                            <h1 class="m-0">版面維護</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">公告發布管理</li>
+                                <li class="breadcrumb-item"><a href="./board.html">版面維護</a></li>
+                                <li class="breadcrumb-item active">版面編輯</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
-
-                    <!-- Main content -->
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-            <section class="content">
-                <div class="container-fluid">
-                    <div class="row px-3">
-                        <div class="card card-secondary p-0">
-                            <div class="card-header">
-                                <h3 class="card-title">Search</h3>
-                    
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                </div>
+
+            <!-- Main content -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-lg-0 mt-4">
+                        <section class="card p-0">
+                            <div class="card-header bg_purple white">
+                                <h3 class="card-title lh-30 m-0">清單歷程</h3>
                             </div>
-                            <div class="card-body row">
-                                <div class="form-group col-3">
-                                    <label for="inputEstimatedBudget">公告主旨</label>
-                                    <input type="number" id="inputEstimatedBudget" class="form-control">
-                                </div>
-                                <div class="form-group col-3">
-                                    <label >狀態篩選</label>
-                                    <div class="col-12 p-0">
-                                        <select class="singleSelect form-control-sm" style="width: 100%;">
-                                            <option></option>
-                                            <optgroup>
-                                                <option value="1">Approval</option>
-                                                <option value="2">Reject</option>
-                                                <option value="3">Fail</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                               <table class="table datatable-RWD nowrap table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>排序</th>
+                                            <th>開始時間</th>
+                                            <th>結束時間</th>
+                                            <th>表單編號</th>
+                                            <th>狀態</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td>2021/08/25</td>
+                                            <td>2021/12/25</td>
+                                            <td>A001</td>
+                                            <td><span>審核中</span></td>
+                                            <td>
+                                                <a type="submit" class="btn btn-edit btn-sm">編輯</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <!-- /.card-body -->
-                            <div class="card-footer">
-                                <button type="button" class="btn btn-add btn-sm"><i class="fas fa-search"></i> 查詢</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <section class="process col-12 connectedSortable py-4 ">
-                            <span class="vtitle">審核狀態</span>
-                            <table class="display responsive nowrap datatable-RWD mt-5" style="width: 100%;">
-                                <thead>
-                                    <tr>
-                                        <th >公告主旨</th>
-                                        <th >公告內文</th>
-                                        <th>發布日期</th>
-                                        <th>發布狀態</th>
-                                        <th >目前審核關卡</th>
-                                        <th >目前審核結果</th>
-                                        <th >申請人</th>
-                                        <th>申請日期</th>
-                                        <th style="width: 5%;">DeletionFlag</th>
-                                        <th style="width: 5%;"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>公告：停電通知</td>
-                                        <td><a href="#">公告內容</a></td>
-                                        <td>2021/09/09</td>
-                                        <td>已發布</td>
-                                        <td>總經理</td>
-                                        <td><span>Approval</span></td>
-                                        <td>UserA</td>
-                                        <td>2021/08/30</td>
-                                        <td>No</td>
-                                        <td>
-                                            <button type="button" class="btn btn-edit btn-sm"><i class="fas fa-pen"></i></button>
-                                            <button type="button" class="btn btn-delete btn-sm"><i class="fas fa-trash-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>公告：門故障通知</td>
-                                        <td><a href="#">公告內容</a></td>
-                                        <td>2021/09/09</td>
-                                        <td>審核中</td>
-                                        <td>總經理</td>
-                                        <td><span>In progress</span></td>
-                                        <td>UserB</td>
-                                        <td>2021/08/30</td>
-                                        <td>Yes</td>
-                                        <td>
-                                            <button type="button" class="btn btn-edit btn-sm"><i class="fas fa-pen"></i></button>
-                                            <button type="button" class="btn btn-delete btn-sm"><i class="fas fa-trash-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </section>
+                        <section class="card p-0">
+                            <div class="card-header bg_purple white">
+                                <h3 class="card-title lh-30 m-0">頁面設定</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form name="">
+                                <div class="card-body row">
+                                    <div class="row">
+                                        <div class="form-group col-6">
+                                            <label>排序</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Sort">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>標題</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Title">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>副標題</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="SubTitle">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>網頁描述</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Description">
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label>圖片</label>
+                                            <div class="input-group mb-3">
+                                                <input type="file" class="form-control" id="File">
+                                                <label class="input-group-text" for="inputGroupFile01">上傳檔案</label>
+                                            </div>
+                                            <img width="200px" id="demo" />
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label>自定義HTML</label>
+                                            <textarea class="summernote">
+                                            Place <em>some</em> <u>text</u> <strong>here</strong>
+                                            </textarea>
+                                            <!-- <div class="summernote">summernote 1</div> -->
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>按鈕文字</label>
+                                            <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>連結</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control" placeholder="OutSideURL"">
+                                                <div class="input-group-text">
+                                                    <input class="form-check-inline" type="checkbox" value="">
+                                                    <span class="form-check-label">另開視窗</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>開始時間</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control form-control-sm float-right" name="reservation">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>結束時間</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control form-control-sm float-right" name="reservation">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">是否發佈</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">已刪除</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-6">
+                                            <label>表單編號</label>
+                                            <input type="text" class="form-control form-control-sm" placeholder="FormNo">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>狀態</label>
+                                            <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
+                                                <option selected="selected">申請</option>
+                                                <option>審核中</option>
+                                                <option>駁回</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer p-0xw">
+                                    <button type="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                </div>
+                            </form>
+                            <!-- /.card-body -->
+                        </section>
+                        
                     </div>
                 </div>
-            </section>
-            <!-- /.content -->
+            </div>
         </div>
+
         <!-- /.content-wrapper -->
         <footer class="main-footer bg-black">
             &copy; 2021 EtherWAN Systems, Inc. All rights reserved.
             All rights reserved.
         </footer>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-
 
     <!-- jQuery -->
     <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="../plugins/jquery/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <!-- Bootstrap 5 -->
     <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTable -->
     <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
-    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="../plugins/jszip/jszip.min.js"></script>
-    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <!-- jQuery Plugins -->
-    <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <script src="../plugins/DataTables-1.10.25/Responsive-2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/DataTables-1.10.25/Responsive-2.2.9/js/responsive.bootstrap5.min.js"></script>
     <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
+    <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <!-- js tree -->
+    <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-lite.min.js"></script>
+    <!-- dropzonejs -->
+    <script src="../plugins/dropzone/min/dropzone.min.js"></script>
     <!-- daterangepicker -->
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/component.js"></script>
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false, 
-                "autoWidth": false,
-                "searching": false,
-                "ordering": false,
-                // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        });
-        function check_All(obj, vName){
-            const checkbox = document.getElementsByName(vName);
-            for (let i = 0; i < checkbox.length; i++) { 
-                checkbox[i].checked = true
-                // if (checkbox[i].checked == true) {
-                //     checkbox[i].checked = false
-                // }
-                // else {
-                //     checkbox[i].checked = true
-                // }
-            }
-        }
-        function clear_All(obj, vName){
-            const checkbox = document.getElementsByName(vName);
-            for (let i = 0; i < checkbox.length; i++) { 
-                checkbox[i].checked = false
-            }
-        }
-        $('.selectAll').click(function (e) {
-            const closet = $(this).parents('tr')
-            $(closet).find('td input[type=checkbox]').prop('checked', true);
-        });
-        $('.clearAll').click(function (e) {
-            const closet = $(this).parents('tr')
-            $(closet).find('td input[type=checkbox]').prop('checked', false);
-        });
-    </script>
-    <script>
-        const dataTable = document.querySelector('.datatable-RWD')
-        const rows = dataTable.rows;//獲取所有行
-        // console.log(rows.length);
-        for (let i = 0; i < rows.length; i++) {
-            for (let j = 0; j < rows[i].cells.length; j++) {
-                // console.log(rows[i].cells[j].innerText);
-                let text = rows[i].cells[j]
-                switch (text.innerText) {
-                    case 'Success':
-                        text.firstChild.className = 'pill-success';
-                        break;
-                    case 'Fail':
-                        text.firstChild.className = 'pill-danger'
-                        break;
-                    case 'Approval':
-                        text.firstChild.className = 'pill-approval'
-                        break;
-                    case 'In progress':
-                        text.firstChild.className = 'pill-draft'
-                        break;
-                }
-            }
-        }
-
-    </script>
+    <script src="../dist/js/board.js"></script>
+    <script src="../dist/js/index.js"></script>
 </body>
 
-</html>
+</html>s

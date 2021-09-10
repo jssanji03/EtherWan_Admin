@@ -2,6 +2,7 @@
     box-shadow: 1px 1px 3px 1px rgba(197, 197, 197, 0.37);
     border-radius: 5px;
     padding: 20px;
+    min-height: 300px;
 }
 
 .vtitle{
@@ -19,12 +20,14 @@
     border-radius: 5px;
     padding: 5px;
     height: 100%;
+    min-height: 420px;
 }
 .card-border{
     border-radius: 2px;
     padding: 5px;
     height: 100%;
     border: 1px solid rgb(206, 206, 206);
+    background-color: $white;
     transition:0.3s;
     &:hover{
         border:0px;
@@ -57,4 +60,15 @@
 .circle-sm{
     width: 40px;
     height: 40px;
+}
+
+.content-header{
+    position: relative;
+}
+.alert{
+    position: absolute;
+    z-index: 999;
+    top: 5px;
+    right: 15px;
+    width: 97%;
 }

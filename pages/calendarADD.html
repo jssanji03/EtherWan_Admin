@@ -121,7 +121,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="announcementADD.html" class="nav-link">
+                                    <a href="announcementADD.htm" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>公告發布作業</p>
                                     </a>
@@ -139,13 +139,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="calendar.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>行事曆發布管理</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="calendarADD.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>行事曆發布作業</p>
                                     </a>
@@ -365,12 +365,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">公告發布管理</h1>
+                            <h1 class="m-0">行事曆發布作業</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">公告發布管理</li>
+                                <li class="breadcrumb-item active">行事曆發布作業</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -381,94 +381,148 @@
             <!-- /.content-header -->
             <section class="content">
                 <div class="container-fluid">
-                    <div class="row px-3">
-                        <div class="card card-secondary p-0">
-                            <div class="card-header">
-                                <h3 class="card-title">Search</h3>
-                    
+                    <div class="row px-3 py-3">
+                        <div class="card p-0">
+                            <div class="card-header bg_purple">
+                                <h3 class="card-title white">年度性行事曆上傳</h3>
+
                                 <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                    <button type="button" class="btn btn-tool white" data-card-widget="collapse"
+                                        title="Collapse">
                                         <i class="fas fa-minus"></i>
                                     </button>
                                 </div>
                             </div>
-                            <div class="card-body row">
-                                <div class="form-group col-3">
-                                    <label for="inputEstimatedBudget">公告主旨</label>
-                                    <input type="number" id="inputEstimatedBudget" class="form-control">
+                            <div class="card-body">
+                                <div id="actions" class="row">
+                                    <div class="col-lg-6">
+                                        <div class="btn-group w-100">
+                                            <span class="btn btn-success col fileinput-button">
+                                                <i class="fas fa-plus"></i>
+                                                <span>Add files</span>
+                                            </span>
+                                            <button type="submit" class="btn btn-primary col start">
+                                                <i class="fas fa-upload"></i>
+                                                <span>Start upload</span>
+                                            </button>
+                                            <button type="reset" class="btn btn-warning col cancel">
+                                                <i class="fas fa-times-circle"></i>
+                                                <span>Cancel upload</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center">
+                                        <div class="fileupload-process w-100">
+                                            <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100" aria-valuenow="0">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group col-3">
-                                    <label >狀態篩選</label>
-                                    <div class="col-12 p-0">
-                                        <select class="singleSelect form-control-sm" style="width: 100%;">
-                                            <option></option>
-                                            <optgroup>
-                                                <option value="1">Approval</option>
-                                                <option value="2">Reject</option>
-                                                <option value="3">Fail</option>
-                                            </optgroup>
-                                        </select>
+                                <div class="table table-striped files" id="previews">
+                                    <div id="template" class="row mt-2">
+                                        <div class="col-auto">
+                                            <span class="preview"><img src="data:," alt="" data-dz-thumbnail /></span>
+                                        </div>
+                                        <div class="col d-flex align-items-center">
+                                            <p class="mb-0">
+                                                <span class="lead" data-dz-name></span>
+                                                (<span data-dz-size></span>)
+                                            </p>
+                                            <strong class="error text-danger" data-dz-errormessage></strong>
+                                        </div>
+                                        <div class="col-4 d-flex align-items-center">
+                                            <div class="progress progress-striped active w-100" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                                                aria-valuenow="0">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto d-flex align-items-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary start">
+                                                    <i class="fas fa-upload"></i>
+                                                    <span>Start</span>
+                                                </button>
+                                                <button data-dz-remove class="btn btn-warning cancel">
+                                                    <i class="fas fa-times-circle"></i>
+                                                    <span>Cancel</span>
+                                                </button>
+                                                <button data-dz-remove class="btn btn-danger delete">
+                                                    <i class="fas fa-trash"></i>
+                                                    <span>Delete</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- /.card-body -->
-                            <div class="card-footer">
-                                <button type="button" class="btn btn-add btn-sm"><i class="fas fa-search"></i> 查詢</button>
+                            <div class="card-footer text-center">
+                                <button type="button" class="btn btn-submit btn-sm">
+                                    上傳</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <section class="process col-12 connectedSortable py-4 ">
-                            <span class="vtitle">審核狀態</span>
-                            <table class="display responsive nowrap datatable-RWD mt-5" style="width: 100%;">
-                                <thead>
-                                    <tr>
-                                        <th >公告主旨</th>
-                                        <th >公告內文</th>
-                                        <th>發布日期</th>
-                                        <th>發布狀態</th>
-                                        <th >目前審核關卡</th>
-                                        <th >目前審核結果</th>
-                                        <th >申請人</th>
-                                        <th>申請日期</th>
-                                        <th style="width: 5%;">DeletionFlag</th>
-                                        <th style="width: 5%;"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>公告：停電通知</td>
-                                        <td><a href="#">公告內容</a></td>
-                                        <td>2021/09/09</td>
-                                        <td>已發布</td>
-                                        <td>總經理</td>
-                                        <td><span>Approval</span></td>
-                                        <td>UserA</td>
-                                        <td>2021/08/30</td>
-                                        <td>No</td>
-                                        <td>
-                                            <button type="button" class="btn btn-edit btn-sm"><i class="fas fa-pen"></i></button>
-                                            <button type="button" class="btn btn-delete btn-sm"><i class="fas fa-trash-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>公告：門故障通知</td>
-                                        <td><a href="#">公告內容</a></td>
-                                        <td>2021/09/09</td>
-                                        <td>審核中</td>
-                                        <td>總經理</td>
-                                        <td><span>In progress</span></td>
-                                        <td>UserB</td>
-                                        <td>2021/08/30</td>
-                                        <td>Yes</td>
-                                        <td>
-                                            <button type="button" class="btn btn-edit btn-sm"><i class="fas fa-pen"></i></button>
-                                            <button type="button" class="btn btn-delete btn-sm"><i class="fas fa-trash-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
+                    <div class="row px-3">
+                        <div class="card p-0">
+                            <div class="card-header bg_purple">
+                                <h3 class="card-title white">單日維護</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool white" data-card-widget="collapse"
+                                        title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>日期</label>
+                                        
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control float-right" name="reservation">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12">
+                                            <label for="inputEstimatedBudget">公告內文</label>
+                                            <textarea class="form-control" rows="8" placeholder="Enter ..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">DeletionFlag</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer text-center">
+                                <button type="button" class="btn btn-padding btn-sm">
+                                    儲存</button>
+                                <button type="button" class="btn btn-submit btn-sm">
+                                    送出申請</button>
+                                <button type="button" class="btn btn-cancel  btn-sm">
+                                    取消</button>
+                                <button type="button" class="btn btn-delete  btn-sm">
+                                    審核駁回</button>
+                                <button type="button" class="btn btn-success  btn-sm">
+                                    審核通過</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -511,6 +565,7 @@
     <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- jQuery Plugins -->
+    <script src="../plugins/dropzone/min/dropzone.min.js"></script>
     <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
     <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <!-- daterangepicker -->
@@ -519,70 +574,6 @@
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/component.js"></script>
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false, 
-                "autoWidth": false,
-                "searching": false,
-                "ordering": false,
-                // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        });
-        function check_All(obj, vName){
-            const checkbox = document.getElementsByName(vName);
-            for (let i = 0; i < checkbox.length; i++) { 
-                checkbox[i].checked = true
-                // if (checkbox[i].checked == true) {
-                //     checkbox[i].checked = false
-                // }
-                // else {
-                //     checkbox[i].checked = true
-                // }
-            }
-        }
-        function clear_All(obj, vName){
-            const checkbox = document.getElementsByName(vName);
-            for (let i = 0; i < checkbox.length; i++) { 
-                checkbox[i].checked = false
-            }
-        }
-        $('.selectAll').click(function (e) {
-            const closet = $(this).parents('tr')
-            $(closet).find('td input[type=checkbox]').prop('checked', true);
-        });
-        $('.clearAll').click(function (e) {
-            const closet = $(this).parents('tr')
-            $(closet).find('td input[type=checkbox]').prop('checked', false);
-        });
-    </script>
-    <script>
-        const dataTable = document.querySelector('.datatable-RWD')
-        const rows = dataTable.rows;//獲取所有行
-        // console.log(rows.length);
-        for (let i = 0; i < rows.length; i++) {
-            for (let j = 0; j < rows[i].cells.length; j++) {
-                // console.log(rows[i].cells[j].innerText);
-                let text = rows[i].cells[j]
-                switch (text.innerText) {
-                    case 'Success':
-                        text.firstChild.className = 'pill-success';
-                        break;
-                    case 'Fail':
-                        text.firstChild.className = 'pill-danger'
-                        break;
-                    case 'Approval':
-                        text.firstChild.className = 'pill-approval'
-                        break;
-                    case 'In progress':
-                        text.firstChild.className = 'pill-draft'
-                        break;
-                }
-            }
-        }
-
-    </script>
 </body>
 
 </html>
