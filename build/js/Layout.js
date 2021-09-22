@@ -33,7 +33,6 @@ const CLASS_NAME_SIDEBAR_FOCUSED = 'sidebar-focused'
 const CLASS_NAME_LAYOUT_FIXED = 'layout-fixed'
 const CLASS_NAME_CONTROL_SIDEBAR_SLIDE_OPEN = 'control-sidebar-slide-open'
 const CLASS_NAME_CONTROL_SIDEBAR_OPEN = 'control-sidebar-open'
-const CLASS_NAME_IFRAME_MODE = 'iframe-mode'
 
 const Default = {
   scrollbarTheme: 'os-theme-light',
@@ -67,7 +66,7 @@ class Layout {
 
     const heights = {
       window: $(window).height(),
-      header: $(SELECTOR_HEADER).length > 0 && !$('body').hasClass('layout-navbar-fixed') ? $(SELECTOR_HEADER).outerHeight() : 0,
+      header: $(SELECTOR_HEADER).length > 0 ? $(SELECTOR_HEADER).outerHeight() : 0,
       footer: $(SELECTOR_FOOTER).length > 0 ? $(SELECTOR_FOOTER).outerHeight() : 0,
       sidebar: $(SELECTOR_SIDEBAR).length > 0 ? $(SELECTOR_SIDEBAR).height() : 0,
       controlSidebar
@@ -86,9 +85,9 @@ class Layout {
       if (max === heights.controlSidebar) {
         $contentSelector.css(this._config.panelAutoHeightMode, (max + offset))
       } else if (max === heights.window) {
-        $contentSelector.css(this._config.panelAutoHeightMode, (max + offset) - (heights.footer == 0 ? 0 : (heights.header - heights.footer)))
+        $contentSelector.css(this._config.panelAutoHeightMode, (max + offset) - heights.header - heights.footer)
       } else {
-        $contentSelector.css(this._config.panelAutoHeightMode, (max + offset) - (heights.footer == 0 ? 0 : heights.header))
+        $contentSelector.css(this._config.panelAutoHeightMode, (max + offset) - heights.header)
       }
 
       if (this._isFooterFixed()) {
@@ -118,11 +117,7 @@ class Layout {
     const $body = $('body')
     const $selector = $(`${SELECTOR_LOGIN_BOX}, ${SELECTOR_REGISTER_BOX}`)
 
-    if ($body.hasClass(CLASS_NAME_IFRAME_MODE)) {
-      $body.css('height', '100%')
-      $('.wrapper').css('height', '100%')
-      $('html').css('height', '100%')
-    } else if ($selector.length === 0) {
+    if ($selector.length === 0) {
       $body.css('height', 'auto')
       $('html').css('height', 'auto')
     } else {

@@ -39,7 +39,7 @@ $(function () {
     timePicker: true,
     singleDatePicker: true,
     locale: {
-      format: 'YYYY/MM/DD hh:mm A'
+      format: 'YYYY/MM/DD'
     }
   });
 });
@@ -49,50 +49,12 @@ $(function () {
   $('input[name="singleDate"]').daterangepicker({
     singleDatePicker: true,
   showDropdowns: true,
-  //   minYear: 1901,
-  // maxYear: parseInt(moment().format('YYYY'), 10),
     locale: {
       format: 'YYYY/MM/DD'
     }
   });
 });
 /////###  End ###/////
-
-/////### magicsuggest 支援可輸入select Start ###/////
-// http://nicolasbize.com/magicsuggest/doc.html  
-
-$(function () { 
-  $('.searchAddress').magicSuggest({
-　　placeholder:'---- 請輸入 ----',
-　　allowFreeEntries: true,
-　　maxSelection:1,
-　　autoSelect:true,
-　　displayField:"value",
-　　resultAsString:true,
-    selectionStacked: true,
-    toggleOnClick: true,
-　　data: ['台北', '新北市']
-  }); 
-});
-
-
-///##### disabled magicsuggest 支援可輸入select #####////
-$(function () { 
-  $('.searchAddress_disable').magicSuggest({
-　　placeholder:'---- 請輸入 ----',
-　　allowFreeEntries: true,
-　　maxSelection:1,
-　　autoSelect:true,
-　　displayField:"value",
-　　resultAsString:true,
-    selectionStacked: true,
-    toggleOnClick: true,
-    disabled: true,
-　　data: ['台北', '新北市']
-  }); 
-});
-/////###  End ###/////
-
 
 /////### 單選 select2 Start ###/////
 // https://select2.org/getting-started/basic-usage
@@ -130,17 +92,9 @@ $(function () {
     });
 });
 
-//跑馬燈
-$(function () {
-    const marqueeStyleArr = document.getElementsByClassName('marquee');
-    for (let i = 0; i < marqueeStyleArr.length; i++) {
-        console.log(marqueeStyleArr.length);
-        this.translateX = this.translateX + marqueeStyleArr[i].clientWidth;  
-    }
-})
 
 
-//jsTree
+//畫面拖曳 sortable
 $(function () {
     $( ".box1" ).sortable({
     connectWith: ".box1",  

@@ -342,7 +342,7 @@
           </li>
           <li class="nav-header important">頁面設計</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="./pages/board.html" class="nav-link">
               <i class="fas fa-columns nav-icon"></i>
               <p>版面維護</p>
             </a>
@@ -376,53 +376,56 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <!-- Main row -->
-        <div class="row px-3">
-            <div class="card card-secondary p-0">
-              <div class="card-header">
-                <h3 class="card-title">Search</h3>
-            
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body row">
-                <div class="form-group col-3">
-                  <label for="inputEstimatedBudget">Estimated budget</label>
-                  <input type="number" id="inputEstimatedBudget" class="form-control">
-                </div>
-                <div class="form-group col-3">
-                  <label for="inputSpentBudget">Total amount spent</label>
-                  <input type="number" id="inputSpentBudget" class="form-control">
-                </div>
-                <div class="form-group col-3">
-                  <label for="inputEstimatedDuration">Estimated project duration</label>
-                  <input type="number" id="inputEstimatedDuration" class="form-control">
-                </div>
-                <div class="form-group col-3">
-                  <label for="inputEstimatedDuration">Estimated project duration</label>
-                  <input type="number" id="inputEstimatedDuration" class="form-control">
-                </div>
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer">
-                <button type="button" class="btn btn-add btn-sm"><i class="fas fa-search"></i> 查詢</button>
-              </div>
+        <!-- SELECT2 EXAMPLE -->
+        <div class="card card-secondary p-0">
+          <div class="card-header">
+            <h3 class="card-title m-0">查詢</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
             </div>
-          <!-- col -->
-          <section class="process col-12 connectedSortable py-4 ">
-            <span class="vtitle">待審核申請</span>
-            <table class="display responsive nowrap datatable-RWD mt-5" style="width: 100%;">
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>公司代碼</label>
+                  <input type="text" id="comCode" class="form-control">
+                </div>
+              </div>
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>公司名稱</label>
+                  <input type="text" id="comName" class="form-control">
+                </div>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            <input type="submit" class="btn btn-search btn-sm" id="submit" value="查詢"></input>
+            <input type="submit" class="btn btn-add btn-sm" value="新增"></input>
+          </div>
+        </div>
+        <!-- /.card -->
+        <section class="process col-12 connectedSortable py-4 ">
+            <span class="vtitle">我的申請狀態</span>
+            <table class="display responsive nowrap datatable-RWD" style="width: 100%;">
               <thead>
                 <tr>
-                  <th style="width: 5%;">申請編號</th>
-                  <th>申請功能</th>
-                  <th style="width: 30%;">申請內容</th>
-                  <th style="width: 5%;">目前審核關卡</th>
+                  <th>申請單編碼</th>
+                  <th>申請作業名稱</th>
+                  <th>申請作業連結</th>
+                  <th>申請者</th>
                   <th>申請日期</th>
-                  <th style="width: 10%;">申請人</th>
+                  <th>發布起始日</th>
+                  <th>發布結束日</th>
                 </tr>
               </thead>
               <tbody>
@@ -430,22 +433,68 @@
                   <td>0001</td>
                   <td>行事曆</td>
                   <td><a href="#">申請內容</a></td>
-                  <td><span>直屬主管</span></td>
+                  <td>Mark</td>
                   <td>2021/08/25</td>
-                  <td>UserA</td>
+                  <td>2021/10/01</td>
+                  <td>2021/10/05</td>
                 </tr>
                 <tr>
                   <td>0002</td>
                   <td>公告</td>
                   <td><a href="#">申請內容</a></td>
-                  <td><span>直屬主管</span></td>
-                  <td>2021/08/30</td>
-                  <td>UserB</td>
+                  <td>Johnny</td>
+                  <td>2021/08/27</td>
+                  <td>2021/10/06</td>
+                  <td>2021/10/10</td>
                 </tr>
               </tbody>
             </table>
-          </section>
-        </div>
+        </section>
+        <section class="process col-12 connectedSortable py-4 ">
+            <span class="vtitle">待審核申請</span>
+            <table class="display responsive nowrap datatable-RWD" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th>申請單編碼</th>
+                  <th>申請作業名稱</th>
+                  <th>申請作業連結</th>
+                  <th>申請者</th>
+                  <th>申請日期</th>
+                  <th>審核結果</th>
+                  <th>目前審核關卡</th>
+                  <th>發布狀態</th>
+                  <th>發布起始日</th>
+                  <th>發布結束日</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td>行事曆</td>
+                  <td><a href="#">申請內容</a></td>
+                  <td>Mark</td>
+                  <td>2021/08/25</td>
+                  <td><span>審核中</span></td>
+                  <td>直屬主管</td>
+                  <td>已發布</td>
+                  <td>2021/10/05</td>
+                  <td>2021/10/05</td>
+                </tr>
+                <tr>
+                  <td>0002</td>
+                  <td>行事曆</td>
+                  <td><a href="#">申請內容</a></td>
+                  <td>Mark</td>
+                  <td>2021/08/25</td>
+                  <td><span>駁回</span></td>
+                  <td>直屬主管</td>
+                  <td>未發布</td>
+                  <td>2021/10/01</td>
+                  <td>2021/10/05</td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
@@ -474,33 +523,60 @@
 <!-- daterangepicker -->
 <script src="plugins/moment/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-lite.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <script src="dist/js/component.js"></script>
+<script src="dist/js/index.js"></script>
 <script>
-  const dataTable = document.querySelector('.datatable-RWD')
-  const rows = dataTable.rows;//獲取所有行
-  // console.log(rows.length);
-  for (let i = 0; i < rows.length; i++) {
-    for (let j = 0; j < rows[i].cells.length; j++) {
-      // console.log(rows[i].cells[j].innerText);
-      let text = rows[i].cells[j]
-      switch (text.innerText) {
-        case '直屬主管':
-          text.firstChild.className = 'pill-success';
-          break;
-        case 'Reject':
-          text.firstChild.className = 'pill-danger'
-          break;
-        case 'Approval':
-          text.firstChild.className = 'pill-approval'
-          break;
-        case 'Draft':
-          text.firstChild.className = 'pill-draft'
-          break;
-      }
+  
+  const submit = document.getElementById('submit');
+  submit.addEventListener('click', () => {
+    const comCode = document.getElementById('comCode');
+    const comName = document.getElementById('comName');
+    function successAction() {
+      localStorage.setItem('companyCode', comCode.value);
+      localStorage.setItem('companyName', comName.value);
+      comCode.value = '';
+      comName.value = '';
+      alert("saved");
     }
-  }
+    successAction()
+  });
+
+  // //add event listener to form
+  // const form = document.querySelector('form')
+  // // const submitBtn = document.querySelector('input[type="submit"]')
+  // const input = document.querySelector('#inputEstimatedBudget')
+  // const displayArea = document.querySelector('ul')
+  // const searchList = JSON.parse(localStorage.getItem('searchList'))
+  // //當localStorage沒有資料陣列，指定一個空陣列放入資料庫
+  //   if (localStorage.getItem('searchList') === null) {
+  //     var storageArray = [];
+  //     localStorage.setItem('searchList', JSON.stringify(storageArray));
+  //     //當localStorage已存在資料陣列，指定一個內容與陣列資料庫相同的陣列
+  //   } else {
+  //     var storageArray = JSON.parse(localStorage.getItem('searchList'));
+  //   };
+
+  //   form.addEventListener("submit", updateLocalStorage)
+
+
+  // function displayWish(input) {
+  //     displayArea.innerHTML += `
+  //     <li>${input}<span>X</span></li>
+  //   `
+  //   }
+  // submitBtn.addEventListener('click', event => {
+  //   //prevent auto send the form
+  //   event.preventDefault()
+  //   storageArray.push(input.value)
+  //   // displayWish(input.value)
+    
+  //   updateLocalStorage(input.value)
+  //   input.value = ''
+  // })
 
 </script>
 </body>

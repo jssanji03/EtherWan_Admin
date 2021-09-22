@@ -384,7 +384,7 @@
                     <div class="row px-3">
                         <div class="card card-secondary p-0">
                             <div class="card-header">
-                                <h3 class="card-title">Search</h3>
+                                <h3 class="card-title m-0">Search</h3>
                     
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -392,22 +392,28 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="card-body row">
-                                <div class="form-group col-3">
-                                    <label for="inputEstimatedBudget">公告主旨</label>
-                                    <input type="number" id="inputEstimatedBudget" class="form-control">
-                                </div>
-                                <div class="form-group col-3">
-                                    <label >狀態篩選</label>
-                                    <div class="col-12 p-0">
-                                        <select class="singleSelect form-control-sm" style="width: 100%;">
-                                            <option></option>
-                                            <optgroup>
-                                                <option value="1">Approval</option>
-                                                <option value="2">Reject</option>
-                                                <option value="3">Fail</option>
-                                            </optgroup>
-                                        </select>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="inputEstimatedBudget">公告主旨</label>
+                                            <input type="number" id="inputEstimatedBudget" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label >狀態篩選</label>
+                                            <div class="col-12 p-0">
+                                                <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                    <option></option>
+                                                    <optgroup>
+                                                        <option value="1">Approval</option>
+                                                        <option value="2">Reject</option>
+                                                        <option value="3">Fail</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -423,16 +429,16 @@
                             <table class="display responsive nowrap datatable-RWD mt-5" style="width: 100%;">
                                 <thead>
                                     <tr>
-                                        <th >公告主旨</th>
-                                        <th >公告內文</th>
+                                        <th>公告主旨</th>
+                                        <th>公告內文</th>
                                         <th>發布日期</th>
                                         <th>發布狀態</th>
-                                        <th >目前審核關卡</th>
-                                        <th >目前審核結果</th>
-                                        <th >申請人</th>
+                                        <th>目前審核關卡</th>
+                                        <th>目前審核結果</th>
+                                        <th>申請人</th>
                                         <th>申請日期</th>
-                                        <th style="width: 5%;">DeletionFlag</th>
-                                        <th style="width: 5%;"></th>
+                                        <th>DeletionFlag</th>
+                                        <th style="width: 10%;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>

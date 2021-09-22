@@ -142,30 +142,30 @@
    */
 
 
-  // $__default['default'](document).on('click', SELECTOR_DATA_REFRESH, function (event) {
-  //   if (event) {
-  //     event.preventDefault();
-  //   }
+  $__default['default'](document).on('click', SELECTOR_DATA_REFRESH, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
 
-  //   CardRefresh._jQueryInterface.call($__default['default'](this), 'load');
-  // });
-  // $__default['default'](function () {
-  //   $__default['default'](SELECTOR_DATA_REFRESH).each(function () {
-  //     CardRefresh._jQueryInterface.call($__default['default'](this));
-  //   });
-  // });
+    CardRefresh._jQueryInterface.call($__default['default'](this), 'load');
+  });
+  $__default['default'](function () {
+    $__default['default'](SELECTOR_DATA_REFRESH).each(function () {
+      CardRefresh._jQueryInterface.call($__default['default'](this));
+    });
+  });
   /**
    * jQuery API
    * ====================================================
    */
 
-  // $__default['default'].fn[NAME$e] = CardRefresh._jQueryInterface;
-  // $__default['default'].fn[NAME$e].Constructor = CardRefresh;
+  $__default['default'].fn[NAME$e] = CardRefresh._jQueryInterface;
+  $__default['default'].fn[NAME$e].Constructor = CardRefresh;
 
-  // $__default['default'].fn[NAME$e].noConflict = function () {
-  //   $__default['default'].fn[NAME$e] = JQUERY_NO_CONFLICT$e;
-  //   return CardRefresh._jQueryInterface;
-  // };
+  $__default['default'].fn[NAME$e].noConflict = function () {
+    $__default['default'].fn[NAME$e] = JQUERY_NO_CONFLICT$e;
+    return CardRefresh._jQueryInterface;
+  };
 
   /**
    * --------------------------------------------
@@ -359,39 +359,39 @@
    */
 
 
-  // $__default['default'](document).on('click', SELECTOR_DATA_COLLAPSE, function (event) {
-  //   if (event) {
-  //     event.preventDefault();
-  //   }
+  $__default['default'](document).on('click', SELECTOR_DATA_COLLAPSE, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
 
-  //   CardWidget._jQueryInterface.call($__default['default'](this), 'toggle');
-  // });
-  // $__default['default'](document).on('click', SELECTOR_DATA_REMOVE, function (event) {
-  //   if (event) {
-  //     event.preventDefault();
-  //   }
+    CardWidget._jQueryInterface.call($__default['default'](this), 'toggle');
+  });
+  $__default['default'](document).on('click', SELECTOR_DATA_REMOVE, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
 
-  //   CardWidget._jQueryInterface.call($__default['default'](this), 'remove');
-  // });
-  // $__default['default'](document).on('click', SELECTOR_DATA_MAXIMIZE, function (event) {
-  //   if (event) {
-  //     event.preventDefault();
-  //   }
+    CardWidget._jQueryInterface.call($__default['default'](this), 'remove');
+  });
+  $__default['default'](document).on('click', SELECTOR_DATA_MAXIMIZE, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
 
-  //   CardWidget._jQueryInterface.call($__default['default'](this), 'toggleMaximize');
-  // });
+    CardWidget._jQueryInterface.call($__default['default'](this), 'toggleMaximize');
+  });
   /**
    * jQuery API
    * ====================================================
    */
 
-  // $__default['default'].fn[NAME$d] = CardWidget._jQueryInterface;
-  // $__default['default'].fn[NAME$d].Constructor = CardWidget;
+  $__default['default'].fn[NAME$d] = CardWidget._jQueryInterface;
+  $__default['default'].fn[NAME$d].Constructor = CardWidget;
 
-  // $__default['default'].fn[NAME$d].noConflict = function () {
-  //   $__default['default'].fn[NAME$d] = JQUERY_NO_CONFLICT$d;
-  //   return CardWidget._jQueryInterface;
-  // };
+  $__default['default'].fn[NAME$d].noConflict = function () {
+    $__default['default'].fn[NAME$d] = JQUERY_NO_CONFLICT$d;
+    return CardWidget._jQueryInterface;
+  };
 
   /**
    * --------------------------------------------
@@ -683,13 +683,13 @@
    * ====================================================
    */
 
-  // $__default['default'].fn[NAME$c] = ControlSidebar._jQueryInterface;
-  // $__default['default'].fn[NAME$c].Constructor = ControlSidebar;
+  $__default['default'].fn[NAME$c] = ControlSidebar._jQueryInterface;
+  $__default['default'].fn[NAME$c].Constructor = ControlSidebar;
 
-  // $__default['default'].fn[NAME$c].noConflict = function () {
-  //   $__default['default'].fn[NAME$c] = JQUERY_NO_CONFLICT$c;
-  //   return ControlSidebar._jQueryInterface;
-  // };
+  $__default['default'].fn[NAME$c].noConflict = function () {
+    $__default['default'].fn[NAME$c] = JQUERY_NO_CONFLICT$c;
+    return ControlSidebar._jQueryInterface;
+  };
 
   /**
    * --------------------------------------------

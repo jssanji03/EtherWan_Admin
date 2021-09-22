@@ -458,9 +458,10 @@
                                     <div class="row">
                                         <div class="form-group col-6">
                                             <label>排序</label>
-                                            <input type="text" class="form-control form-control-sm"
-                                                placeholder="Sort">
+                                            <input type="text" class="form-control form-control-sm" placeholder="Sort">
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="form-group col-6">
                                             <label>標題</label>
                                             <input type="text" class="form-control form-control-sm"
@@ -471,25 +472,26 @@
                                             <input type="text" class="form-control form-control-sm"
                                                 placeholder="SubTitle">
                                         </div>
-                                        <div class="form-group col-6">
-                                            <label>網頁描述</label>
-                                            <input type="text" class="form-control form-control-sm"
-                                                placeholder="Description">
-                                        </div>
                                         <div class="form-group col-12">
+                                            <label>網頁描述</label>
+                                            <textarea class="form-control" rows="5" placeholder="Description"></textarea>
+                                        </div>
+                                        <div class="form-group col-6">
                                             <label>圖片</label>
                                             <div class="input-group mb-3">
                                                 <input type="file" class="form-control" id="File">
                                                 <label class="input-group-text" for="inputGroupFile01">上傳檔案</label>
                                             </div>
-                                            <img width="200px" id="demo" />
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <img class="picDemo" style="height: 100px;">
+                                            <canvas id="the-canvas" style="display: none;"></canvas>
                                         </div>
                                         <div class="form-group col-12">
-                                            <label>自定義HTML</label>
+                                            <label>自定義</label>
                                             <textarea class="summernote">
                                             Place <em>some</em> <u>text</u> <strong>here</strong>
                                             </textarea>
-                                            <!-- <div class="summernote">summernote 1</div> -->
                                         </div>
                                         <div class="form-group col-6">
                                             <label>按鈕文字</label>
@@ -586,7 +588,7 @@
     <!-- Bootstrap 5 -->
     <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTable -->
-    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <script src="../plugins/DataTables-1.10.25/DataTables-1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="../plugins/DataTables-1.10.25/Responsive-2.2.9/js/dataTables.responsive.min.js"></script>
     <script src="../plugins/DataTables-1.10.25/Responsive-2.2.9/js/responsive.bootstrap5.min.js"></script>
     <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
@@ -606,6 +608,10 @@
     <script src="../dist/js/component.js"></script>
     <script src="../dist/js/board.js"></script>
     <script src="../dist/js/index.js"></script>
+    <script>
+        // var sHTML = $('.summernote').summernote('code');
+        // console.log(sHTML);
+    </script>
 </body>
 
 </html>s

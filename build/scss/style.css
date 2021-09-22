@@ -3,7 +3,6 @@
 @import url("../../plugins/bootstrap-5.0.0-dist/css/bootstrap-reboot.min.css");
 @import url("../../plugins/bootstrap-5.0.0-dist/css/bootstrap.min.css");
 @import url("../../plugins/jquery-ui/jquery-ui.min.css");
-@import url("../../plugins/summernote/summernote.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
 @import url("../../plugins/select2-4.0.13/css/select2.min.css");
 @import url("../../plugins/dropzone/min/dropzone.min.css");
@@ -72,7 +71,7 @@ table {
 }
 
 .fontsEn {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Urbanist", sans-serif;
 }
 
 .f-300 {
@@ -369,7 +368,7 @@ table {
   font-weight: 400;
   border-radius: 5px;
   margin: 0px 5px;
-  background-color: #313994;
+  background-color: #3872dd;
   color: #ffffff;
 }
 
@@ -392,7 +391,7 @@ table {
   font-weight: 400;
   border-radius: 5px;
   margin: 0px 5px;
-  background-color: #7C8AA1;
+  background-color: #5bbbeb;
   color: #ffffff;
 }
 
@@ -404,6 +403,29 @@ table {
 }
 
 .btn-add:focus {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-search {
+  height: 35px;
+  min-width: auto;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 0px 5px;
+  background-color: #7C8AA1;
+  color: #ffffff;
+}
+
+.btn-search:hover {
+  background-color: #525e70;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-search:focus {
   font-size: 16px;
   font-weight: 400;
 }
@@ -496,29 +518,6 @@ table {
 }
 
 .btn-cancel:focus {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.btn-padding {
-  height: 35px;
-  min-width: auto;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 5px;
-  margin: 0px 5px;
-  background-color: RGB(245, 199, 29);
-  color: #ffffff;
-}
-
-.btn-padding:hover {
-  background-color: #e4ba00;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.btn-padding:focus {
   font-size: 16px;
   font-weight: 400;
 }
@@ -672,6 +671,27 @@ button {
 
 .photoLink {
   max-height: 450px;
+}
+
+.imgPreview {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*容器佔滿整個螢幕*/
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.imgPreview img {
+  height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .InputArea .card {
@@ -873,7 +893,10 @@ button {
           box-shadow: 1px 1px 3px 1px rgba(197, 197, 197, 0.37);
   border-radius: 5px;
   padding: 20px;
-  min-height: 300px;
+}
+
+.card .card-header h3 {
+  font-size: 18px;
 }
 
 .vtitle {
@@ -979,6 +1002,7 @@ table.dataTable thead tr th {
   padding: 8px;
   vertical-align: middle;
   line-height: 20px;
+  white-space: nowrap;
 }
 
 table.dataTable tbody tr {
@@ -995,6 +1019,8 @@ table.dataTable tbody tr td {
   vertical-align: middle;
   outline: none;
   padding: 8px;
+  white-space: nowrap;
+  text-align: center;
 }
 
 table.dataTable tbody tr:nth-child(odd) {
@@ -1311,13 +1337,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Urbanist", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   margin: 0px;
 }
 
+h3 {
+  font-size: 25px;
+}
+
 p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Urbanist", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #5a5a5a;
   line-height: 1.5;
   font-weight: 400;
@@ -1328,7 +1358,7 @@ a,
 a:focus {
   text-decoration: none;
   outline: 0 solid transparent;
-  font-family: "Roboto", sans-serif;
+  font-family: "Urbanist", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: RGB(53, 157, 209);
 }
 
@@ -1348,6 +1378,15 @@ ul li {
 img {
   height: auto;
   max-width: 100%;
+}
+
+section {
+  padding: 10px 20px;
+}
+
+section.page_title {
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .orgArea {
@@ -2224,7 +2263,6 @@ img {
 .marqueeBox .marquee-wrapper ul {
   height: 30px;
   position: relative;
-  width: 100%;
 }
 
 .marqueeBox .marquee-wrapper ul li {
@@ -2232,29 +2270,17 @@ img {
   top: -10;
   left: calc(40% - 100px);
   opacity: 0;
-  -webkit-animation: display 12s ease-in-out  infinite;
-          animation: display 12s ease-in-out  infinite;
+  -webkit-animation-name: display;
+          animation-name: display;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 767px) {
   .marqueeBox .marquee-wrapper ul li {
     left: calc(30% - 100px);
   }
-}
-
-.marqueeBox .marquee-wrapper ul li:nth-child(2) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-.marqueeBox .marquee-wrapper ul li:nth-child(3) {
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-}
-
-.marqueeBox .marquee-wrapper ul li:nth-child(4) {
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
 }
 
 @-webkit-keyframes display {
@@ -2268,14 +2294,14 @@ img {
             transform: translateX(0);
     opacity: 1;
   }
-  20% {
+  15% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
   }
-  30% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+  20% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {
@@ -2296,14 +2322,14 @@ img {
             transform: translateX(0);
     opacity: 1;
   }
-  20% {
+  15% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
   }
-  30% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+  20% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {

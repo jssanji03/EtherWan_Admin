@@ -384,8 +384,7 @@
                     <div class="row px-3">
                         <div class="card p-0">
                             <div class="card-header bg_purple">
-                                <h3 class="card-title white">公告</h3>
-
+                                <h3 class="card-title white m-0">公告</h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool white" data-card-widget="collapse"
                                         title="Collapse">
@@ -393,48 +392,136 @@
                                     </button>
                                 </div>
                             </div>
+                            <form>
                             <div class="card-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="form-group col-12">
-                                            <label for="inputEstimatedBudget">公告主旨</label>
-                                            <input type="number" id="inputEstimatedBudget" class="form-control">
+                                <div class="row">
+                                    <div class="form-group col-lg-3 col-md-6 col-12">
+                                        <label>申請者</label>
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group col-lg-3 col-md-6 col-12">
+                                        <label>申請單編號</label>
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group col-lg-3 col-md-6 col-12">
+                                        <label>申請日期</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="far fa-calendar-alt"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control form-control-sm float-right" name="reservation">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-12">
-                                            <label for="inputEstimatedBudget">公告內文</label>
-                                            <textarea class="form-control" rows="8" placeholder="Enter ..."></textarea>
+                                    <div class="form-group col-lg-3 col-md-6 col-12">
+                                        <label>申請單位</label>
+                                        <div class="col-12 p-0">
+                                            <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                <option></option>
+                                                <optgroup>
+                                                    <option value="1">HR部門</option>
+                                                    <option value="2">福委會</option>
+                                                </optgroup>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">即時宣導</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label>即時宣導內文</label>
+                                        <textarea class="form-control" rows="5" name="Description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="form-group col-md-6 col-12">
+                                            <label>公告主旨</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="form-group col-md-6 col-12">
+                                            <label>聯繫窗口</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
                                         <div class="form-group col-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox">
-                                                <label class="form-check-label">DeletionFlag</label>
+                                            <label>公告內文</label>
+                                            <textarea class="form-control" rows="5" name="Description"></textarea>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label>公告網址</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>圖片</label>
+                                            <div class="input-group mb-3">
+                                                <input type="file" class="form-control" id="File">
+                                                <label class="input-group-text">上傳檔案</label>
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
+                                        <div class="form-group col-6">
+                                            <img class="picDemo" style="height: 100px;">
+                                            <canvas id="the-canvas" style="display: none;"></canvas>
+                                        </div>
+                                        <div class="imgPreview">
+                                            <img src="#" alt="" id="imgPreview">
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="form-group col-12">
+                                            <label for="inputEstimatedBudget">評語/備註</label>
+                                            <textarea class="form-control" rows="5" placeholder="Enter ..."></textarea>
+                                        </div>
+                                </div>
                             </div>
-                            <!-- /.card-body -->
+                                <!-- /.card-body -->
                             <div class="card-footer text-center">
-                                <button type="button" class="btn btn-padding btn-sm">
-                                    儲存</button>
-                                <button type="button" class="btn btn-submit btn-sm">
-                                    送出申請</button>
-                                <button type="button" class="btn btn-cancel  btn-sm">
-                                    取消</button>
-                                <button type="button" class="btn btn-delete  btn-sm">
-                                    審核駁回</button>
-                                <button type="button" class="btn btn-success  btn-sm">
-                                    審核通過</button>
+                                <input type="submit" class="btn btn-success btn-sm" value="審核通過"></input>
+                                <input type="submit" class="btn btn-delete btn-sm" value="審核駁回">
+                                </input>
+                                <input type="submit" class="btn btn-cancel btn-sm" value="取消">
+                                </input>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- /.content -->
+            <section class="processpy-4 ">
+                <span class="vtitle">審核歷程</span>
+                <table class="display responsive nowrap datatable-RWD" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>流水號</th>
+                            <th>審核人員</th>
+                            <th>審核結果</th>
+                            <th>評語</th>
+                            <th>審核日期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>UserA</td>
+                            <td><span>駁回</span></td>
+                            <td>圖片不清晰</td>
+                            <td>2021/10/05</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>UserA</td>
+                            <td><span>審核完成</span></td>
+                            <td>ＯＫ</td>
+                            <td>2021/10/05</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer bg-black">
@@ -442,12 +529,12 @@
             All rights reserved.
         </footer>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
         <!-- /.control-sidebar -->
+        
     </div>
+    <!-- Button trigger modal -->
+    
+    <!-- Modal -->
     <!-- ./wrapper -->
 
 
@@ -461,90 +548,23 @@
     <!-- DataTable -->
     <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
     <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="../plugins/jszip/jszip.min.js"></script>
-    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- jQuery Plugins -->
     <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
     <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <!-- daterangepicker -->
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-lite.min.js"></script>
+    <!-- js tree -->
+    <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.js"></script>
+    <!-- <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script> -->
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/component.js"></script>
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                "searching": false,
-                "ordering": false,
-                // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        });
-        function check_All(obj, vName) {
-            const checkbox = document.getElementsByName(vName);
-            for (let i = 0; i < checkbox.length; i++) {
-                checkbox[i].checked = true
-                // if (checkbox[i].checked == true) {
-                //     checkbox[i].checked = false
-                // }
-                // else {
-                //     checkbox[i].checked = true
-                // }
-            }
-        }
-        function clear_All(obj, vName) {
-            const checkbox = document.getElementsByName(vName);
-            for (let i = 0; i < checkbox.length; i++) {
-                checkbox[i].checked = false
-            }
-        }
-        $('.selectAll').click(function (e) {
-            const closet = $(this).parents('tr')
-            $(closet).find('td input[type=checkbox]').prop('checked', true);
-        });
-        $('.clearAll').click(function (e) {
-            const closet = $(this).parents('tr')
-            $(closet).find('td input[type=checkbox]').prop('checked', false);
-        });
-    </script>
-    <script>
-        const dataTable = document.querySelector('.datatable-RWD')
-        const rows = dataTable.rows;//獲取所有行
-        // console.log(rows.length);
-        for (let i = 0; i < rows.length; i++) {
-            for (let j = 0; j < rows[i].cells.length; j++) {
-                // console.log(rows[i].cells[j].innerText);
-                let text = rows[i].cells[j]
-                switch (text.innerText) {
-                    case 'Success':
-                        text.firstChild.className = 'pill-success';
-                        break;
-                    case 'Fail':
-                        text.firstChild.className = 'pill-danger'
-                        break;
-                    case 'Approval':
-                        text.firstChild.className = 'pill-approval'
-                        break;
-                    case 'In progress':
-                        text.firstChild.className = 'pill-draft'
-                        break;
-                }
-            }
-        }
-
-    </script>
+    <script src="../dist/js/board.js"></script>
+    <script src="../dist/js/index.js"></script>
 </body>
 
 </html>

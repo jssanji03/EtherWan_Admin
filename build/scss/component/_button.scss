@@ -22,10 +22,13 @@
 }
 
 .btn-success {
-    @include button($background-color:$primary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+    @include button($background-color:#3872dd,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
 }
 .btn-add {
-    @include button($background-color:#7C8AA1,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+    @include button($background-color:$important,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btn-search {
+    @include button($background-color:#7C8AA1,$fontColor: $white,$hover-color:#525e70,$hover-fontColor:$white);
 }
 .btn-submit {
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
@@ -39,9 +42,9 @@
 .btn-cancel {
     @include button($background-color:rgb(207, 207, 207),$fontColor: $text,$hover-color:rgb(71, 71, 71),$hover-fontColor:$white);
 }
-.btn-padding {
-    @include button($background-color:$yellow,$fontColor: $white,$hover-color:rgb(228, 186, 0),$hover-fontColor:$white);
-}
+// .btn-padding {
+//     @include button($background-color:$yellow,$fontColor: $white,$hover-color:rgb(228, 186, 0),$hover-fontColor:$white);
+// }
 
 .btn-cal{
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$secondary,$hover-fontColor:$white);

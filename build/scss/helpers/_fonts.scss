@@ -1,8 +1,10 @@
 // Fonts
 $fonts: 'Roboto', sans-serif;
 $fontsNoto: 'Noto Sans TC', sans-serif;
+$fontEn:'Urbanist', sans-serif;
 
 $font-family-sans-serif:
+"Urbanist", sans-serif,
   // Safari for macOS and iOS (San Francisco)
   -apple-system,
   // Chrome < 56 for macOS (San Francisco)
@@ -24,7 +26,7 @@ $font-family-sans-serif:
 // $fontsEn: "Montserrat", sans-serif;
 
 .fontsEn{
-    font-family: $font-family-sans-serif;
+    font-family: $fontEn;
 }
 .f-300{
     font-weight: 300;
