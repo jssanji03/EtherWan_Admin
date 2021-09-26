@@ -411,7 +411,7 @@
                                                     <i class="far fa-calendar-alt"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" class="form-control form-control-sm float-right" name="reservation">
+                                            <input type="text" class="form-control form-control-sm float-right singleDate">
                                         </div>
                                     </div>
                                     <div class="form-group col-lg-3 col-md-6 col-12">
@@ -456,20 +456,54 @@
                                             <label>公告網址</label>
                                             <input type="text" class="form-control form-control-sm">
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>圖片</label>
                                             <div class="input-group mb-3">
                                                 <input type="file" class="form-control" id="File">
                                                 <label class="input-group-text">上傳檔案</label>
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
-                                            <img class="picDemo" style="height: 100px;">
-                                            <canvas id="the-canvas" style="display: none;"></canvas>
+                                        <div class="col-md-6 col-12">
+                                            <label>圖片預覽</label>
+                                            
+                                            <div style="height: 100px" id="pdf-container">
+                                                <img class="picDemo" data-bs-toggle="modal" data-bs-target="#previewModal" style="height: 100px;">
+                                                <canvas class="the-canvas" style="display: none;"></canvas>
+                                            </div>
+                                            <!-- <canvas style="height: 100px" id="the-canvas"></canvas> -->
                                         </div>
-                                        <div class="imgPreview">
-                                            <img src="#" alt="" id="imgPreview">
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                                <div class="modal-content previewBg">
+                                                    <div class="modal-body">
+                                                        <img src="#" alt="" class="picDemo">
+                                                    </div>
+                                                    <div class="modal-footer text-center">
+                                                        <div class="col-12">
+                                                            <p>Page: <span id="page_num"></span> / <span id="page_count"></span></p>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button type="button" class="btn btn-add" id="prev">上一頁</button>
+                                                            <button type="button" class="btn btn-add" id="next">下一頁</button>
+                                                                &nbsp; &nbsp;
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <!-- <div class="imgPreview">
+                                            <i class="fas fa-times-circle white"></i>
+                                            <div class="previewBg">
+                                                <img src="#" alt="" class="picDemo">
+                                                <div class="count">
+                                                    <p class="text-center white">Page: <span id="page_num"></span> / <span id="page_count"></span></p>
+                                                    <button type="button" class="btn btn-add" id="prev">Previous</button>
+                                                    <button type="button" class="btn btn-add" id="next">Next</button>
+                                                    &nbsp; &nbsp;
+                                                </div>
+                                            </div>
+                                        </div> -->
                                 </div>
                                 <div class="row">
                                         <div class="form-group col-12">
@@ -510,14 +544,14 @@
                             <td>UserA</td>
                             <td><span>駁回</span></td>
                             <td>圖片不清晰</td>
-                            <td>2021/10/05</td>
+                            <td>2021/10/05</td>
                         </tr>
                         <tr>
                             <td>0001</td>
                             <td>UserA</td>
                             <td><span>審核完成</span></td>
                             <td>ＯＫ</td>
-                            <td>2021/10/05</td>
+                            <td>2021/10/05</td>
                         </tr>
                     </tbody>
                 </table>
@@ -547,10 +581,8 @@
     <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTable -->
     <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
-    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
     <!-- jQuery Plugins -->
     <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
-    <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <!-- daterangepicker -->
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
@@ -558,8 +590,9 @@
     <script src="../plugins/summernote/summernote-lite.min.js"></script>
     <!-- js tree -->
     <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- PDF -->
     <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.js"></script>
-    <!-- <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script> -->
+    <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.worker.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/component.js"></script>

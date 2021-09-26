@@ -20,21 +20,10 @@
 .photoLink{
     max-height: 450px;
 }
-
-.imgPreview {
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%; /*容器佔滿整個螢幕*/
-    height: 100%;
-    position: fixed;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.5);
+.previewBg {
+    display: flex;
+    flex-wrap: wrap;
     img{
-        height: 50%;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        height: 70%;
     }
 }

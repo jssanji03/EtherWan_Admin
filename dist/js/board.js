@@ -158,8 +158,6 @@ $(function () {
 
 
 
-
-
 // Alert
 function show () {
     const alert = document.querySelector('.alert')
@@ -175,37 +173,6 @@ function removeDom(obj) {
     $Node.remove()
 }
 
-//檔案上傳顯示
-// $('#File').on("change", function (e) {
-//     // var file = e.target.files[0];
-//         // const obj_url = URL.createObjectURL(file);
-//         // const iframe = document.getElementById('viewer');
-//         // iframe.setAttribute('src', obj_url);
-//         // URL.revokeObjectURL(obj_url);
-// ////////////
-//     var file = $('#File')[0].files[0];
-//     var type = file.type;
-//     if (type.indexOf('png') != '-1') {
-//         var file = $('#File')[0].files[0];
-//         console.log(URL.createObjectURL(file));
-//         var reader = new FileReader;
-//         reader.onload = function (e) {
-//             $('.picDemo').css('display', 'block');
-//             $('.picDemo').attr('src', e.target.result);
-//             $('#viewer').css('display', "none ");
-//         };
-//         reader.readAsDataURL(file);
-//     } else if (type.indexOf('pdf') != '-1'){
-//         var file = e.target.files[0];
-//         const obj_url = URL.createObjectURL(file);
-//         console.log(obj_url);
-//         $('#viewer').attr('src', obj_url);
-//         URL.revokeObjectURL(obj_url);
-//         $('#viewer').css('display', "block ");
-//         $('.picDemo').css('display', "none ");
-//         // window.open(obj_url, '_blank');
-//     }
-// });
 
 //js Tree Start
 $(function () {
@@ -290,61 +257,4 @@ function createJSTree(jsonData) {
 
 //#### js Tree End ####//
 
-// pdf.js 
-//https://mozilla.github.io/pdf.js/getting_started/#download
-$('#File').on("change", function (e) {
-    var file = $('#File')[0].files[0];
-    var type = file.type;
-    if (type.indexOf('pdf') != '-1'){
-        const file = e.target.files[0];
-        fileReader = new FileReader();
-        fileReader.onload = function (ev) {
-        console.log("loading PDF");
-        pdfjsLib.getDocument({data: fileReader.result}).promise.then((pdf) => {
-        pdf.getPage(1).then(function (page) {
-          var desiredWidth = 1000;
-          var viewport = page.getViewport({ scale: 1 });
-          var scale = desiredWidth / viewport.width;
-          var scaledViewport = page.getViewport({ scale: scale });
 
-          var canvas = document.getElementById("the-canvas");
-          var context = canvas.getContext("2d");
-
-          canvas.height = scaledViewport.height;
-          canvas.width = scaledViewport.width;
-
-          var renderContext = {
-            canvasContext: context,
-            viewport: scaledViewport
-          };
-          var renderTask = page.render(renderContext);
-          renderTask.promise.then(function () {
-            console.log("Page rendered");
-              var png_data = canvas.toDataURL('image/png')
-              $('.picDemo').attr('src', png_data);
-          });
-        });
-      });
-        };
-        fileReader.readAsArrayBuffer(file);
-    } else {
-        var file = $('#File')[0].files[0];
-        console.log(URL.createObjectURL(file));
-        var reader = new FileReader;
-        reader.onload = function (e) {
-            $('.picDemo').css('display', 'block');
-            $('.picDemo').attr('src', e.target.result);
-            // $('#the-canvas').css('display', "none ");
-        };
-        reader.readAsDataURL(file);
-    }
-});
-
-$('.picDemo').on('click', function () {
-    var src = $(this).attr('src');
-    $('.imgPreview img').attr('src', src);
-    $('.imgPreview').show()
-});
-$('.imgPreview').on('click', function (){
-    $('.imgPreview').hide()
-});

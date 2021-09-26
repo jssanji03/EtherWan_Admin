@@ -32,46 +32,15 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">Home</a>
                 </li>
             </ul>
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-                <!-- Navbar Search -->
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-                        <i class="fas fa-search"></i>
-                    </a>
-                    <div class="navbar-search-block">
-                        <form class="form-inline">
-                            <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <i class="fas fa-th-large"></i>
                     </a>
                 </li>
             </ul>
@@ -476,16 +445,19 @@
                                             <label>網頁描述</label>
                                             <textarea class="form-control" rows="5" placeholder="Description"></textarea>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>圖片</label>
                                             <div class="input-group mb-3">
                                                 <input type="file" class="form-control" id="File">
-                                                <label class="input-group-text" for="inputGroupFile01">上傳檔案</label>
+                                                <label class="input-group-text">上傳檔案</label>
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
-                                            <img class="picDemo" style="height: 100px;">
-                                            <canvas id="the-canvas" style="display: none;"></canvas>
+                                        <div class="form-group col-md-6 col-12">
+                                            <label>圖片預覽</label>
+                                            <div style="height: 100px">
+                                                <img class="picDemo" style="height: 100px;">
+                                                <canvas class="the-canvas" style="display: none;"></canvas>
+                                            </div>
                                         </div>
                                         <div class="form-group col-12">
                                             <label>自定義</label>
@@ -493,11 +465,11 @@
                                             Place <em>some</em> <u>text</u> <strong>here</strong>
                                             </textarea>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>按鈕文字</label>
                                             <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>連結</label>
                                             <div class="input-group input-group-sm">
                                                 <input type="text" class="form-control" placeholder="OutSideURL"">
@@ -507,7 +479,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>開始時間</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -515,10 +487,10 @@
                                                         <i class="far fa-calendar-alt"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control form-control-sm float-right" name="reservation">
+                                                <input type="text" class="form-control form-control-sm float-right singleDate">
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>結束時間</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -526,18 +498,18 @@
                                                         <i class="far fa-calendar-alt"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control form-control-sm float-right" name="reservation">
+                                                <input type="text" class="form-control form-control-sm float-right singleDate">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="form-group col-3">
+                                        <div class="form-group col-md-3 col-6">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox">
                                                 <label class="form-check-label">是否發佈</label>
                                             </div>
                                         </div>
-                                        <div class="form-group col-3">
+                                        <div class="form-group col-md-3 col-6">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox">
                                                 <label class="form-check-label">已刪除</label>
@@ -545,11 +517,11 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>表單編號</label>
                                             <input type="text" class="form-control form-control-sm" placeholder="FormNo">
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6 col-12">
                                             <label>狀態</label>
                                             <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
                                                 <option selected="selected">申請</option>
@@ -589,16 +561,13 @@
     <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTable -->
     <script src="../plugins/DataTables-1.10.25/DataTables-1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="../plugins/DataTables-1.10.25/Responsive-2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/DataTables-1.10.25/Responsive-2.2.9/js/responsive.bootstrap5.min.js"></script>
-    <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
     <!-- js tree -->
     <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- PDF -->
+    <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.js"></script>
     <!-- Summernote -->
     <script src="../plugins/summernote/summernote-lite.min.js"></script>
-    <!-- dropzonejs -->
-    <script src="../plugins/dropzone/min/dropzone.min.js"></script>
     <!-- daterangepicker -->
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
