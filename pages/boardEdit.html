@@ -59,10 +59,7 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                                                                       with font-awesome or any other icon font library -->
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -344,7 +341,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-header primary">頁面設計</li>
                         <li class="nav-item">
                             <a href="board.html" class="nav-link">
                                 <i class="fas fa-columns nav-icon"></i>
@@ -416,129 +413,271 @@
                             </div>
                             <!-- /.card-body -->
                         </section>
+                        
                         <section class="card p-0">
-                            <div class="card-header bg_purple white">
-                                <h3 class="card-title lh-30 m-0">頁面設定</h3>
+                            <div class="card-header bg_purple">
+                                <nav class="nav nav-pills" id="myTab" role="tablist">
+                                    <a class="nav-board  active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                                        role="tab">頁面設定一</a>
+                                    <a class="nav-board" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                                        role="tab">頁面設定二</a>
+                                </nav>
                             </div>
                             <!-- /.card-header -->
-                            <!-- form start -->
-                            <form name="">
-                                <div class="card-body row">
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label>排序</label>
-                                            <input type="text" class="form-control form-control-sm" placeholder="Sort">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label>標題</label>
-                                            <input type="text" class="form-control form-control-sm"
-                                                placeholder="Title">
-                                        </div>
-                                        <div class="form-group col-6">
-                                            <label>副標題</label>
-                                            <input type="text" class="form-control form-control-sm"
-                                                placeholder="SubTitle">
-                                        </div>
-                                        <div class="form-group col-12">
-                                            <label>網頁描述</label>
-                                            <textarea class="form-control" rows="5" placeholder="Description"></textarea>
-                                        </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>圖片</label>
-                                            <div class="input-group mb-3">
-                                                <input type="file" class="form-control" id="File">
-                                                <label class="input-group-text">上傳檔案</label>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <form>
+                                        <div class="card-body row">
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>排序</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Sort">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>圖片預覽</label>
-                                            <div style="height: 100px">
-                                                <img class="picDemo" style="height: 100px;">
-                                                <canvas class="the-canvas" style="display: none;"></canvas>
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Title">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>副標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="SubTitle">
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>網頁描述</label>
+                                                    <textarea class="form-control" rows="5" placeholder="Description"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" class="form-control" id="File">
+                                                        <label class="input-group-text">上傳檔案</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片預覽</label>
+                                                    <div style="height: 100px">
+                                                        <img class="picDemo" data-bs-toggle="modal" data-bs-target="#previewModal" style="height: 100px;">
+                                                        <canvas class="the-canvas" style="display: none;"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>自定義</label>
+                                                    <textarea class="summernote">
+                                                                                                                    Place <em>some</em> <u>text</u> <strong>here</strong>
+                                                                                                                    </textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>按鈕文字</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>連結</label>
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="text" class="form-control" placeholder="OutSideURL"">
+                                                                                                                        <div class=" input-group-text">
+                                                        <input class="form-check-inline" type="checkbox" value="">
+                                                        <span class="form-check-label">另開視窗</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group col-12">
-                                            <label>自定義</label>
-                                            <textarea class="summernote">
-                                            Place <em>some</em> <u>text</u> <strong>here</strong>
-                                            </textarea>
-                                        </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>按鈕文字</label>
-                                            <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
-                                        </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>連結</label>
-                                            <div class="input-group input-group-sm">
-                                                <input type="text" class="form-control" placeholder="OutSideURL"">
-                                                <div class="input-group-text">
-                                                    <input class="form-check-inline" type="checkbox" value="">
-                                                    <span class="form-check-label">另開視窗</span>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>開始時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>結束時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>開始時間</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="far fa-calendar-alt"></i>
-                                                    </span>
+                                        <div class="row">
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">是否發佈</label>
                                                 </div>
-                                                <input type="text" class="form-control form-control-sm float-right singleDate">
                                             </div>
-                                        </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>結束時間</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="far fa-calendar-alt"></i>
-                                                    </span>
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">已刪除</label>
                                                 </div>
-                                                <input type="text" class="form-control form-control-sm float-right singleDate">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-3 col-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox">
-                                                <label class="form-check-label">是否發佈</label>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>表單編號</label>
+                                                <input type="text" class="form-control form-control-sm" placeholder="FormNo">
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>狀態</label>
+                                                <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
+                                                    <option selected="selected">申請</option>
+                                                    <option>審核中</option>
+                                                    <option>駁回</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-3 col-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox">
-                                                <label class="form-check-label">已刪除</label>
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>表單編號</label>
-                                            <input type="text" class="form-control form-control-sm" placeholder="FormNo">
+                                        <!-- /.card-body -->
+                                        <div class="card-footer p-0xw">
+                                            <button type="submit" class="btn btn-submit btn-sm"> 儲存</button>
                                         </div>
-                                        <div class="form-group col-md-6 col-12">
-                                            <label>狀態</label>
-                                            <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
-                                                <option selected="selected">申請</option>
-                                                <option>審核中</option>
-                                                <option>駁回</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer p-0xw">
-                                    <button type="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <form>
+                                        <div class="card-body row">
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>排序</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Sort">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Title">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>副標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="SubTitle">
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>網頁描述</label>
+                                                    <textarea class="form-control" rows="5" placeholder="Description"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" class="form-control" id="File">
+                                                        <label class="input-group-text">上傳檔案</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片預覽</label>
+                                                    <div style="height: 100px">
+                                                        <img class="picDemo" data-bs-toggle="modal" data-bs-target="#previewModal" style="height: 100px;">
+                                                        <canvas class="the-canvas" style="display: none;"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>自定義</label>
+                                                    <textarea class="summernote">
+                                                                                                                                                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                                                                                                                                                        </textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>按鈕文字</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>連結</label>
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="OutSideURL"">
+                                                                                                                                                            <div class=" input-group-text">
+                                                        <input class="form-check-inline" type="checkbox" value="">
+                                                        <span class="form-check-label">另開視窗</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>開始時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>結束時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">是否發佈</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">已刪除</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>表單編號</label>
+                                                <input type="text" class="form-control form-control-sm" placeholder="FormNo">
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>狀態</label>
+                                                <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
+                                                    <option selected="selected">申請</option>
+                                                    <option>審核中</option>
+                                                    <option>駁回</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                        <div class="card-footer p-0xw">
+                                            <button type="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                        </div>
+                                    </form>
                                 </div>
-                            </form>
+                            </div>
+                            
                             <!-- /.card-body -->
                         </section>
-                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content previewBg">
+                                    <div class="modal-body">
+                                        <img src="#" alt="" class="picDemo">
+                                    </div>
+                                    <div class="modal-footer text-center">
+                                        <div class="col-12">
+                                            <p>Page: <span id="page_num"></span> / <span id="page_count"></span></p>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-add" id="prev">上一頁</button>
+                                            <button type="button" class="btn btn-add" id="next">下一頁</button>
+                                            &nbsp; &nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

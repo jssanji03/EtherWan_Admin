@@ -1,4 +1,5 @@
 
+// 輪播圖
 // 畫面新增頁面
 $(function () {
     const data =[
@@ -21,7 +22,7 @@ $(function () {
     ]
     $("#clone").on('click', function () {
         const val = $('input:radio[name="list"]:checked').val();
-        const board = [".OneGrid", ".TwoGrid", ".ThreeGrid", ".FourGrid", ".announcement", ".calendar", ".leaveApplication", ".LinkURL", ".HomeBanner", ".Propaganda"]
+        const board = [".OneGrid", ".TwoGrid", ".ThreeGrid", ".FourGrid", ".announcement", ".calendar", ".leaveApplication", ".LinkURL", ".HomeBanner", ".Propaganda",".Organization"]
         
         const edit=`<div class="editPage">
                         <a type="submit" href="./boardEdit.html" class="btn btn-edit btn-sm">編輯</a>
@@ -41,36 +42,35 @@ $(function () {
         function homePage(grid) {
             function carousel (data) {
                 var carousel = `
-            <section class="HomeBanner col-12">
             <div class="container">
                 <div class="row pt-70 align-items-center">
                     <div class="col-lg-3 col-12 order-lg-first order-last mt-lg-0 mt-3">
-                        <div class="row flex-xl-column d-flex pe-4">
-                            <div class="information_card bg_gradient">
-                                <a class="" href="./pages/homepage.html">
-                                    <h3 class="white">關於益網</h3>
-                                    <p class="important fontsEn fz-12 lh-30">About EtherWan</p>
+                        <div class="row pe-lg-4 pe-0">
+                            <div class="information_card bg-blue30">
+                                <a class="" href="#">
+                                    <h3 class="text">關於益網</h3>
+                                    <p class="gray fontsEn fz-12 lh-30">About EtherWan</p>
                                 </a>
                             </div>
-                            <div class="information_card mt-4 bg_gradient">
-                                <a class="" href="./pages/companyForm.html">
+                            <div class="information_card mt-3 bg-blue40">
+                                <a class="" href="#">
                                     <h3 class="white">公司管理辦法/表單</h3>
-                                    <p class="important fontsEn fz-12 lh-30 ">Policy / Form</p>
+                                    <p class="lightBlue fontsEn fz-12 lh-30 ">Policy / Form</p>
                                 </a>
                             </div>
-                            <div class="information_card mt-4 bg_gradient">
-                                <a class="" href="./pages/useForm.html">
+                            <div class="information_card mt-3 bg-blue50">
+                                <a class="" href="#">
                                     <h3 class="white">常用資訊</h3>
-                                    <p class="important fontsEn fz-12 lh-30">Useful Information</p>
+                                    <p class="lightBlue fontsEn fz-12 lh-30">Useful Information</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-9 col-12 p-0 order-lg-last order-first">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators ">
+                            <div class="carousel-indicators">
                             </div>
-                            <div class="carousel-inner" style="height: 350px;">
+                            <div class="carousel-inner">
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                                 data-bs-slide="prev">
@@ -86,7 +86,6 @@ $(function () {
                     </div>
                 </div>
             </div>
-        </section>
                 `;
                 var html = ``;
                 for (var i = 0; i < data.length; i++) {
@@ -97,37 +96,37 @@ $(function () {
                         break;
                     }
                 }
-                $(".box1").html(carousel); 
+                $(".HomeBanner").html(carousel); 
                 $(".carousel-inner").html(html); 
                 $(".carousel-inner>div").first().addClass("active"); 
             }
             carousel(data)
             
-            $(`${grid}:first .container`).before(del);
-            $(`${grid}`).addClass('portlet').clone(true).appendTo(".box1");
+            $(`${grid}:first .container`).before(edit);
+            $(`${grid}:first`).addClass('portlet').css("display", "block").appendTo(".box1");
 
             //下方自動加入控制圓鈕
             const total = document.querySelectorAll('.carousel-item').length
             append_li();
             function append_li() {
-        let li = "";
-        var get_ac = $(".carousel-inner .active");
-        var ac = $(".carousel .carousel-inner div").index(get_ac);
+                let li = "";
+                var get_ac = $(".carousel-inner .active");
+                var ac = $(".carousel .carousel-inner div").index(get_ac);
 
-        for (var i = 0; i <= total - 1; i++) {
-            if (i == (ac) / 2) {
-                li += `<button type="button" data-bs-target="#carousel1" class="active" data-bs-slide-to="${i}" class="active"
-                            aria-current="true"></button>`;
-            } else {
-                li += `<button type="button" data-bs-target="#carousel1" data-bs-slide-to="${i}"
-                            ></button>`;
-            }
-        }
-        $(".carousel-indicators").append(li);
+                for (var i = 0; i <= total - 1; i++) {
+                    if (i == (ac) / 2) {
+                        li += `<button type="button" data-bs-target="#carouselExampleIndicators" class="active" data-bs-slide-to="${i}" class="active"
+                                    aria-current="true"></button>`;
+                    } else {
+                        li += `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}"
+                                    ></button>`;
+                    }
+                }
+                $(".carousel-indicators").append(li);
             }
             //單則隱藏控制鈕
             if (total.length < 2) {
-        $('.carousel-indicators').hide();
+                $('.carousel-indicators').hide();
             }
         }
         switch (val) {
@@ -150,6 +149,8 @@ $(function () {
             case 'HomeBanner': homePage (board[8]);
             break;
             case 'Propaganda': customPage (board[9]);
+            break;
+            case 'Organization': customPage (board[10]);
             break;
         }
     });
@@ -220,22 +221,6 @@ function customMenu($node) {
                                 tree.select_node($node);
                             }
 
-                        },
-                        "Rename": {
-                            "separator_before": false,
-                            "separator_after": false,
-                            "label": "重新命名",
-                            "action": function (obj) {
-                                tree.edit($node);
-                            }
-                        },
-                        "Remove": {
-                            "separator_before": false,
-                            "separator_after": false,
-                            "label": "刪除",
-                            "action": function (obj) {
-                                tree.delete_node($node);
-                            }
                         }
         };
         if ($node.parent == 'json1') {    //如果是根節點
@@ -254,7 +239,51 @@ function createJSTree(jsonData) {
             }
         })
 }
-
 //#### js Tree End ####//
 
 
+//Board 共用同一個 Modal 
+$(function () {
+    var searchModal = document.getElementById('search')
+    searchModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+            var recipient = button.getAttribute('data-bs-whatever')
+            console.log(recipient);
+        // Update the modal's content.
+            var modalTitle = searchModal.querySelector('.modal-title')
+            var modalBody = searchModal.querySelector('.modal-body')
+            modalTitle.textContent = recipient;
+            if (recipient == "過往資訊") {
+                var data = [
+                    {
+                        url: "./public/pdf/Corporate Brand Guidelines_CH.pdf",
+                        title: "(110)益公字第07003號_企業識別系統",
+                        date: "2021/08/19",
+                    },
+                    {
+                        url: "./public/pdf/Corporate Brand Guidelines_CH.pdf",
+                        title: "(110)益公字第07004號_企業識別系統",
+                        date: "2021/08/20",
+                    },
+                    {
+                        url: "./public/pdf/Corporate Brand Guidelines_CH.pdf",
+                        title: "(110)益公字第07005號_企業識別系統",
+                        date: "2021/08/22",
+                    },
+                ];
+                let display = `<ul class="lh-30 my-2 p-1">`
+                for (var i = 0; i < data.length; i++) {
+                     display += `<li class="d-flex justify-content-between">
+                                    <a href="${data[i].url}" target="_blank">${data[i].title}</a>
+                                        <span class="third">${data[i].date}</span>
+                                </li>`
+                }
+                display += `</ul>`
+                modalBody.innerHTML = display
+            } else {
+                modalBody.innerHTML 
+            }
+    })
+})

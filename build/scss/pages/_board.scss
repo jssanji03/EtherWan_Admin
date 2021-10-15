@@ -21,43 +21,76 @@
 .marqueeBox{
     .marquee-wrapper {
       ul{
-        height: 30px;
+        min-height:55px;
+        height:auto;
         position: relative;
+        @media #{$breakpoint-lg}{
+          height: 80px;
+        }
+        @media #{$breakpoint-md}{
+          height: 95px;
+        }
+        @media #{$breakpoint-sm}{
+          height: 120px;
+        }
+        @media #{$breakpoint-xs}{
+          height: 210px;
+        }
         li{
             position: absolute;
+            width: 100%;
+            height:20px;
             top: -10;
-            left: calc(40% - 100px);
             opacity: 0;
-            animation-name: display;
-            // animation-duration:25s;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0px 100px;
+            line-height: 20px;
+            animation-name: marquee;
             animation-iteration-count:infinite;
-            margin-left: 20px;
-            @media #{$breakpoint-xs}{
-              left: calc(30% - 100px);
+            animation-timing-function:linear;
+            @media #{$breakpoint-lg,$breakpoint-md,$breakpoint-sm,$breakpoint-xs}{
+              padding: 0px 10px;
             }
           }
         }
     }
 }
-@keyframes display {
-  0% {
-    transform: translateX(200px);
-    opacity: 0;
+@keyframes marquee {
+  0% { 
+    bottom: 2%;
+    opacity: 1; 
   }
-  10% {
-    transform: translateX(0);
-    opacity: 1;
+  10% { 
+    bottom: 70%;
   }
-  15% {
-    transform: translateX(0);
-    opacity: 1;
+  30% { 
+    top: -300%;
+    // opacity: 0;
   }
-  20% {
-    transform: translateX(-100px);
-    opacity: 0;
+  100% { top: -500%;
+   }
+}
+
+.alert{
+  position: fixed;
+  z-index: 999;
+  width: 85%;
+}
+
+.nav-board{
+  color:$white;
+  border-radius:5px;
+  line-height: 20px;
+  padding:8px 10px;
+  margin: 0px 10px;
+  &:hover{
+    color: rgb(236, 186, 22);
   }
-  100% {
-    transform: translateX(-200px);
-    opacity: 0;
+  &.active{
+    background-color: $primary;
+    &:hover{
+      color: $white;
+    }
   }
 }

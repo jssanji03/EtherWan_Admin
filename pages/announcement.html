@@ -36,14 +36,6 @@
                 </li>
             </ul>
 
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
-                </li>
-            </ul>
         </nav>
         <!-- /.navbar -->
 
@@ -562,32 +554,6 @@
             const closet = $(this).parents('tr')
             $(closet).find('td input[type=checkbox]').prop('checked', false);
         });
-    </script>
-    <script>
-        const dataTable = document.querySelector('.datatable-RWD')
-        const rows = dataTable.rows;//獲取所有行
-        // console.log(rows.length);
-        for (let i = 0; i < rows.length; i++) {
-            for (let j = 0; j < rows[i].cells.length; j++) {
-                // console.log(rows[i].cells[j].innerText);
-                let text = rows[i].cells[j]
-                switch (text.innerText) {
-                    case 'Success':
-                        text.firstChild.className = 'pill-success';
-                        break;
-                    case 'Fail':
-                        text.firstChild.className = 'pill-danger'
-                        break;
-                    case 'Approval':
-                        text.firstChild.className = 'pill-approval'
-                        break;
-                    case 'In progress':
-                        text.firstChild.className = 'pill-draft'
-                        break;
-                }
-            }
-        }
-
     </script>
 </body>
 

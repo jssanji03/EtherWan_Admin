@@ -1,7 +1,6 @@
 
 @mixin button($background-color:$text,$fontColor: $white,$hover-color:$lightGray,$hover-fontColor:$white) {
     height: 35px;
-    // line-height: 35px;
     min-width: auto;
     font-size: 16px;
     font-weight: 400;
@@ -21,11 +20,14 @@
     }
 }
 
+.btn-padding {
+    @include button($background-color:#8130a7,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
 .btn-success {
     @include button($background-color:#3872dd,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
 }
 .btn-add {
-    @include button($background-color:$important,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+    @include button($background-color:$primary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
 }
 .btn-search {
     @include button($background-color:#7C8AA1,$fontColor: $white,$hover-color:#525e70,$hover-fontColor:$white);
@@ -34,7 +36,7 @@
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
 }
 .btn-delete {
-    @include button($background-color:rgb(228, 61, 39),$fontColor: $white,$hover-color:rgb(141, 20, 20),$hover-fontColor:$white);
+    @include button($background-color:rgb(192, 39, 19),$fontColor: $white,$hover-color:rgb(141, 20, 20),$hover-fontColor:$white);
 }
 .btn-edit {
     @include button($background-color:rgb(22, 171, 182),$fontColor: $white,$hover-color:rgb(16, 118, 126),$hover-fontColor:$white);
@@ -42,9 +44,20 @@
 .btn-cancel {
     @include button($background-color:rgb(207, 207, 207),$fontColor: $text,$hover-color:rgb(71, 71, 71),$hover-fontColor:$white);
 }
-// .btn-padding {
-//     @include button($background-color:$yellow,$fontColor: $white,$hover-color:rgb(228, 186, 0),$hover-fontColor:$white);
-// }
+.btn-more{
+    padding: 10px 30px;
+    background-color: $important;
+    color: $white;
+    transition-duration: .5s;
+    transition-property: transform;
+    &:hover{
+        background-color: $white;
+        border:1px solid $important;
+        color: $important;
+        box-shadow: 0px 3px 8px 0px rgba(197, 197, 197, 0.5);
+        transform: translateY(-6px);
+    }
+}
 
 .btn-cal{
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$secondary,$hover-fontColor:$white);
@@ -56,7 +69,7 @@
 .btn-menu{
     width: 100%;
     height: 50px;
-    background-color: #d0dce6;
+    background-color: #F3F3F3;
     border-radius: 8px;
     line-height: 40px;
     color: $text;
@@ -73,7 +86,7 @@
         width: 100%;
         height:100%;
         background: transparent;
-        box-shadow: inset 0px 0px 0px $important;
+        box-shadow: inset 0px 0px 0px $primary;
         display: inline-block;
         -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
         transition: all 0.6s ease-in-out
@@ -81,7 +94,7 @@
     &:hover{
         color: $white;
         &::before{
-            box-shadow: inset 1400px 0px 0px $important;
+            box-shadow: inset 1150px 0px 0px $primary;
             color: $white;
         }
     }

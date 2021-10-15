@@ -59,10 +59,7 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                                   with font-awesome or any other icon font library -->
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -130,7 +127,7 @@
                         </li>
                         <!-- 行事曆 -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="calendar.html" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     行事曆管理
@@ -139,13 +136,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="calendar.html" class="nav-link">
+                                    <a href="calendarADD.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>行事曆發布管理</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="calendarADD.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>行事曆發布作業</p>
                                     </a>
@@ -344,11 +341,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-header primary">頁面設計</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="board.html" class="nav-link">
                                 <i class="fas fa-columns nav-icon"></i>
-                                <p>版面維護</p>
+                                <p>版面管理</p>
                             </a>
                         </li>
                     </ul>
@@ -405,7 +402,7 @@
                                                         <i class="far fa-calendar-alt"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control form-control-sm float-right" name="reservationtime">
+                                                <input type="text" class="form-control form-control-sm singleDate" >
                                             </div>
                                             <!-- /.input group -->
                                         </div>
@@ -427,7 +424,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="button" class="btn btn-add btn-sm"><i class="fas fa-search"></i>
+                                <button type="button" class="btn btn-search btn-sm"><i class="fas fa-search"></i>
                                     查詢</button>
                             </div>
                         </div>
@@ -452,7 +449,7 @@
                                         <td>年度</td>
                                         <td>2021/09/09</td>
                                         <td><a href="#">內容</a></td>
-                                        <td>已發布</td>
+                                        <td><span>已發布</span></td>
                                         <td>UserA</td>
                                         <td>No</td>
                                         <td>
@@ -466,7 +463,7 @@
                                         <td>年度</td>
                                         <td>2021/09/09</td>
                                         <td><a href="#">內容</a></td>
-                                        <td>已發布</td>
+                                        <td><span>已發布</span></td>
                                         <td>UserA</td>
                                         <td>No</td>
                                         <td>
@@ -506,53 +503,23 @@
     <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTable -->
     <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
-    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="../plugins/jszip/jszip.min.js"></script>
-    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- jQuery Plugins -->
     <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
-    <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <!-- daterangepicker -->
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-lite.min.js"></script>
+    <!-- js tree -->
+    <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- PDF -->
+    <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.js"></script>
+    <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.worker.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/component.js"></script>
-    <script>
-        const dataTable = document.querySelector('.datatable-RWD')
-        const rows = dataTable.rows;//獲取所有行
-        // console.log(rows.length);
-        for (let i = 0; i < rows.length; i++) {
-            for (let j = 0; j < rows[i].cells.length; j++) {
-                // console.log(rows[i].cells[j].innerText);
-                let text = rows[i].cells[j]
-                switch (text.innerText) {
-                    case 'Success':
-                        text.firstChild.className = 'pill-success';
-                        break;
-                    case 'Fail':
-                        text.firstChild.className = 'pill-danger'
-                        break;
-                    case 'Approval':
-                        text.firstChild.className = 'pill-approval'
-                        break;
-                    case 'In progress':
-                        text.firstChild.className = 'pill-draft'
-                        break;
-                }
-            }
-        }
-
-    </script>
+    <script src="../dist/js/board.js"></script>
+    <script src="../dist/js/index.js"></script>
 </body>
 
 </html>

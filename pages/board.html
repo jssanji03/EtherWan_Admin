@@ -62,8 +62,6 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                                                                       with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -131,7 +129,7 @@
                         </li>
                         <!-- 行事曆 -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="calendar.html" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     行事曆管理
@@ -140,7 +138,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="calendarADD.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>行事曆發布管理</p>
                                     </a>
@@ -345,7 +343,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-header primary">頁面設計</li>
                         <li class="nav-item">
                             <a href="board.html" class="nav-link">
                                 <i class="fas fa-columns nav-icon"></i>
@@ -377,7 +375,7 @@
                     </div><!-- /.row -->
                     <div class="alert alert-success alert-dismissible shadow fade " role="alert" >
                         <i class="fas fa-exclamation-triangle fz-20 mx-2"></i>
-                        <strong>新增成功</strong> 
+                        <strong>新增成功</strong>
                         <button type="button" class="btn-close" aria-label="Close" onclick="cancel()"></button>
                     </div>
                 </div><!-- /.container-fluid -->
@@ -394,7 +392,7 @@
                             </div>
                         </div>
                         <div class="col-xl-9  col-12 mt-lg-0 mt-4">
-                            <section class="tab-pane" id="content1">
+                            <section class="tab-pane pt-0" id="content1">
                                 <!-- 頁面設定 -->
                                 <div class="card p-0">
                                     <div class="card-header bg_purple white">
@@ -434,7 +432,7 @@
                                                                 <i class="far fa-calendar-alt"></i>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control float-right singleDate">
+                                                        <input type="text" class="form-control form-control-sm singleDate">
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-6">
@@ -445,7 +443,7 @@
                                                                 <i class="far fa-calendar-alt"></i>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control float-right singleDate">
+                                                        <input type="text" name="datetimes" class="form-control form-control-sm singleDate">
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-3">
@@ -479,7 +477,6 @@
                                     <div class="card-footer p-0xw">
                                         <button id="boardSubmit" type="submit" class="btn btn-submit btn-sm" onclick="show ()">儲存</button>
                                     </div>
-                                    
                                     <!-- /.card-body -->
                                 </div>
                                 <!-- 版型 -->
@@ -501,13 +498,13 @@
                                                 </section>
                                                 <section class="OneGrid" style="display: none;">
                                                     <div class="container">
-                                                        <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
+                                                        <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
                                                         <div class="row">
                                                             <div>
                                                                 <a href="#"><img name="Image" src="https://fakeimg.pl/1300x350/" class="img-fluid" alt="..."></a>
                                                             </div>
                                                             <div class="card-body">
-                                                                <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
+                                                                <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
                                                                 <p name="Description" >Some quick example text to build on the card title and make up the bulk of the card's
                                                                     content.</p>
                                                                 <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
@@ -539,33 +536,35 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col-md-6 col-12 p-1">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
-                                                                <div>
-                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid" alt="..."></a>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk of
-                                                                        the card's
-                                                                        content.</p>
-                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
-                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                            class="fas fa-angle-right"></i></button>
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                                                                <div class="row">
+                                                                    <div>
+                                                                        <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid" alt="..."></a>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                        <p name="Description">Some quick example text to build on the card title and make up the bulk of the card's
+                                                                            content.</p>
+                                                                        <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                        <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                                class="fas fa-angle-right"></i></button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6 col-12 p-1">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
-                                                                <div>
-                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid" alt="..."></a>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk of
-                                                                        the card's
-                                                                        content.</p>
-                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
-                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                            class="fas fa-angle-right"></i></button>
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                                                                <div class="row">
+                                                                    <div>
+                                                                        <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid" alt="..."></a>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                        <p name="Description">Some quick example text to build on the card title and make up the bulk of the card's
+                                                                            content.</p>
+                                                                        <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                        <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                                class="fas fa-angle-right"></i></button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -596,49 +595,55 @@
                                                 <section class="ThreeGrid" style="display: none;">
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="col-md-4 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
-                                                                <div style="max-height:300px;">
-                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk of
-                                                                        the card's
-                                                                        content.</p>
-                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
-                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                            class="fas fa-angle-right"></i></button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
-                                                                <div style="max-height:300px;">
-                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk of
-                                                                        the card's
-                                                                        content.</p>
-                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
-                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                            class="fas fa-angle-right"></i></button>
+                                                            <div class="col-4">
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                                                                <div class="row">
+                                                                    <div>
+                                                                        <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                        <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                            the card's
+                                                                            content.</p>
+                                                                        <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                        <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                                class="fas fa-angle-right"></i></button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-4 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
-                                                                <div style="max-height:300px;">
-                                                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                            <div class="col-4">
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                                                                <div class="row">
+                                                                    <div>
+                                                                        <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                        <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                            the card's
+                                                                            content.</p>
+                                                                        <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                        <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                                class="fas fa-angle-right"></i></button>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk of
-                                                                        the card's
-                                                                        content.</p>
-                                                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
-                                                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                            class="fas fa-angle-right"></i></button>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                                                                <div class="row">
+                                                                    <div>
+                                                                        <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                        <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                            the card's
+                                                                            content.</p>
+                                                                        <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                                                        <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                                                                class="fas fa-angle-right"></i></button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -673,55 +678,63 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col-md-3 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
                                                                 <div>
                                                                     <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
                                                                 </div>
                                                                 <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
                                                                     <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
                                                                     <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                    class="fas fa-angle-right"></i></button>
+                                                                            class="fas fa-angle-right"></i></button>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-3 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
                                                                 <div>
                                                                     <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
                                                                 </div>
                                                                 <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
                                                                     <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
                                                                     <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                    class="fas fa-angle-right"></i></button>
+                                                                            class="fas fa-angle-right"></i></button>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-3 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
                                                                 <div>
                                                                     <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
                                                                 </div>
                                                                 <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
                                                                     <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
                                                                     <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                    class="fas fa-angle-right"></i></button>
+                                                                            class="fas fa-angle-right"></i></button>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-3 col-12">
-                                                                <h3 name="Title" class="mb-2"><a href="#" class="primary">Title</a></h3>
+                                                                <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
                                                                 <div>
                                                                     <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
                                                                 </div>
                                                                 <div class="card-body">
-                                                                    <h5 name="SubTitle" class="mb-2 third lh-20">Card subtitle</h5>
-                                                                    <p name="Description" >Some quick example text to build on the card title and make up the bulk</p>
+                                                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                                                        the card's
+                                                                        content.</p>
                                                                     <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
                                                                     <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
-                                                                    class="fas fa-angle-right"></i></button>
+                                                                            class="fas fa-angle-right"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -778,9 +791,8 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                            <div class="col-12 text-end align-items-end">
-                                                                <a class="" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">過往資訊 <i
-                                                                        class="mx-2 fas fa-angle-right"></i></a>
+                                                            <div class="col-12 footer">
+                                                                <a class="btn-more" data-bs-toggle="modal" data-bs-target="#" data-bs-whatever="過往資訊">過往資訊 <i class="fas fa-angle-right"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -809,7 +821,7 @@
                                                                     <p class="fz-20 lh-40 border-bottom text-center primary">行事曆</p>
                                                                 </div>
                                                                 <div class="col-12">
-                                                                    <p class="pink lh-40 text-center">＊點選可查看當日行程</p>
+                                                                    <p class="lh-40 text-center important">＊點選可查看當日行程</p>
                                                                     <div class="datepicker"></div>
                                                                     <div id="event" class="m-3 d-flex flex-wrap">
                                             
@@ -837,12 +849,12 @@
                                                 </section>
                                                 <section class="leaveApplication col-lg-6 col-12" style="display: none;">
                                                     <div class="container" style="height: 100%;">
-                                                        <div class="row p-3 card-border">
+                                                        <div class="row p-3 card-radius bg-white shadow-sm">
                                                             <div class="col-12">
                                                                 <p class="fz-20 lh-40 border-bottom primary text-center">請假資訊</p>
                                                             </div>
                                                             <div class="col-12 my-2">
-                                                                <table class="table table-striped">
+                                                                <table class="table table-striped datatable-RWD">
                                                                     <thead>
                                                                         <tr class="fz-15">
                                                                             <th scope="col">人員</th>
@@ -897,9 +909,9 @@
                                                                     </tbody>
                                                                 </table>
                                                             </div>
-                                                            <div class="col-12 text-end align-items-end">
-                                                                <a class="" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">查看更多 <i
-                                                                        class="mx-2 fas fa-angle-right"></i></a>
+                                                            <div class="col-12 text-end footer">
+                                                                <a class="btn-more" data-bs-toggle="modal" data-bs-target="#" data-bs-whatever="查看更多">查看更多 <i
+                                                                        class="fas fa-angle-right"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -927,7 +939,7 @@
                                                                 <p class="fz-20 lh-40 border-bottom text-center primary">系統連結</p>
                                                             </div>
                                                             <div class="col-12">
-                                                                <div class="row">
+                                                                <div class="row p-3">
                                                                     <div class="col-md-6 col-12">
                                                                         <ul class="linkList">
                                                                             <li>
@@ -962,8 +974,9 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 text-end align-items-end">
-                                                                <a class="" href="sysForm.html">快速連結 <i class="mx-2 fas fa-angle-right"></i></a>
+                                                            <div class="col-12 text-end footer">
+                                                                <a class="btn-more" href="#">快速連結 <i class="fas fa-angle-right"></i></a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </section>
@@ -983,10 +996,8 @@
                                                         </div>
                                                     </div>
                                                 </section>
-                                                <!-- <section class="HomeBanner col-12" style="display: none;">
-                                                    <div class="container">
-                                                    </div>
-                                                </section> -->
+                                                <section class="HomeBanner col-12" style="display: none;">
+                                                </section>
                                                 <div class="form-group text-center py-3">
                                                     <div class="form-check">
                                                         <input class="form-check-input" name="list" type="radio" value="HomeBanner">
@@ -1008,7 +1019,7 @@
                                                         <div class="row">
                                                             <div class="col-12 bg_third marqueeBox overflow-hidden p-2">
                                                                 <p class="white text-center f-500 fz-25"><i class="fas fa-bell"></i> 即時宣導</p>
-                                                                <div class="col-12 mt-4 marquee-wrapper marquee" id="marquee">
+                                                                <div class="col-12 mt-1 marquee-wrapper marquee" id="marquee">
                                                                     <ul class="white mx-auto marquee-canvas">
                                                                     </ul>
                                                                 </div>
@@ -1020,6 +1031,31 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" name="list" type="radio" value="Propaganda">
                                                         <label class="form-check-label">即時宣導</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 組織圖 template -->
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <section class="Organization_demo border">
+                                                    <div class="row">
+                                                        <div class="col p-1" style="height: 200px;">
+                                                            <img src="https://fakeimg.pl/100x200/?text=Organization" class="img-fluid" alt="...">
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="Organization col-12" style="display: none;">
+                                                    <div class="container jOrgChart">
+                                                        <button class="btn btn-primary ext shadow ">全部展開 &nbsp; <i class="fas fa-sitemap"></i></button>
+                                                        <button type="button" class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-whatever="人員搜尋" data-bs-target="#">
+                                                            人員搜尋
+                                                        </button>
+                                                        <div class="row mt-5 orgArea" id='jOrgChart'></div>
+                                                    </div>
+                                                </section>
+                                                <div class="form-group text-center py-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="list" type="radio" value="Organization">
+                                                        <label class="form-check-label">組織圖</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1037,7 +1073,6 @@
                                     <!-- /.card-header -->
                                     <div class="card-body">
                                         <div class="row box1">
-                                        
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
@@ -1047,6 +1082,58 @@
                     </div>
                 </div>
             </section>
+            <div id='modalArea'></div>
+            <!-- 共用 Modal -->
+            <div class="modal fade" id="search" tabindex="-1">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">人員搜尋</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Main content -->
+                            <section class="content">
+                                <div class="container-fluid">
+                                    <h3 class="text-center primary">Search</h3>
+                                    <div class="row justify-content-center">
+                                        <div class="col-6">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control form-control-sm" placeholder="請輸入名字...">
+                                                <button class="btn btn-search" type="button">搜尋</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <table class="display responsive nowrap datatable-RWD" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>申請單編碼</th>
+                                        <th>申請作業名稱</th>
+                                        <th>申請作業連結</th>
+                                        <th>申請者</th>
+                                        <th>申請日期</th>
+                                        <th>發布起始日</th>
+                                        <th>發布結束日</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0001</td>
+                                        <td>行事曆</td>
+                                        <td><a href="#">申請內容</a></td>
+                                        <td>Mark</td>
+                                        <td>2021/08/25</td>
+                                        <td>2021/10/01</td>
+                                        <td>2021/10/05</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- /.content-wrapper -->
@@ -1069,25 +1156,22 @@
     <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
     <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-lite.min.js"></script>
     <!-- js tree -->
     <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- jOrgChart -->
+    <script src="../plugins/jOrgChart/jquery.jOrgChart.js"></script>
     <!-- daterangepicker -->
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Summernote -->
-    <script src="../plugins/summernote/summernote-lite.min.js"></script>
+
     <!-- AdminLTE App -->
+    <script src="../dist/js/organization.js"></script>
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/component.js"></script>
     <script src="../dist/js/board.js"></script>
     <script src="../dist/js/index.js"></script>
-    <script>
-    //    var myCarousel = document.querySelector('.carousel')
-    //     var carousel = new bootstrap.Carousel(myCarousel, {
-    //         interval: 5000,
-    //         wrap: true
-    //     })
-    </script>
 </body>
 
 </html>

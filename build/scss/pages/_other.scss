@@ -108,3 +108,15 @@
             }
         }
 }
+
+
+
+.content{
+    .list-group{
+        height: 352px;
+        overflow-y: auto;
+    }
+    .tab-content > section{
+        padding-top: 0px;
+    }
+}

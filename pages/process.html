@@ -60,8 +60,6 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                                                   with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -129,7 +127,7 @@
                         </li>
                         <!-- 行事曆 -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="calendar.html" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     行事曆管理
@@ -138,7 +136,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="calendarADD.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>行事曆發布管理</p>
                                     </a>
@@ -343,9 +341,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-header primary">頁面設計</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="board.html" class="nav-link">
                                 <i class="fas fa-columns nav-icon"></i>
                                 <p>版面管理</p>
                             </a>
@@ -378,7 +376,7 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <section class="process col-12 connectedSortable">
+            <section class="process col-12 connectedSortable content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-3 col-12">
@@ -435,11 +433,46 @@
                                         <!-- <span class="badge bg-danger rounded-pill">2</span> -->
                                     </p>
                                 </a>
+                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true"
+                                    data-bs-toggle="tab" data-bs-target="#process1" role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程1
+                                        <!-- <span class="badge bg-primary rounded-pill">14</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process2"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程2
+                                        <!-- <span class="badge bg-success rounded-pill">5</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process3"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程3
+                                        <!-- <span class="badge bg-warning rounded-pill">3</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process4"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程4
+                                        <!-- <span class="badge bg-primary rounded-pill">2</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="tab" data-bs-target="#process5"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center secondary">
+                                        排程5
+                                        <!-- <span class="badge bg-danger rounded-pill">2</span> -->
+                                    </p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-xl-9  col-12 mt-lg-0 mt-4">
                             <div class="tab-content">
-                                <section class="tab-pane fade show active" role="tabpanel" id="process1">
+                                <section class="tab-pane fade show active " role="tabpanel" id="process1">
                                     <!-- general form elements -->
                                     <div class="card p-0">
                                         <div class="card-header bg_purple white">
@@ -539,16 +572,133 @@
                                     </div>
                                 </section>
                                 <section class="tab-pane fade" role="tabpanel" id="process2">
-                                    <h4>Process2 Items</h4>
-                                    <hr>
+                                    <div class="card p-0">
+                                        <div class="card-header bg_purple white">
+                                            <h3 class="card-title lh-30 m-0">Process2</h3>
+                                        </div>
+                                        <!-- form start -->
+                                        <form>
+                                            <div class="card-body row">
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputEmail1">公司代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="CompanyCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputPassword1">排程代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="ScheduleJobCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程名稱</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="ScheduleJobName">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程說明</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="Description">
+                                                </div>
+                                                <label for="exampleInputFile">排程時間(CRON)</label>
+                                                <div class="form-group d-flex align-items-center col-6">
+                                                    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="* * * * * ?">
+                                                    <span class="px-2"><a class="cronLink badge bg-primary f-400 fz-15 p-2"
+                                                            href="https://www.bejson.com/othertools/cron/">排程設定</a></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+                                            <div class="card-footer p-0xw">
+                                                <button type="submit" class="btn btn-add btn-sm"><i class="fas fa-plus-circle"></i> 新增</button>
+                                            </div>
+                                        </form>
+                                        <!-- /.card-body -->
+                                    </div>
                                 </section>
                                 <section class="tab-pane fade" role="tabpanel" id="process3">
-                                    <h4>Process3 Items</h4>
-                                    <hr>
+                                    <div class="card p-0">
+                                        <div class="card-header bg_purple white">
+                                            <h3 class="card-title lh-30 m-0">Process3</h3>
+                                        </div>
+                                        <!-- form start -->
+                                        <form>
+                                            <div class="card-body row">
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputEmail1">公司代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="CompanyCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputPassword1">排程代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="ScheduleJobCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程名稱</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="ScheduleJobName">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程說明</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="Description">
+                                                </div>
+                                                <label for="exampleInputFile">排程時間(CRON)</label>
+                                                <div class="form-group d-flex align-items-center col-6">
+                                                    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="* * * * * ?">
+                                                    <span class="px-2"><a class="cronLink badge bg-primary f-400 fz-15 p-2"
+                                                            href="https://www.bejson.com/othertools/cron/">排程設定</a></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+                                            <div class="card-footer p-0xw">
+                                                <button type="submit" class="btn btn-add btn-sm"><i class="fas fa-plus-circle"></i> 新增</button>
+                                            </div>
+                                        </form>
+                                        <!-- /.card-body -->
+                                    </div>
                                 </section>
                                 <section class="tab-pane fade" role="tabpanel" id="process4">
-                                    <h4>Process4 Items</h4>
-                                    <hr>
+                                    <div class="card p-0">
+                                        <div class="card-header bg_purple white">
+                                            <h3 class="card-title lh-30 m-0">Process4</h3>
+                                        </div>
+                                        <!-- form start -->
+                                        <form>
+                                            <div class="card-body row">
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputEmail1">公司代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="CompanyCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputPassword1">排程代碼</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="ScheduleJobCode">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程名稱</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="ScheduleJobName">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label for="exampleInputFile">排程說明</label>
+                                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="Description">
+                                                </div>
+                                                <label for="exampleInputFile">排程時間(CRON)</label>
+                                                <div class="form-group d-flex align-items-center col-6">
+                                                    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1"
+                                                        placeholder="* * * * * ?">
+                                                    <span class="px-2"><a class="cronLink badge bg-primary f-400 fz-15 p-2"
+                                                            href="https://www.bejson.com/othertools/cron/">排程設定</a></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.card-body -->
+                                            <div class="card-footer p-0xw">
+                                                <button type="submit" class="btn btn-add btn-sm"><i class="fas fa-plus-circle"></i> 新增</button>
+                                            </div>
+                                        </form>
+                                        <!-- /.card-body -->
+                                    </div>
                                 </section>
                                 <section class="tab-pane fade" role="tabpanel" id="process5">
                                     <h4>Process5 Items</h4>

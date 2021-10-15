@@ -6,18 +6,19 @@
 
   
 //## 包含標題與搜尋功能 RWD card - End ##//    
-
 //## Datatable Responsive 套件 - Start ##//
- $('.datatable-RWD').DataTable({
+$('.datatable-RWD').DataTable({
         searching: false,
         "paging": false,
         "ordering": false,
         "info": false,
         "autoWidth": false,
-        scroller: true,
-        responsive: true,
+        "scroller": true,
+        "responsive": true,
         "lengthChange": false,
         "language": {
+            "decimal": "-",
+            "thousands": ",",
             "info": "顯示 _PAGE_ 至 _PAGES_",
             "search": "搜尋 :",
             "paginate": {
@@ -26,44 +27,48 @@
             },
             "lengthMenu": "顯示 _MENU_ 筆資料"
         },
+        "keys": {
+          clipboard: true,
+          blurable: true,
+        },
+        select: {
+          style: 'multi',
+        },
         dom: "<'row'<'col-xl-12'fr>>" +
             "<'row'<'col-sm-12'tlp>>",
     }
 );
- 
+
+
 // dataTable 審核狀態
-const dataTable = document.querySelectorAll('.datatable-RWD')
+$(function () {
+  const dataTable = document.querySelectorAll('.datatable-RWD')
   for (let i = 0; i < dataTable.length; i++) {
-    const rows = dataTable[i].rows ;
+    const rows = dataTable[i].rows;
     for (let i = 0; i < rows.length; i++) {
-    for (let j = 0; j < rows[i].cells.length; j++) {
-      let text = rows[i].cells[j]
-      switch (text.innerText) {
-        case '駁回':
-          text.firstChild.className = 'pill-danger'
-          break;
-        case '審核完成':
-          text.firstChild.className = 'pill-approval'
-          break;
-        case '審核中':
-          text.firstChild.className = 'pill-draft'
-          break;
+      for (let j = 0; j < rows[i].cells.length; j++) {
+        let text = rows[i].cells[j]
+        switch (text.innerText) {
+          case '駁回':
+            text.firstChild.className = 'pill-danger'
+            break;
+          case '審核完成':
+            text.firstChild.className = 'pill-approval'
+            break;
+          case '審核中':
+            text.firstChild.className = 'pill-draft'
+            break;
+          case '已發布':
+            text.firstChild.className = 'pill-approval'
+            break;
+        }
       }
     }
   }
-  }
+})
 
 /////### DateRangePicker 日期時間選擇 Start ###/////
 // https://www.daterangepicker.com/
-$(function () { 
-  $('.reservation').daterangepicker({
-    timePicker: true,
-    singleDatePicker: true,
-    locale: {
-      format: 'YYYY/MM/DD'
-    }
-  });
-});
 
 // 單日期選擇器 //
 $(function () {  
@@ -141,110 +146,6 @@ $(function () {
   
  // pdf.js 
 //https://mozilla.github.io/pdf.js/getting_started/#download
-// $('#File').on("change", function (e) {
-//     var file = $('#File')[0].files[0];
-//     var type = file.type;
-//     if (type.indexOf('pdf') != '-1'){
-//       const file = e.target.files[0],
-//         fileReader = new FileReader();
-//         var pageNum = 1,
-//           pageRendering = false,
-//           pageNumPending = null;
-      
-//       fileReader.onload = function (ev) {
-
-//           pdfjsLib.getDocument({ data: fileReader.result }).promise.then((pdf) => {
-//           pageRendering = true;
-//         // Update current page in HTML
-//             pdf.getPage(pageNum).then(function (page) {
-//             console.log(pageNum);
-//           var desiredWidth = 1000;
-//           var viewport = page.getViewport({ scale: 1 });
-//           var scale = desiredWidth / viewport.width;
-//           var scaledViewport = page.getViewport({ scale: scale });
-
-//           var canvas = document.querySelector(".the-canvas");
-//           var context = canvas.getContext("2d");
-
-//           canvas.height = scaledViewport.height;
-//           canvas.width = scaledViewport.width;
-
-//           var renderContext = {
-//             canvasContext: context,
-//             viewport: scaledViewport
-//           };
-//           var renderTask = page.render(renderContext);
-//           renderTask.promise.then(function () {
-//             console.log("Page rendered");
-//               var png_data = canvas.toDataURL('image/png')
-//               $('.picDemo').attr('src', png_data);
-//           });
-//         });
-//       });
-//         };
-//         fileReader.readAsArrayBuffer(file);
-//     } else {
-//       var file = $('#File')[0].files[0];
-//         console.log(URL.createObjectURL(file));
-//         var reader = new FileReader;
-//         reader.onload = function (e) {
-//             $('.picDemo').css('display', 'block');
-//           $('.picDemo').attr('src', e.target.result);
-//             // $('#the-canvas').css('display', "none ");
-//         };
-//         reader.readAsDataURL(file);
-//     }
-// });
- // pdf.js 
-// $('#File').on("change", function (e) {
-//     var file = $('#File')[0].files[0];
-//     var type = file.type;
-//     if (type.indexOf('pdf') != '-1'){
-//       const file = e.target.files[0];
-//         fileReader = new FileReader();
-//         fileReader.onload = function (ev) {
-//         pdfjsLib.getDocument({data: fileReader.result}).promise.then((pdf) => {
-//         // Update current page in HTML
-//           pdf.getPage(1).then(function (page) {
-//           var desiredWidth = 1000;
-//           var viewport = page.getViewport({ scale: 1 });
-//           var scale = desiredWidth / viewport.width;
-//           var scaledViewport = page.getViewport({ scale: scale });
-
-//           var canvas = document.querySelector(".the-canvas");
-//           var context = canvas.getContext("2d");
-
-//           canvas.height = scaledViewport.height;
-//           canvas.width = scaledViewport.width;
-
-//           var renderContext = {
-//             canvasContext: context,
-//             viewport: scaledViewport
-//           };
-//           var renderTask = page.render(renderContext);
-//           renderTask.promise.then(function () {
-//             console.log("Page rendered");
-//               var png_data = canvas.toDataURL('image/png')
-//               $('.picDemo').attr('src', png_data);
-//           });
-//         });
-//       });
-//         };
-//         fileReader.readAsArrayBuffer(file);
-//     } else {
-//       var file = $('#File')[0].files[0];
-//         console.log(URL.createObjectURL(file));
-//         var reader = new FileReader;
-//         reader.onload = function (e) {
-//             $('.picDemo').css('display', 'block');
-//           $('.picDemo').attr('src', e.target.result);
-//             // $('#the-canvas').css('display', "none ");
-//         };
-//         reader.readAsDataURL(file);
-//     }
-// });
- 
-//  pdf.js 
 $('#File').on("change", function (e) {
     var file = $('#File')[0].files[0];
     var type = file.type;
@@ -264,7 +165,6 @@ $('#File').on("change", function (e) {
       function renderPage(num) {
         pageRendering = true;
         // Initial/first page rendering
-          // for (var num = 1; num < pdf.numPages; ++num) {
             pdfDoc.getPage(num).then(function (page) {
               // you can now use *page* here
               console.log(num);
@@ -296,7 +196,6 @@ $('#File').on("change", function (e) {
                   pageNumPending = null;
                 }
               });
-
               document.getElementById('page_num').textContent = num;
             });
           // }
@@ -347,14 +246,15 @@ $('#File').on("change", function (e) {
       // fileReader.readAsArrayBuffer(file);
     } else {
       var file = $('#File')[0].files[0];
-        console.log(URL.createObjectURL(file));
+        // console.log(URL.createObjectURL(file));
         var reader = new FileReader;
         reader.onload = function (e) {
           $('.picDemo').css('display', 'block');
           $('.picDemo').attr('src', e.target.result);
           $('#previewModal .modal-footer').css('display', "none ");
+          console.log(reader.result);
         };
-        reader.readAsDataURL(file);
+      reader.readAsDataURL(file);
     }
 });
  

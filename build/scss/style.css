@@ -3,16 +3,17 @@
 @import url("../../plugins/bootstrap-5.0.0-dist/css/bootstrap-reboot.min.css");
 @import url("../../plugins/bootstrap-5.0.0-dist/css/bootstrap.min.css");
 @import url("../../plugins/jquery-ui/jquery-ui.min.css");
-@import url("../../plugins/daterangepicker/daterangepicker.css");
 @import url("../../plugins/select2-4.0.13/css/select2.min.css");
-@import url("../../plugins/dropzone/min/dropzone.min.css");
 @import url("../../plugins/Magicsuggest/css/magicsuggest-min.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
+@import url("../../plugins/KeyTable-2.6.4/css/keyTable.dataTables.min.css");
 @import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
 @import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap.min.css");
+@import url("../../plugins/datatables-select/css/select.bootstrap5.min.css");
 @import url("../../plugins/jstree-3.3.11/dist/themes/default/style.min.css");
 @import url("../../plugins/summernote/summernote-lite.min.css");
+@import url("../../plugins/jOrgChart/jquery.jOrgChart.css");
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
@@ -67,6 +68,107 @@ img {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.primary {
+  color: #6DAFFE;
+}
+
+.bg_primary {
+  background-color: #6DAFFE;
+}
+
+.secondary {
+  color: #437FC7;
+}
+
+.bg_secondary {
+  background-color: #437FC7;
+}
+
+.third {
+  color: #708ba5;
+}
+
+.bg_third {
+  background-color: #708ba5;
+}
+
+.subtitle {
+  color: #A7A7A7;
+}
+
+.important {
+  color: #B9732F;
+}
+
+.bg_important {
+  background-color: #B9732F;
+}
+
+.text {
+  color: #505c62;
+}
+
+.gray {
+  color: #A7A7A7;
+}
+
+.bg {
+  background-color: #edf6ff;
+}
+
+.lightBlue {
+  color: #edf6ff;
+}
+
+.bg-blue30 {
+  background-color: #edf6ff;
+}
+
+.bg-blue40 {
+  background-color: #6DAFFE;
+}
+
+.bg-blue50 {
+  background-color: #437FC7;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.bg-lightGray {
+  background-color: #E9EEF2;
+}
+
+.dark {
+  color: #303030;
+}
+
+.hover {
+  color: #313994;
+}
+
+.bg_hover {
+  background-color: #313994;
+}
+
+.purple {
+  color: #88157b;
+}
+
+.bg_purple {
+  background-color: #88157b;
+}
+
+.pink {
+  color: #d31577;
+}
+
+.bg_gradient {
+  background: -webkit-gradient(linear, right top, left top, from(#113E9A), to(#52B0DD));
+  background: linear-gradient(to left, #113E9A, #52B0DD);
 }
 
 .fontsEn {
@@ -133,91 +235,16 @@ table {
   line-height: 70px;
 }
 
-.primary {
-  color: #313994;
+.card-Title {
+  color: #6DAFFE;
 }
 
-.bg_primary {
-  background-color: #313994;
+.card-Subtitle {
+  color: #B9732F;
 }
 
-.secondary {
-  color: RGB(53, 157, 209);
-}
-
-.bg_secondary {
-  background-color: RGB(53, 157, 209);
-}
-
-.third {
-  color: #708ba5;
-}
-
-.bg_third {
-  background-color: #708ba5;
-}
-
-.important {
-  color: #5bbbeb;
-}
-
-.bg_important {
-  background-color: #5bbbeb;
-}
-
-.text {
-  color: #5a5a5a;
-}
-
-.bg {
-  background-color: #ecf5ff;
-}
-
-.bg-blue30 {
-  background-color: #ebf8ff;
-}
-
-.white {
-  color: #ffffff;
-}
-
-.bg-lightGray {
-  background-color: #E9EEF2;
-}
-
-.dark {
-  color: #303030;
-}
-
-.hover {
-  color: #313994;
-}
-
-.bg_hover {
-  background-color: #313994;
-}
-
-.purple {
-  color: #88157b;
-}
-
-.bg_purple {
-  background-color: #88157b;
-}
-
-.pink {
-  color: #d31577;
-}
-
-.bg_gradient {
-  background: -webkit-gradient(linear, right top, left top, from(#113E9A), to(#52B0DD));
-  background: linear-gradient(to left, #113E9A, #52B0DD);
-}
-
-.ui-state-highlight {
-  width: 100%;
-  height: 30px;
-  background-color: #d31577;
+.card-link {
+  color: #6DAFFE;
 }
 
 .mt-15 {
@@ -360,6 +387,29 @@ table {
   min-height: 100px;
 }
 
+.btn-padding {
+  height: 35px;
+  min-width: auto;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 0px 5px;
+  background-color: #8130a7;
+  color: #ffffff;
+}
+
+.btn-padding:hover {
+  background-color: #313994;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-padding:focus {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .btn-success {
   height: 35px;
   min-width: auto;
@@ -390,7 +440,7 @@ table {
   font-weight: 400;
   border-radius: 5px;
   margin: 0px 5px;
-  background-color: #5bbbeb;
+  background-color: #6DAFFE;
   color: #ffffff;
 }
 
@@ -436,7 +486,7 @@ table {
   font-weight: 400;
   border-radius: 5px;
   margin: 0px 5px;
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   color: #ffffff;
 }
 
@@ -459,7 +509,7 @@ table {
   font-weight: 400;
   border-radius: 5px;
   margin: 0px 5px;
-  background-color: #e43d27;
+  background-color: #c02713;
   color: #ffffff;
 }
 
@@ -506,7 +556,7 @@ table {
   border-radius: 5px;
   margin: 0px 5px;
   background-color: #cfcfcf;
-  color: #5a5a5a;
+  color: #505c62;
 }
 
 .btn-cancel:hover {
@@ -521,6 +571,28 @@ table {
   font-weight: 400;
 }
 
+.btn-more {
+  padding: 10px 30px;
+  background-color: #B9732F;
+  color: #ffffff;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.btn-more:hover {
+  background-color: #ffffff;
+  border: 1px solid #B9732F;
+  color: #B9732F;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(197, 197, 197, 0.5);
+          box-shadow: 0px 3px 8px 0px rgba(197, 197, 197, 0.5);
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
 .btn-cal {
   height: 35px;
   min-width: auto;
@@ -528,14 +600,14 @@ table {
   font-weight: 400;
   border-radius: 5px;
   margin: 0px 5px;
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   color: #ffffff;
   width: 35px;
   height: 35px;
 }
 
 .btn-cal:hover {
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -549,10 +621,10 @@ table {
 .btn-menu {
   width: 100%;
   height: 50px;
-  background-color: #d0dce6;
+  background-color: #F3F3F3;
   border-radius: 8px;
   line-height: 40px;
-  color: #5a5a5a;
+  color: #505c62;
   font-size: 14px;
   position: relative;
   z-index: 2;
@@ -568,8 +640,8 @@ table {
   width: 100%;
   height: 100%;
   background: transparent;
-  -webkit-box-shadow: inset 0px 0px 0px #5bbbeb;
-          box-shadow: inset 0px 0px 0px #5bbbeb;
+  -webkit-box-shadow: inset 0px 0px 0px #6DAFFE;
+          box-shadow: inset 0px 0px 0px #6DAFFE;
   display: inline-block;
   -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
   -webkit-transition: all 0.6s ease-in-out;
@@ -581,15 +653,15 @@ table {
 }
 
 .btn-menu:hover::before {
-  -webkit-box-shadow: inset 1400px 0px 0px #5bbbeb;
-          box-shadow: inset 1400px 0px 0px #5bbbeb;
+  -webkit-box-shadow: inset 1150px 0px 0px #6DAFFE;
+          box-shadow: inset 1150px 0px 0px #6DAFFE;
   color: #ffffff;
 }
 
 .btn-link {
   width: 100%;
   height: 40px;
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   border-radius: 8px;
   color: #ffffff;
   text-decoration: none;
@@ -601,8 +673,8 @@ table {
 
 .btn-link:hover {
   background-color: #ffffff;
-  color: RGB(53, 157, 209);
-  border-color: RGB(53, 157, 209);
+  color: #437FC7;
+  border-color: #437FC7;
 }
 
 button {
@@ -628,7 +700,7 @@ button {
 }
 
 .pill-approval {
-  background-color: #313994;
+  background-color: #6DAFFE;
   color: white;
   border-radius: 20px;
   padding: 2px 10px;
@@ -706,7 +778,7 @@ button {
 }
 
 .SelectArea .card-header {
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   color: #ffffff;
 }
 
@@ -818,6 +890,10 @@ button {
   line-height: 15px;
 }
 
+.form-control-sm {
+  height: 35px;
+}
+
 .main-sidebar {
   background-color: #546D92;
   height: 100vw;
@@ -851,7 +927,7 @@ button {
 }
 
 .main-sidebar .nav-sidebar .nav-item .nav-link.active {
-  background-color: #5bbbeb;
+  background-color: #6DAFFE;
 }
 
 .main-sidebar .nav-sidebar .nav-item .nav-link.active .nav-icon, .main-sidebar .nav-sidebar .nav-item .nav-link.active p {
@@ -867,7 +943,7 @@ button {
 }
 
 .main-sidebar .nav-sidebar .nav-item .nav-treeview .nav-item .nav-link.active .nav-icon, .main-sidebar .nav-sidebar .nav-item .nav-treeview .nav-item .nav-link.active p {
-  color: #5a5a5a;
+  color: #505c62;
 }
 
 .main-sidebar .nav-sidebar .nav-item .nav-treeview .nav-item .nav-link:hover {
@@ -885,17 +961,6 @@ button {
   padding: 20px;
 }
 
-.card .card-header h3 {
-  font-size: 18px;
-}
-
-.vtitle {
-  padding: 0px  5px;
-  color: #88157b;
-  font-size: 20px;
-  border-left: 5px solid #88157b;
-}
-
 .card-noShadow {
   border-radius: 10px;
   padding: 20px;
@@ -905,7 +970,18 @@ button {
   border-radius: 5px;
   padding: 5px;
   height: 100%;
-  min-height: 420px;
+}
+
+.card-radius .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .card-border {
@@ -913,7 +989,6 @@ button {
   padding: 5px;
   height: 100%;
   border: 1px solid #cecece;
-  background-color: #ffffff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -924,22 +999,55 @@ button {
           box-shadow: 1px 1px 20px 7px rgba(197, 197, 197, 0.336);
 }
 
-.information_card {
-  width: 100%;
-  height: 110px;
-  text-align: center;
-  padding: 40px 0px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 5px;
-  padding: 20px;
-  position: relative;
+.card-border .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-@media only screen and (max-width: 767px) {
+.information_card {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 33px 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.information_card:hover {
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(138, 150, 170, 0.8);
+          box-shadow: 0px 0px 5px 1px rgba(138, 150, 170, 0.8);
+  background-color: #B9732F;
+}
+
+.information_card:hover h3 {
+  color: #ffffff;
+}
+
+.information_card:hover p {
+  color: #edf6ff;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .information_card {
-    width: 100%;
-    padding: 40px 0px;
+    padding: 10px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .information_card h3 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .information_card {
+    margin: 0 auto;
   }
   .information_card h3 {
     font-size: 20px;
@@ -951,21 +1059,16 @@ button {
   height: 40px;
 }
 
-.content-header {
-  position: relative;
-}
-
-.alert {
-  position: absolute;
-  z-index: 999;
-  top: 5px;
-  right: 15px;
-  width: 97%;
+.vtitle {
+  padding: 0px  5px;
+  color: #88157b;
+  font-size: 20px;
+  border-left: 5px solid #88157b;
 }
 
 table.dataTable tbody th,
 table.dataTable tbody td {
-  color: #5a5a5a;
+  color: #505c62;
   padding: 15px 0px;
 }
 
@@ -980,7 +1083,7 @@ table.dataTable thead {
 }
 
 table.dataTable thead tr {
-  color: #313994;
+  color: #437FC7;
   font-size: 16px;
 }
 
@@ -1001,7 +1104,7 @@ table.dataTable tbody tr {
 }
 
 table.dataTable tbody tr .dateColor {
-  color: RGB(53, 157, 209);
+  color: #437FC7;
   font-weight: 300;
 }
 
@@ -1011,6 +1114,7 @@ table.dataTable tbody tr td {
   padding: 8px;
   white-space: nowrap;
   text-align: center;
+  line-height: 18px;
 }
 
 table.dataTable tbody tr:nth-child(odd) {
@@ -1018,12 +1122,12 @@ table.dataTable tbody tr:nth-child(odd) {
 }
 
 table.dataTable tfoot tr {
-  border-top: 1px solid RGB(53, 157, 209);
-  color: #5a5a5a;
+  border-top: 1px solid #437FC7;
+  color: #505c62;
 }
 
 table.dataTable .assignActive {
-  background-color: #313994;
+  background-color: #6DAFFE;
   color: #ffffff;
   display: inline-block;
   width: 120px;
@@ -1038,106 +1142,24 @@ table.dataTable .assignActive {
   margin-top: 10px;
 }
 
-@media (max-width: 992px) {
-  .datatable-card {
-    border: none !important;
-    background-color: transparent !important;
-    min-width: 100%;
-    /*針對tr去做隱藏*/
-  }
-  .datatable-card thead .tr-only-hide {
-    display: none !important;
-  }
-  .datatable-card tbody {
-    background-color: transparent;
-    /*讓tr變成區塊主要讓他有個區塊*/
-  }
-  .datatable-card tbody tr {
-    width: 100%;
-    display: block;
-    font-size: 15px;
-    line-height: 15px;
-    -webkit-box-shadow: 2px 2px 5px #ccc;
-            box-shadow: 2px 2px 5px #ccc;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: none !important;
-  }
-  .datatable-card tbody tr:nth-child(odd) {
-    border-left: 10px solid #5a5a5a;
-    border-radius: 20px;
-  }
-  .datatable-card tbody tr:nth-child(even) {
-    border-left: 10px solid RGB(245, 199, 29);
-    border-radius: 20px;
-  }
-  .datatable-card tbody tr .vcheckbox:before {
-    display: none;
-  }
-  .datatable-card tbody tr td {
-    text-align: left;
-    overflow: hidden;
-    width: 100%;
-    display: block;
-    padding: 5px 0px;
-    border: none !important;
-  }
-  .datatable-card tbody tr td:before {
-    /*最重要的就是這串*/
-    content: attr(data-th) " : ";
-    /*最重要的就是這串*/
-    display: inline-block;
-    text-transform: uppercase;
-    width: 50%;
-    font-weight: 400;
-    margin-right: 10px;
-    text-align: end;
-    color: #313994;
-  }
-  .datatable-card tfoot {
-    display: none !important;
-  }
-}
-
-.TableArea .card {
-  padding: 0px;
-}
-
-.TableArea .card-header {
-  background-color: #4f1296;
-  color: #ffffff;
-}
-
-.TableArea .card-body {
-  min-height: 200px;
-}
-
-.TableArea .table-Hover td, .TableArea .table-Hover th {
-  border-top: 1px solid #9bb1db;
-}
-
-.TableArea .table-Hover tbody tr {
-  line-height: 30px;
-}
-
-.TableArea .table-Hover tbody tr:hover {
-  background-color: #fdd830 !important;
-}
-
-.TableArea .table-Hover tbody tr:nth-child(odd) {
+.exInput {
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
   background-color: #eaf5fc;
 }
 
-.TableArea .datatable-RWD {
-  text-align: left;
+.exInput2 {
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-color: #ffffff;
 }
 
-.TableArea .datatable-RWD tbody .dtr-title {
-  text-align: left;
-}
-
-.TableArea .datatable-RWD tbody tr:nth-child(odd) {
-  background-color: #eaf5fc !important;
+.ui-selecting {
+  background: #FECA40;
 }
 
 .ui-widget.ui-widget-content {
@@ -1310,6 +1332,12 @@ table.dataTable .assignActive {
   list-style: disc;
 }
 
+.ui-state-highlight {
+  width: 100%;
+  height: 30px;
+  background-color: #B9732F;
+}
+
 body {
   font-family: "Noto Sans TC", sans-serif;
   font-size: 15px;
@@ -1338,7 +1366,7 @@ h3 {
 
 p {
   font-family: "Urbanist", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #5a5a5a;
+  color: #505c62;
   line-height: 1.5;
   font-weight: 400;
   margin: 0px;
@@ -1349,12 +1377,12 @@ a:focus {
   text-decoration: none;
   outline: 0 solid transparent;
   font-family: "Urbanist", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: RGB(53, 157, 209);
+  color: #437FC7;
 }
 
 a:hover,
 a:focus:hover {
-  color: #313994;
+  color: #6DAFFE;
 }
 
 ul {
@@ -1381,11 +1409,12 @@ section.page_title {
 
 .orgArea {
   position: relative;
+  overflow: auto;
 }
 
 .jOrgChart .node {
   min-width: 200px;
-  height: 120px;
+  height: 130px;
   line-height: 40px;
   border-radius: 4px;
   margin: 0 8px;
@@ -1411,15 +1440,6 @@ section.page_title {
 .organization_table {
   border-collapse: separate;
   margin: 0 auto;
-}
-
-.jOrgChart {
-  position: relative;
-}
-
-.jOrgChart .ext {
-  position: absolute;
-  right: 30px;
 }
 
 .jOrgChart .level {
@@ -1473,7 +1493,7 @@ section.page_title {
 }
 
 .jOrgChart .level a .count {
-  color: #313994;
+  color: #6DAFFE;
   position: relative;
 }
 
@@ -1520,7 +1540,7 @@ section.page_title {
     text-align: center;
   }
   .jOrgChart .level a .count {
-    color: #313994;
+    color: #6DAFFE;
     text-align: center;
   }
 }
@@ -1562,158 +1582,14 @@ section.page_title {
     text-align: center;
   }
   .jOrgChart .level a .count {
-    color: #313994;
-    text-align: center;
-  }
-}
-
-.jOrgChart .level0 {
-  background-color: #f0ebf1fa;
-}
-
-.jOrgChart .level0 a {
-  font-size: 12px;
-}
-
-.jOrgChart .level0 a .header {
-  line-height: 25px;
-  color: #ffffff;
-  background-color: #6d18a5;
-  border-radius: 4px 4px 0px 0px;
-  text-align: center;
-  position: relative;
-}
-
-.jOrgChart .level0 a .header .icon i.fa-id-card {
-  position: absolute;
-  right: 5px;
-  top: 6px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.jOrgChart .level0 a .pic {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 5px;
-}
-
-.jOrgChart .level0 a .pic img {
-  max-width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.jOrgChart .level0 a .position {
-  color: lightcoral;
-  text-align: left;
-}
-
-.jOrgChart .level0 a .name {
-  font-weight: 600;
-  text-align: left;
-}
-
-.jOrgChart .level0 a .count {
-  color: #313994;
-  position: relative;
-}
-
-.jOrgChart .level0 a .count i.fa-user {
-  position: absolute;
-  top: 3px;
-  right: 5px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .jOrgChart .level0 {
-    background-color: #f0ebf1fa;
-  }
-  .jOrgChart .level0 a {
-    font-size: 12px;
-  }
-  .jOrgChart .level0 a .header {
-    line-height: 30px;
-    color: #ffffff;
-    background-color: #6d18a5;
-    border-radius: 4px 4px 0px 0px;
-  }
-  .jOrgChart .level0 a .pic {
-    width: 120px;
-    height: 120px;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 10px;
-  }
-  .jOrgChart .level0 a .pic img {
-    max-width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .jOrgChart .level0 a .position {
-    padding-top: 3px;
-    color: lightcoral;
-    text-align: center;
-  }
-  .jOrgChart .level0 a .name {
-    color: #303030;
-    font-weight: 500;
-    text-align: center;
-  }
-  .jOrgChart .level0 a .count {
-    color: #313994;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .jOrgChart .level0 {
-    background-color: #f0ebf1fa;
-  }
-  .jOrgChart .level0 a {
-    font-size: 12px;
-  }
-  .jOrgChart .level0 a .header {
-    line-height: 30px;
-    color: #ffffff;
-    background-color: #6d18a5;
-    border-radius: 4px 4px 0px 0px;
-  }
-  .jOrgChart .level0 a .pic {
-    width: 120px;
-    height: 120px;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 10px;
-  }
-  .jOrgChart .level0 a .pic img {
-    max-width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .jOrgChart .level0 a .position {
-    padding-top: 3px;
-    color: lightcoral;
-    text-align: center;
-  }
-  .jOrgChart .level0 a .name {
-    color: #303030;
-    font-weight: 500;
-    text-align: center;
-  }
-  .jOrgChart .level0 a .count {
-    color: #313994;
+    color: #6DAFFE;
     text-align: center;
   }
 }
 
 .jOrgChart .level1 {
-  background-color: #bddbf3;
+  background-color: #f3f3f3;
+  margin-top: 50px;
 }
 
 .jOrgChart .level1 a {
@@ -1723,7 +1599,7 @@ section.page_title {
 .jOrgChart .level1 a .header {
   line-height: 25px;
   color: #ffffff;
-  background-color: #313994;
+  background-color: #44a1d0;
   border-radius: 4px 4px 0px 0px;
   text-align: center;
   position: relative;
@@ -1763,7 +1639,7 @@ section.page_title {
 }
 
 .jOrgChart .level1 a .count {
-  color: #313994;
+  color: #44a1d0;
   position: relative;
 }
 
@@ -1783,7 +1659,7 @@ section.page_title {
   .jOrgChart .level1 a .header {
     line-height: 30px;
     color: #ffffff;
-    background-color: #313994;
+    background-color: #6DAFFE;
     border-radius: 4px 4px 0px 0px;
   }
   .jOrgChart .level1 a .pic {
@@ -1810,7 +1686,7 @@ section.page_title {
     text-align: center;
   }
   .jOrgChart .level1 a .count {
-    color: #313994;
+    color: #6DAFFE;
     text-align: center;
   }
 }
@@ -1823,9 +1699,9 @@ section.page_title {
     font-size: 12px;
   }
   .jOrgChart .level1 a .header {
-    line-height: 40px;
+    line-height: 30px;
     color: #ffffff;
-    background-color: #313994;
+    background-color: #6DAFFE;
     border-radius: 4px 4px 0px 0px;
   }
   .jOrgChart .level1 a .pic {
@@ -1852,13 +1728,13 @@ section.page_title {
     text-align: center;
   }
   .jOrgChart .level1 a .count {
-    color: #313994;
+    color: #6DAFFE;
     text-align: center;
   }
 }
 
 .jOrgChart .level2 {
-  background-color: #ececec;
+  background-color: #f3f3f3;
 }
 
 .jOrgChart .level2 a {
@@ -1868,7 +1744,7 @@ section.page_title {
 .jOrgChart .level2 a .header {
   line-height: 25px;
   color: #ffffff;
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   border-radius: 4px 4px 0px 0px;
   text-align: center;
   position: relative;
@@ -1908,7 +1784,7 @@ section.page_title {
 }
 
 .jOrgChart .level2 a .count {
-  color: RGB(53, 157, 209);
+  color: #437FC7;
   position: relative;
 }
 
@@ -1920,7 +1796,7 @@ section.page_title {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .jOrgChart .level2 {
-    background-color: #ececec;
+    background-color: #f3f3f3;
   }
   .jOrgChart .level2 a {
     font-size: 12px;
@@ -1928,7 +1804,7 @@ section.page_title {
   .jOrgChart .level2 a .header {
     line-height: 30px;
     color: #ffffff;
-    background-color: RGB(53, 157, 209);
+    background-color: #437FC7;
     border-radius: 4px 4px 0px 0px;
   }
   .jOrgChart .level2 a .pic {
@@ -1955,22 +1831,22 @@ section.page_title {
     text-align: center;
   }
   .jOrgChart .level2 a .count {
-    color: RGB(53, 157, 209);
+    color: #437FC7;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .jOrgChart .level2 {
-    background-color: #ececec;
+    background-color: #f3f3f3;
   }
   .jOrgChart .level2 a {
     font-size: 12px;
   }
   .jOrgChart .level2 a .header {
-    line-height: 18px;
+    line-height: 30px;
     color: #ffffff;
-    background-color: RGB(53, 157, 209);
+    background-color: #437FC7;
     border-radius: 4px 4px 0px 0px;
   }
   .jOrgChart .level2 a .pic {
@@ -1997,13 +1873,13 @@ section.page_title {
     text-align: center;
   }
   .jOrgChart .level2 a .count {
-    color: RGB(53, 157, 209);
+    color: #437FC7;
     text-align: center;
   }
 }
 
 .jOrgChart .level3 {
-  background-color: #ececec;
+  background-color: #f3f3f3;
 }
 
 .jOrgChart .level3 a {
@@ -2065,7 +1941,7 @@ section.page_title {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .jOrgChart .level3 {
-    background-color: #ececec;
+    background-color: #f3f3f3;
   }
   .jOrgChart .level3 a {
     font-size: 12px;
@@ -2107,7 +1983,7 @@ section.page_title {
 
 @media only screen and (max-width: 767px) {
   .jOrgChart .level3 {
-    background-color: #ececec;
+    background-color: #f3f3f3;
   }
   .jOrgChart .level3 a {
     font-size: 12px;
@@ -2229,6 +2105,41 @@ section.page_title {
   position: relative;
 }
 
+.jOrgChart .organization_text .more {
+  width: 20px;
+  height: 20px;
+  background-color: #5a0592;
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(204, 204, 204, 0.486);
+          box-shadow: 0px 0px 3px 3px rgba(204, 204, 204, 0.486);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -140px;
+  left: -10px;
+}
+
+.jOrgChart .organization_text .more i.fas {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jOrgChart .organization_text .more {
+    position: absolute;
+    bottom: -260px;
+    left: -10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jOrgChart .organization_text .more {
+    position: absolute;
+    bottom: -240px;
+    left: -10px;
+  }
+}
+
 .portlet {
   padding: 30px 0px;
   border: 1px solid #969696;
@@ -2251,82 +2162,115 @@ section.page_title {
 }
 
 .marqueeBox .marquee-wrapper ul {
-  height: 30px;
+  min-height: 55px;
+  height: auto;
   position: relative;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .marqueeBox .marquee-wrapper ul {
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .marqueeBox .marquee-wrapper ul {
+    height: 95px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .marqueeBox .marquee-wrapper ul {
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .marqueeBox .marquee-wrapper ul {
+    height: 210px;
+  }
 }
 
 .marqueeBox .marquee-wrapper ul li {
   position: absolute;
+  width: 100%;
+  height: 20px;
   top: -10;
-  left: calc(40% - 100px);
   opacity: 0;
-  -webkit-animation-name: display;
-          animation-name: display;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px 100px;
+  line-height: 20px;
+  -webkit-animation-name: marquee;
+          animation-name: marquee;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  margin-left: 20px;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 767px) {
   .marqueeBox .marquee-wrapper ul li {
-    left: calc(30% - 100px);
+    padding: 0px 10px;
   }
 }
 
-@-webkit-keyframes display {
+@-webkit-keyframes marquee {
   0% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
-    opacity: 0;
+    bottom: 2%;
+    opacity: 1;
   }
   10% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
+    bottom: 70%;
   }
-  15% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-  20% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    opacity: 0;
+  30% {
+    top: -300%;
   }
   100% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-    opacity: 0;
+    top: -500%;
   }
 }
 
-@keyframes display {
+@keyframes marquee {
   0% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
-    opacity: 0;
+    bottom: 2%;
+    opacity: 1;
   }
   10% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
+    bottom: 70%;
   }
-  15% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-  20% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    opacity: 0;
+  30% {
+    top: -300%;
   }
   100% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-    opacity: 0;
+    top: -500%;
   }
+}
+
+.alert {
+  position: fixed;
+  z-index: 999;
+  width: 85%;
+}
+
+.nav-board {
+  color: #ffffff;
+  border-radius: 5px;
+  line-height: 20px;
+  padding: 8px 10px;
+  margin: 0px 10px;
+}
+
+.nav-board:hover {
+  color: #ecba16;
+}
+
+.nav-board.active {
+  background-color: #6DAFFE;
+}
+
+.nav-board.active:hover {
+  color: #ffffff;
 }
 
 .info img {
@@ -2336,13 +2280,13 @@ section.page_title {
 }
 
 .a-link {
-  color: #5a5a5a;
+  color: #505c62;
   line-height: 30px;
 }
 
 .a-link.active {
-  border-bottom: 3px solid #5bbbeb;
-  color: #5bbbeb;
+  border-bottom: 3px solid #B9732F;
+  color: #B9732F;
 }
 
 .timeline .time_line {
@@ -2350,7 +2294,7 @@ section.page_title {
 }
 
 .timeline .time_line::before {
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2371,7 +2315,7 @@ section.page_title {
 }
 
 .process .list-group .active {
-  background-color: RGB(53, 157, 209);
+  background-color: #437FC7;
   border: none;
 }
 
@@ -2380,7 +2324,7 @@ section.page_title {
 }
 
 .process .list-group p {
-  color: #5a5a5a;
+  color: #505c62;
 }
 
 .process .tab-content .cronLink:hover {
@@ -2436,5 +2380,14 @@ section.page_title {
 .linkList li .btn-menu:hover .fas {
   padding-right: 20px;
   color: #ffffff;
+}
+
+.content .list-group {
+  height: 352px;
+  overflow-y: auto;
+}
+
+.content .tab-content > section {
+  padding-top: 0px;
 }
 /*# sourceMappingURL=style.css.map */

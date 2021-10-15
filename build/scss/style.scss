@@ -2,16 +2,17 @@
 @import url("../../plugins/bootstrap-5.0.0-dist/css/bootstrap-reboot.min.css");
 @import url("../../plugins/bootstrap-5.0.0-dist/css/bootstrap.min.css");
 @import url("../../plugins/jquery-ui/jquery-ui.min.css");
-@import url("../../plugins/daterangepicker/daterangepicker.css");
 @import url("../../plugins/select2-4.0.13/css/select2.min.css");
-@import url("../../plugins/dropzone/min/dropzone.min.css");
 @import url("../../plugins/Magicsuggest/css/magicsuggest-min.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
 @import url("../../plugins/daterangepicker/daterangepicker.css");
+@import url("../../plugins/KeyTable-2.6.4/css/keyTable.dataTables.min.css");
 @import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
 @import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap.min.css");
+@import url("../../plugins/datatables-select/css/select.bootstrap5.min.css");
 @import url("../../plugins/jstree-3.3.11/dist/themes/default/style.min.css");
 @import url("../../plugins/summernote/summernote-lite.min.css");
+@import url("../../plugins/jOrgChart/jquery.jOrgChart.css");
 
 
 /* :: 1.0 Import Fonts */
@@ -24,8 +25,8 @@
 // *******************
 //     helpers
 // *******************
-@import "helpers/fonts";
 @import "helpers/color";
+@import "helpers/fonts";
 @import "helpers/responsive";
 @import "helpers/spacing";
 @import "helpers/border";
