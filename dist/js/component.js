@@ -8,36 +8,61 @@
 //## 包含標題與搜尋功能 RWD card - End ##//    
 //## Datatable Responsive 套件 - Start ##//
 $('.datatable-RWD').DataTable({
-        searching: false,
-        "paging": false,
-        "ordering": false,
-        "info": false,
-        "autoWidth": false,
-        "scroller": true,
-        "responsive": true,
-        "lengthChange": false,
-        "language": {
-            "decimal": "-",
-            "thousands": ",",
-            "info": "顯示 _PAGE_ 至 _PAGES_",
-            "search": "搜尋 :",
-            "paginate": {
-                "previous": "上一頁",
-                "next":"下一頁"
-            },
-            "lengthMenu": "顯示 _MENU_ 筆資料"
-        },
-        "keys": {
-          clipboard: true,
-          blurable: true,
-        },
-        select: {
-          style: 'multi',
-        },
-        dom: "<'row'<'col-xl-12'fr>>" +
-            "<'row'<'col-sm-12'tlp>>",
-    }
-);
+  destroy: true,
+  searching: false,
+  paging: true,
+  ordering: false,
+  info: false,
+  autoWidth: false,
+  scroller: true,
+  responsive: true,
+  lengthChange: true,
+  language: {
+    "info": "第 _PAGE_ 頁 / 總 _PAGES_ 頁",
+    "search": "搜尋 :",
+    "paginate": {
+      "previous": "上一頁",
+      "next": "下一頁"
+    },
+    "lengthMenu": "顯示 _MENU_ 筆資料"
+  },
+  dom: "<'row'<'col-xl-6'fr>>" +
+    "<'row'<'col-sm-12't>>" +
+    "<'row mt-2'<'col-sm-2'l><'col text-left'i><'col-sm-6 text-end'p>>",
+  'info': '第 _PAGE_ 頁 / 總 _PAGES_ 頁',
+});
+// $('.datatable-RWD').DataTable({
+//         searching: false,
+//         "paging": true,
+//         "ordering": false,
+//         "info": true,
+//         "autoWidth": false,
+//         "scroller": true,
+//         "responsive": true,
+//         "lengthChange": false,
+//         "language": {
+//             "decimal": "-",
+//             "thousands": ",",
+//             "info": "顯示 _PAGE_ 至 _PAGES_",
+//             "search": "搜尋 :",
+//             "paginate": {
+//                 "previous": "上一頁",
+//                 "next":"下一頁"
+//             },
+//             "lengthMenu": "顯示 _MENU_ 筆資料"
+//         },
+//         "keys": {
+//           clipboard: true,
+//           blurable: true,
+//         },
+//         select: {
+//           style: 'multi',
+//         },
+//         dom: "<'row'<'col-xl-6'fr>>" +
+//     "<'row'<'col-sm-12'tl>>" +
+//     "<'row'<'col-sm-6'i><'col-sm-6 text-end'p>>",
+//     }
+// );
 
 
 // dataTable 審核狀態
@@ -139,10 +164,33 @@ $(function () {
     });
 })
 
-// SummerNote
+// SummerNote  取出code
  $('.summernote').summernote({
-      height: 150,
+   height: 150,
+   focus: true,
+   toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline', 'clear']],
+    ['fontname', ['fontname']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['table', ['table']],
+    ['insert', ['link']],
+    ['view', ['fullscreen', 'codeview', 'help']],
+  ],
+   callbacks: {
+     onBlur: function(e) {
+       let sHTML = $('.summernote').summernote('code');
+       const submitButton = document.getElementById("submit")
+       submitButton.addEventListener("click", (e)=>{
+        e.preventDefault()
+        console.log(sHTML);
+   })
+      }
+   }
  })
+
+
   
  // pdf.js 
 //https://mozilla.github.io/pdf.js/getting_started/#download

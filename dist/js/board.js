@@ -211,17 +211,16 @@ $(function () {
 function customMenu($node) {
         var tree = $("#data").jstree(true);
         var items = {
-                        "Create": {
-                            "separator_before": false,
-                            "separator_after": true,
-                            "label": "新增頁面",
-                            action: function (data) {
-                                $node = tree.create_node($node, { text: 'New Folder', type: 'default' });
-                                tree.deselect_all();
-                                tree.select_node($node);
-                            }
-
-                        }
+            "Create": {
+                "separator_before": false,
+                "separator_after": true,
+                "label": "新增頁面",
+                action: function (data) {
+                    $node = tree.create_node($node, { text: 'New Folder', type: 'default' });
+                    tree.deselect_all();
+                    tree.select_node($node);
+                }
+            }
         };
         if ($node.parent == 'json1') {    //如果是根節點
             delete items.Create;
@@ -233,10 +232,12 @@ function createJSTree(jsonData) {
                 "check_callback": true,
                 'data': jsonData
             },
-            "plugins": ["themes", "json_data", "html_data","contextmenu"],
-            "contextmenu": {
-                "items": customMenu
-            }
+            "plugins": ["themes", "json_data", "html_data"],
+            //右鍵 新增刪除 都先拿掉
+            // "plugins": ["themes", "json_data", "html_data","contextmenu"],
+            // "contextmenu": {
+            //     "items": customMenu
+            // }
         })
 }
 //#### js Tree End ####//

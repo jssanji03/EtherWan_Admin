@@ -463,9 +463,10 @@
                                                 </div>
                                                 <div class="form-group col-12">
                                                     <label>自定義</label>
-                                                    <textarea class="summernote">
-                                                                                                                    Place <em>some</em> <u>text</u> <strong>here</strong>
-                                                                                                                    </textarea>
+                                                    <textarea id="summernote" class="summernote">
+                                                            <p>Hello, world</p>
+                                                            <p>Summernote can insert HTML string</p>
+                                                    </textarea>
                                                 </div>
                                                 <div class="form-group col-md-6 col-12">
                                                     <label>按鈕文字</label>
@@ -475,7 +476,7 @@
                                                     <label>連結</label>
                                                     <div class="input-group input-group-sm">
                                                         <input type="text" class="form-control" placeholder="OutSideURL"">
-                                                                                                                        <div class=" input-group-text">
+                                                            <div class=" input-group-text">
                                                         <input class="form-check-inline" type="checkbox" value="">
                                                         <span class="form-check-label">另開視窗</span>
                                                     </div>
@@ -535,16 +536,16 @@
                                         </div>
                                         <!-- /.card-body -->
                                         <div class="card-footer p-0xw">
-                                            <button type="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                            <button type="submit" id="submit" class="btn btn-submit btn-sm"> 儲存</button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="home-tab">
                                     <form>
                                         <div class="card-body row">
                                             <div class="row">
                                                 <div class="form-group col-6">
-                                                    <label>排序</label>
+                                                    <label>排序profile</label>
                                                     <input type="text" class="form-control form-control-sm" placeholder="Sort">
                                                 </div>
                                             </div>
@@ -577,9 +578,10 @@
                                                 </div>
                                                 <div class="form-group col-12">
                                                     <label>自定義</label>
-                                                    <textarea class="summernote">
-                                                                                                                                                        Place <em>some</em> <u>text</u> <strong>here</strong>
-                                                                                                                                                        </textarea>
+                                                    <textarea id="summernote" class="summernote">
+                                                            <p>Hello, world</p>
+                                                            <p>Summernote can insert HTML string</p>
+                                                    </textarea>
                                                 </div>
                                                 <div class="form-group col-md-6 col-12">
                                                     <label>按鈕文字</label>
@@ -588,9 +590,8 @@
                                                 <div class="form-group col-md-6 col-12">
                                                     <label>連結</label>
                                                     <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="OutSideURL"">
-                                                                                                                                                            <div class=" input-group-text">
+                                                        <input type="text" class="form-control" placeholder="OutSideURL"">
+                                                            <div class=" input-group-text">
                                                         <input class="form-check-inline" type="checkbox" value="">
                                                         <span class="form-check-label">另開視窗</span>
                                                     </div>
@@ -650,7 +651,7 @@
                                         </div>
                                         <!-- /.card-body -->
                                         <div class="card-footer p-0xw">
-                                            <button type="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                            <button type="submit" id="submit" class="btn btn-submit btn-sm"> 儲存</button>
                                         </div>
                                     </form>
                                 </div>
@@ -716,10 +717,6 @@
     <script src="../dist/js/component.js"></script>
     <script src="../dist/js/board.js"></script>
     <script src="../dist/js/index.js"></script>
-    <script>
-        // var sHTML = $('.summernote').summernote('code');
-        // console.log(sHTML);
-    </script>
 </body>
 
 </html>s

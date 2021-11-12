@@ -21,17 +21,17 @@
 .marqueeBox{
     .marquee-wrapper {
       ul{
-        min-height:55px;
+        min-height:60px;
         height:auto;
         position: relative;
         @media #{$breakpoint-lg}{
           height: 80px;
         }
         @media #{$breakpoint-md}{
-          height: 95px;
+          height: 110px;
         }
         @media #{$breakpoint-sm}{
-          height: 120px;
+          height: 110px;
         }
         @media #{$breakpoint-xs}{
           height: 210px;
@@ -56,26 +56,33 @@
         }
     }
 }
+
 @keyframes marquee {
   0% { 
-    bottom: 2%;
+    bottom: 0%;
     opacity: 1; 
   }
   10% { 
     bottom: 70%;
   }
-  30% { 
-    top: -300%;
-    // opacity: 0;
+  50% { 
+    bottom: 70%;
   }
-  100% { top: -500%;
-   }
+  60% { 
+    top: -200%;
+  }
+  100% { top: -200%;
+  }
 }
 
 .alert{
   position: fixed;
   z-index: 999;
-  width: 85%;
+  width: 80%;
+  top:40px
+}
+.note-editable{
+  background-color: #fff;
 }
 
 .nav-board{

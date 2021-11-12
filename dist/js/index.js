@@ -23,8 +23,8 @@ $(function () {
         // $("#marquee").html(html); //印出html
         for (let i = 0; i < marqueeLi.length; i++) {
             const Li = marqueeLi[i];
-            Li.style.animationDelay = `${4+i * 5}s`;
-            Li.style.animationDuration = `${marqueeLi.length * 5}s`;
+            Li.style.animationDelay = `${i * 10}s`;
+            Li.style.animationDuration = `${marqueeLi.length + 30}s`;
             // Li.style.animation = `display ${marqueeLi.length * 4}s ease-in-out infinite`;
         }
 
@@ -103,12 +103,12 @@ $(function () {
             });
         }
 
-        function month(year,month) {
+        function month() {
             const select = document.querySelector('.ui-datepicker-month')
             const value = select.options[select.selectedIndex].text;
             const monthEvent = data.map(function (item, index) {
                 if (item.month === value) {
-                    return `<li class='third'>${item.date.substr(5)}  <span class='lh-30 mx-3 text'>${item.event}</span></li>`
+                    return `<li class='third eventList lh-30'>${item.date.substr(5)}<p class='lh-20 text'>${item.event}</p></li>`
                 }
             });
             $('#event').html(monthEvent)
@@ -117,7 +117,7 @@ $(function () {
             const event = data.map(function (item, index) {
                 // console.log(ev);
                 if (item.date === ev) {
-                    return `<li class='third'>${item.date.substr(5)}  <p class='lh-30'>${item.event}</p></li>`
+                    return `<li class='third eventList lh-30'>${item.date.substr(5)}<p class='lh-20 text'>${item.event}</p></li>`
                 }
                 else {
                     return ``

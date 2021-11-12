@@ -1,5 +1,5 @@
 body {
-    font-family: $fontsNoto;
+    font-family: $fontEn,$font-family-sans-serif;
     font-size: 15px;
     background-color: rgb(255, 255, 255);
 }
@@ -37,9 +37,9 @@ a:focus {
     outline: 0 solid transparent;
     font-family: $fontEn,$font-family-sans-serif;
     color: $secondary;
-    &:hover{
-        color: $primary;
-    }
+    // &:hover{
+    //     color: $primary;
+    // }
 }
 
 ul {
