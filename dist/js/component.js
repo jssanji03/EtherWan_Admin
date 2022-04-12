@@ -12,7 +12,7 @@ $('.datatable-RWD').DataTable({
   searching: false,
   paging: true,
   ordering: false,
-  info: false,
+  info: true,
   autoWidth: false,
   scroller: true,
   responsive: true,
@@ -28,8 +28,8 @@ $('.datatable-RWD').DataTable({
   },
   dom: "<'row'<'col-xl-6'fr>>" +
     "<'row'<'col-sm-12't>>" +
-    "<'row mt-2'<'col-sm-2'l><'col text-left'i><'col-sm-6 text-end'p>>",
-  'info': '第 _PAGE_ 頁 / 總 _PAGES_ 頁',
+    "<'row mt-2 justify-content-between'<'col-sm-3'l><'col text-left'i><'col-sm-6 text-end'p>>",
+  // 'info': '第 _PAGE_ 頁 / 總 _PAGES_ 頁',
 });
 // $('.datatable-RWD').DataTable({
 //         searching: false,
@@ -243,6 +243,7 @@ $('#File').on("change", function (e) {
                   renderPage(pageNumPending);
                   pageNumPending = null;
                 }
+                
               });
               document.getElementById('page_num').textContent = num;
             });
@@ -300,9 +301,11 @@ $('#File').on("change", function (e) {
           $('.picDemo').css('display', 'block');
           $('.picDemo').attr('src', e.target.result);
           $('#previewModal .modal-footer').css('display', "none ");
-          console.log(reader.result);
+          $(".cancelPicture").on("click", () => {
+            $('.picDemo').attr('src', " ");
+          })
         };
       reader.readAsDataURL(file);
     }
 });
- 
+

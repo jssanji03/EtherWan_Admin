@@ -507,6 +507,56 @@ table {
   font-weight: 400;
 }
 
+.btn-read {
+  height: 35px;
+  min-width: auto;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 0px 5px;
+  background-color: RGB(245, 199, 29);
+  color: #ffffff;
+  line-height: 30px;
+}
+
+.btn-read:hover {
+  background-color: #313994;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-read:focus {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btnArea {
+  position: fixed;
+  top: 120px;
+  z-index: 999;
+  right: 30px;
+  display: block;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btnArea .boardSubmit {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 15px;
+  font-size: 14px;
+  padding: 3px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 10px;
+}
+
 .btn-delete {
   height: 35px;
   min-width: auto;
@@ -893,10 +943,13 @@ button {
 
 .main-sidebar {
   background-color: #546D92;
-  height: 100vw;
+  height: calc(100% - 50px);
   overflow: auto;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+  top: 30px !important;
+  left: 20px !important;
+  border-radius: 8px;
 }
 
 .main-sidebar::-webkit-scrollbar {
@@ -905,11 +958,13 @@ button {
 }
 
 .main-sidebar .nav-sidebar .nav-item.menu-open .nav-link {
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
 .main-sidebar .nav-sidebar .nav-item:hover .nav-link {
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
@@ -917,6 +972,7 @@ button {
 .main-sidebar .nav-sidebar .nav-item:focus {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+  border-radius: 20px;
 }
 
 .main-sidebar .nav-sidebar .nav-item .nav-link .nav-icon, .main-sidebar .nav-sidebar .nav-item .nav-link p {
@@ -925,6 +981,7 @@ button {
 
 .main-sidebar .nav-sidebar .nav-item .nav-link.active {
   background-color: #6DAFFE;
+  border-radius: 20px;
 }
 
 .main-sidebar .nav-sidebar .nav-item .nav-link.active .nav-icon, .main-sidebar .nav-sidebar .nav-item .nav-link.active p {
@@ -949,6 +1006,21 @@ button {
 
 .main-sidebar .nav-sidebar .nav-item .nav-treeview .nav-item .nav-link:hover .nav-icon, .main-sidebar .nav-sidebar .nav-item .nav-treeview .nav-item .nav-link:hover p {
   color: #ffffff;
+}
+
+.content-wrapper, .main-header {
+  margin-left: 280px !important;
+  background-color: #f4f6f9;
+}
+
+.wrapper {
+  background-color: #f4f6f9;
+}
+
+.main-footer {
+  border-radius: 8px;
+  margin-left: 280px !important;
+  margin-bottom: 10px !important;
 }
 
 .card {
@@ -2155,6 +2227,20 @@ section.page_title {
   left: 45%;
 }
 
+.editPage {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 45%;
+}
+
+.Propaganda .editPage {
+  position: absolute;
+  z-index: 999;
+  top: 20%;
+  left: 45%;
+}
+
 .photoLink {
   height: inherit;
 }
@@ -2257,7 +2343,7 @@ section.page_title {
 
 .alert {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   width: 80%;
   top: 40px;
 }

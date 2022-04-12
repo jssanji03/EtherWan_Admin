@@ -36,6 +36,30 @@
 .btn-submit {
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
 }
+.btn-read {
+    @include button($background-color:$yellow,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btnArea{
+  position: fixed;
+  top: 120px;
+  z-index: 999;
+  right:30px;
+  display: block;
+  flex-wrap: wrap;
+  .boardSubmit{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    padding: 3px;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}
 .btn-delete {
     @include button($background-color:rgb(192, 39, 19),$fontColor: $white,$hover-color:rgb(141, 20, 20),$hover-fontColor:$white);
 }
