@@ -40,7 +40,10 @@
     "sync": "browser-sync start --server --files *.html pages/ dist/",
     "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
     "watch-css": "nodemon --watch build/scss -e scss -x \"npm-run-all css-lint css\"",
-    "watch-js": "nodemon --watch build/js -e js -x \"npm-run-all js-lint js\""
+    "watch-js": "nodemon --watch build/js -e js -x \"npm-run-all js-lint js\"",
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [
     "css",
